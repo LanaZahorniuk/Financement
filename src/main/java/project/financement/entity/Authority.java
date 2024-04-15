@@ -1,4 +1,4 @@
-package project.financement;
+package project.financement.entity;
 
 import java.util.Set;
 import java.util.UUID;

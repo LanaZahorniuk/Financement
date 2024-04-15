@@ -1,4 +1,4 @@
-package project.financement;
+package project.financement.entity;
 
 
 import java.math.BigDecimal;
@@ -9,7 +9,7 @@ public class Expense {
     private UUID expenseId;
     private BigDecimal expenseAmount;
     private LocalDate expenseDate;
-    private ExpenseCategory expenseCategoryName;
+    public ExpenseCategory expenseCategoryName;
     private String expenseTransactionDescription;
     private Account account;
 }

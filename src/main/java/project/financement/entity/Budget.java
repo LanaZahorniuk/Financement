@@ -1,4 +1,4 @@
-package project.financement;
+package project.financement.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

@@ -1,4 +1,4 @@
-package project.financement;
+package project.financement.entity;
 
 import java.time.LocalDate;
 import java.util.UUID;
