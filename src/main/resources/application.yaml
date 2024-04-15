@@ -2,3 +2,7 @@ spring:
   main:
     banner-mode: off
 
+  datasource:
+    url: jdbc:mysql://localhost}:3306/db_example/hr
+    username: root
+    password:
