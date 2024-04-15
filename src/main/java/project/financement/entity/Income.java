@@ -1,5 +1,7 @@
 package project.financement.entity;
 
+import project.financement.entity.enums.IncomeCategory;
+
 import java.time.LocalDate;
 
 import java.math.BigDecimal;

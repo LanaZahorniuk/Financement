@@ -1,5 +1,7 @@
 package project.financement.entity;
 
+import project.financement.entity.enums.Currency;
+
 import java.math.BigDecimal;
 import java.util.UUID;
 

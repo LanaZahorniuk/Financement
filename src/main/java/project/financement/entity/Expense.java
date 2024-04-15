@@ -1,6 +1,8 @@
 package project.financement.entity;
 
 
+import project.financement.entity.enums.ExpenseCategory;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;

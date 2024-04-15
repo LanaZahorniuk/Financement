@@ -1,4 +1,4 @@
-package project.financement.entity;
+package project.financement.entity.enums;
 
 public enum Currency {
     USD("$"),
