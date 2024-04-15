@@ -14,7 +14,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Table(name = "budget")
-@EqualsAndHashCode(exclude = {"startDate", "endDate", "plannedIncome", "plannedExpenses"})
+@EqualsAndHashCode(exclude = {"account"})
 @NoArgsConstructor
 public class Budget {
     @Id
@@ -34,15 +34,14 @@ public class Budget {
     @Column(name = "planned_expenses")
     private BigDecimal plannedExpenses;
 
+
     @OneToOne(mappedBy = "budget")
-    @JoinColumn(name = "account_id")
     private Account account;
 
     @Override
     public String toString() {
         return "Budget{" +
                 "budgetId=" + budgetId +
-                ", account=" + account +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", plannedIncome=" + plannedIncome +

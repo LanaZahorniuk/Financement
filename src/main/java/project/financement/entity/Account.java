@@ -8,13 +8,14 @@ import lombok.Setter;
 import project.financement.entity.enums.Currency;
 
 import java.math.BigDecimal;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
 @Getter
 @Setter
 @Table(name = "accounts")
-@EqualsAndHashCode(exclude = {"accountName", "balance", "currency", "budget"})
+@EqualsAndHashCode(exclude = {"budget"})
 @NoArgsConstructor
 public class Account {
     @Id
@@ -32,9 +33,16 @@ public class Account {
     @Column(name = "currency")
     private Currency currency;
 
-    @OneToOne(mappedBy = "account")
+
+    @OneToOne
     @JoinColumn(name = "budget_id")
     private Budget budget;
+
+    @OneToMany(mappedBy = "account")
+    private Set<Expense> expenses;
+
+    @OneToMany(mappedBy = "account")
+    private Set<Income> incomes;
 
     @Override
     public String toString() {

@@ -16,6 +16,7 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@EqualsAndHashCode(exclude = {"account"})
 @Table(name = "expense")
 @NoArgsConstructor
 public class Expense {
@@ -37,21 +38,10 @@ public class Expense {
     @Column(name = "expense_transaction_description")
     private String expenseTransactionDescription;
 
+
     @ManyToOne
+    @JoinColumn(name = "account_id")
     private Account account;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Expense expense = (Expense) o;
-        return Objects.equals(expenseId, expense.expenseId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(expenseId);
-    }
 
     @Override
     public String toString() {

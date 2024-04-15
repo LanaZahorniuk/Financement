@@ -13,7 +13,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Table(name = "users")
-@EqualsAndHashCode(exclude = {"dateOfBirth", "registrationDate", "userInfo"})
+@EqualsAndHashCode(exclude = {"userInfo"})
 @NoArgsConstructor
 public class User {
     @Id
@@ -33,7 +33,8 @@ public class User {
     @Column(name = "registration_date ")
     private LocalDate registrationDate;
 
-    @OneToOne(mappedBy = "user")
+
+    @OneToOne
     @JoinColumn(name = "user_info_id")
     private UserInfo userInfo;
 

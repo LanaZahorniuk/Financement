@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.util.Set;
 import java.util.UUID;
+
 @Entity
 @Getter
 @Setter
@@ -32,16 +33,14 @@ public class UserInfo {
     @Column(name = "phone_number ")
     private String phoneNumber;
 
+
     @OneToOne(mappedBy = "userInfo")
-    @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "userInfo")
-    @JoinColumn(name = "account_id")
+    @OneToMany
     private Set<Account> accounts;
 
-    @ManyToOne
-    @JoinColumn(name = "role_id")
+    @OneToMany
     private Role role;
 
     @Override

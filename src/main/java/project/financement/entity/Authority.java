@@ -12,8 +12,8 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
-@Table(name = "authoritys")
-@EqualsAndHashCode(exclude = {"authorityName", "roles"})
+@Table(name = "authorities")
+@EqualsAndHashCode(exclude = {"roles"})
 @NoArgsConstructor
 public class Authority {
     @Id
@@ -24,7 +24,13 @@ public class Authority {
     @Column(name = "authority_name")
     private String authorityName;
 
-    @ManyToMany(mappedBy = "authoritySet")
+
+    @ManyToMany
+    @JoinTable(
+            name = "authority_role",
+            joinColumns = @JoinColumn(name = "authority_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
     private Set<Role> roles;
 
     @Override

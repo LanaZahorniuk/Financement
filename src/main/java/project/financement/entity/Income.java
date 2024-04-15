@@ -12,9 +12,11 @@ import java.time.LocalDate;
 import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.UUID;
+
 @Entity
 @Getter
 @Setter
+@EqualsAndHashCode(exclude = {"account"})
 @Table(name = "income")
 @NoArgsConstructor
 public class Income {
@@ -36,21 +38,10 @@ public class Income {
     @Column(name = "income_transaction_description")
     private String incomeTransactionDescription;
 
+
     @ManyToOne
+    @JoinColumn(name = "account_id")
     private Account account;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Income income = (Income) o;
-        return Objects.equals(incomeId, income.incomeId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(incomeId);
-    }
 
     @Override
     public String toString() {

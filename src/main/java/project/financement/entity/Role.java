@@ -13,7 +13,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Table(name = "roles")
-@EqualsAndHashCode(exclude = {"roleName", "authoritySet"})
+@EqualsAndHashCode(exclude = {"authoritySet"})
 @NoArgsConstructor
 public class Role {
     @Id
@@ -23,6 +23,7 @@ public class Role {
 
     @Column(name = "role_name")
     private String roleName;
+
 
     @ManyToMany(mappedBy = "roles")
     private Set<Authority> authoritySet;
