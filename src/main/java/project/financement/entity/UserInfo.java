@@ -24,23 +24,24 @@ public class UserInfo {
     @Column(name = "user_name")
     private String username;
 
-    @Column(name = "email ")
+    @Column(name = "email")
     private String email;
 
-    @Column(name = "password ")
+    @Column(name = "password")
     private String password;
 
-    @Column(name = "phone_number ")
+    @Column(name = "phone_number")
     private String phoneNumber;
 
 
     @OneToOne(mappedBy = "userInfo")
     private User user;
 
-    @OneToMany
+    @OneToMany(mappedBy = "userInfo")
     private Set<Account> accounts;
 
-    @OneToMany
+    @ManyToOne
+    @JoinColumn(name = "role_id")
     private Role role;
 
     @Override

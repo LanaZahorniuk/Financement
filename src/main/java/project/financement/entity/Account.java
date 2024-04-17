@@ -15,7 +15,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Table(name = "accounts")
-@EqualsAndHashCode(exclude = {"budget"})
+@EqualsAndHashCode(exclude = {"budget", "expenses", "incomes", "userInfo"})
 @NoArgsConstructor
 public class Account {
     @Id
@@ -43,6 +43,10 @@ public class Account {
 
     @OneToMany(mappedBy = "account")
     private Set<Income> incomes;
+
+    @ManyToOne
+    @JoinColumn(name = "user_info_id")
+    private UserInfo userInfo;
 
     @Override
     public String toString() {

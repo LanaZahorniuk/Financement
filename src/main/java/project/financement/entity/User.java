@@ -21,16 +21,16 @@ public class User {
     @Column(name = "user_id")
     private UUID userId;
 
-    @Column(name = "first_name ")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name = "last_name ")
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "date_of_birth ")
+    @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
 
-    @Column(name = "registration_date ")
+    @Column(name = "registration_date")
     private LocalDate registrationDate;
 
 
