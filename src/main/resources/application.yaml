@@ -11,11 +11,26 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
 
 
   sql:
     init:
-      schema-locations: classpath:db/schema.sql
-      data-locations: classpath:db/data.sql
+      schema-locations:
+        classpath:db/schema.sql
+      data-locations:
+        classpath:db/data.sql
       mode: always
+
+  liquibase:
+    change-log:
+      classpath:db/changelog/changelog-master.xml
+
+
+
+
+#  logging:
+#    level:
+#      org.hibernate.SQL: DEBUG
+#      org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+#      org.springframework.boot.autoconfigure.sql.init: DEBUG

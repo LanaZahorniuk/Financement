@@ -58,3 +58,15 @@ public class Account {
                 '}';
     }
 }
+
+
+/*
+@PreAuthorize("hasRole('PremiumUser')")
+public void addAccount(Account account) {
+}
+
+@PreAuthorize("hasRole('FreeUser')")
+public void addLimitedAccount(Account account) {
+    // для FreeUser
+}
+ */

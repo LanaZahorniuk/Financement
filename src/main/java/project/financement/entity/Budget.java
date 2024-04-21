@@ -49,3 +49,10 @@ public class Budget {
                 '}';
     }
 }
+
+
+/*
+@PreAuthorize("hasAuthority('CreateBudget')")
+public void createBudget(Budget budget) {
+}
+ */
