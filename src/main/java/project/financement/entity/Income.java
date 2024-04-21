@@ -5,18 +5,16 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import project.financement.entity.enums.IncomeCategory;
 
 import java.time.LocalDate;
 
 import java.math.BigDecimal;
-import java.util.Objects;
 import java.util.UUID;
 
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(exclude = {"account"})
+@EqualsAndHashCode(exclude = {"incomeCategoryName", "account"})
 @Table(name = "income")
 @NoArgsConstructor
 public class Income {
@@ -31,13 +29,13 @@ public class Income {
     @Column(name = "income_date")
     private LocalDate incomeDate;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "income_category_name")
-    public IncomeCategory incomeCategoryName;
-
     @Column(name = "income_transaction_description")
     private String incomeTransactionDescription;
 
+
+    @ManyToOne
+    @JoinColumn(name = "income_category_id")
+    private IncomeCategory incomeCategoryName;
 
     @ManyToOne
     @JoinColumn(name = "account_id")
@@ -49,7 +47,6 @@ public class Income {
                 "incomeId=" + incomeId +
                 ", incomeAmount=" + incomeAmount +
                 ", incomeDate=" + incomeDate +
-                ", incomeCategoryName=" + incomeCategoryName +
                 ", incomeTransactionDescription='" + incomeTransactionDescription + '\'' +
                 '}';
     }

@@ -3,6 +3,19 @@ spring:
     banner-mode: off
 
   datasource:
-    url: jdbc:mysql://localhost}:3306/db_example/hr
-    username: root
-    password:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+
+  sql:
+    init:
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
+      mode: always

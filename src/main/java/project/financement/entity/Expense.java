@@ -6,17 +6,15 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import project.financement.entity.enums.ExpenseCategory;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Objects;
 import java.util.UUID;
 
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(exclude = {"account"})
+@EqualsAndHashCode(exclude = {"expenseCategoryName", "account"})
 @Table(name = "expense")
 @NoArgsConstructor
 public class Expense {
@@ -31,13 +29,13 @@ public class Expense {
     @Column(name = "expense_date")
     private LocalDate expenseDate;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "expense_category_name")
-    public ExpenseCategory expenseCategoryName;
-
     @Column(name = "expense_transaction_description")
     private String expenseTransactionDescription;
 
+
+    @ManyToOne
+    @JoinColumn(name = "expense_category_id")
+    private ExpenseCategory expenseCategoryName;
 
     @ManyToOne
     @JoinColumn(name = "account_id")
@@ -49,7 +47,6 @@ public class Expense {
                 "expenseId=" + expenseId +
                 ", expenseAmount=" + expenseAmount +
                 ", expenseDate=" + expenseDate +
-                ", expenseCategoryName=" + expenseCategoryName +
                 ", expenseTransactionDescription='" + expenseTransactionDescription + '\'' +
                 '}';
     }
