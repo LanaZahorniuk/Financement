@@ -11,7 +11,7 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
 
 
   sql:
@@ -22,9 +22,9 @@ spring:
         classpath:db/data.sql
       mode: always
 
-  liquibase:
-    change-log:
-      classpath:db/changelog/changelog-master.xml
+#  liquibase:
+#    change-log:
+#      classpath:db/changelog/changelog-master.xml
 
 
 

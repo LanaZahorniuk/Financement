@@ -1,82 +1,61 @@
-INSERT INTO currency (currency_code, symbol)
-VALUES ('USD', '$'),
-       ('EUR', '€'),
-       ('JPY', '¥'),
-       ('GBP', '£'),
-       ('AUD', 'A$'),
-       ('PLN', 'zł'),
-       ('UAH', '₴'),
-       ('CAD', 'C$'),
-       ('CNY', '¥'),
-       ('CHF', 'CHF'),
-       ('INR', '₹'),
-       ('BRL', 'R$'),
-       ('SEK', 'kr'),
-       ('NZD', 'NZ$'),
-       ('SGD', 'S$'),
-       ('MXN', '$'),
-       ('ZAR', 'R');
+INSERT INTO role (role_id, role_name)
+VALUES (UNHEX(REPLACE('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304', '-', '')), 'PremiumUser'),
+       (UNHEX(REPLACE('aeead63a-55b8-4f56-9c94-855322fdefb9', '-', '')), 'FreeUser');
 
-INSERT INTO expense_category (expense_category_id, expense_category_name)
-VALUES (UUID_TO_BIN(UUID()), 'Food'),
-       (UUID_TO_BIN(UUID()), 'Transportation');
 
-INSERT INTO income_category (income_category_id, income_category_name)
-VALUES (UUID_TO_BIN(UUID()), 'Salary'),
-       (UUID_TO_BIN(UUID()), 'Gifts');
+INSERT INTO authority (authority_id, authority_name)
+VALUES (UNHEX(REPLACE('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea', '-', '')), 'ManageAccount'),
+       (UNHEX(REPLACE('f06c6c8e-8772-4f1a-b52e-c5ab8bef9f2f', '-', '')), 'ViewAccount');
 
-INSERT INTO roles (role_id, role_name)
-VALUES (UUID_TO_BIN(UUID()), 'PremiumUser'),
-       (UUID_TO_BIN(UUID()), 'FreeUser');
-
-INSERT INTO authorities (authority_id, authority_name)
-VALUES (UUID_TO_BIN(UUID()), 'CreateCategory'),
-       (UUID_TO_BIN(UUID()), 'CreateBudget'),
-       (UUID_TO_BIN(UUID()), 'AddUnlimitedAccounts');
 
 INSERT INTO authority_role (authority_id, role_id)
-VALUES ((SELECT authority_id FROM authorities WHERE authority_name = 'CreateCategory'),
-        (SELECT role_id FROM roles WHERE role_name = 'PremiumUser')),
-       ((SELECT authority_id FROM authorities WHERE authority_name = 'CreateBudget'),
-        (SELECT role_id FROM roles WHERE role_name = 'PremiumUser')),
-       ((SELECT authority_id FROM authorities WHERE authority_name = 'AddUnlimitedAccounts'),
-        (SELECT role_id FROM roles WHERE role_name = 'PremiumUser'));
-
-INSERT INTO users (user_id, first_name, last_name, date_of_birth, registration_date, user_info_id)
-VALUES (UUID_TO_BIN(UUID()), 'John', 'Doe', '1990-01-01', '2022-01-01', UUID_TO_BIN(UUID())),
-       (UUID_TO_BIN(UUID()), 'Jane', 'Doe', '1995-02-01', '2022-02-01', UUID_TO_BIN(UUID()));
+VALUES (UNHEX(REPLACE('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea', '-', '')),
+        UNHEX(REPLACE('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304', '-', ''))),
+       (UNHEX(REPLACE('f06c6c8e-8772-4f1a-b52e-c5ab8bef9f2f', '-', '')),
+        UNHEX(REPLACE('aeead63a-55b8-4f56-9c94-855322fdefb9', '-', '')));
 
 
-INSERT INTO users_info (user_info_id, user_name, email, password, phone_number, user_id, role_id)
-VALUES (UUID_TO_BIN(UUID()), 'johndoe', 'john@example.com', 'password123', '1234567890',
-        (SELECT user_id FROM users WHERE first_name = 'John'),
-        (SELECT role_id FROM roles WHERE role_name = 'PremiumUser')),
-       (UUID_TO_BIN(UUID()), 'janedoe', 'jane@example.com', 'password123', '0987654321',
-        (SELECT user_id FROM users WHERE first_name = 'Jane'),
-        (SELECT role_id FROM roles WHERE role_name = 'FreeUser'));
+INSERT INTO user_info (user_info_id, user_name, email, password, phone_number, role_id)
+VALUES (UNHEX(REPLACE('456def23-3214-45ec-8c1a-2ff297ae8f3d', '-', '')), 'johnsmith', 'john.smith@example.com',
+        'password123', '1234567890', UNHEX(REPLACE('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304', '-', '')));
 
 
-INSERT INTO accounts (account_id, account_name, balance, currency_code, user_info_id)
-VALUES (UUID_TO_BIN(UUID()), 'Checking Account', 1500.00, 'USD',
-        (SELECT user_info_id FROM users_info WHERE user_name = 'johndoe')),
-       (UUID_TO_BIN(UUID()), 'Savings Account', 3000.00, 'EUR',
-        (SELECT user_info_id FROM users_info WHERE user_name = 'janedoe'));
+INSERT INTO user (user_id, first_name, last_name, date_of_birth, registration_date, user_info_id)
+VALUES (UNHEX(REPLACE('12345678-1234-5678-1234-567812345678', '-', '')), 'John', 'Smith', '1990-01-01', '2020-01-01',
+        UNHEX(REPLACE('456def23-3214-45ec-8c1a-2ff297ae8f3d', '-', '')));
+
+
+INSERT INTO account (account_id, account_name, balance, currency, user_info_id)
+VALUES (UNHEX(REPLACE('888a5b08-573c-4f83-96e8-319ec975a111', '-', '')), 'Savings Account', 15000.00, 'USD',
+        UNHEX(REPLACE('456def23-3214-45ec-8c1a-2ff297ae8f3d', '-', ''))),
+       (UNHEX(REPLACE('777a4b09-473c-4f83-96e8-319ec975a222', '-', '')), 'Checking Account', 3000.00, 'EUR',
+        UNHEX(REPLACE('456def23-3214-45ec-8c1a-2ff297ae8f3d', '-', '')));
 
 
 INSERT INTO budget (budget_id, start_date, end_date, planned_income, planned_expenses, account_id)
-VALUES (UUID_TO_BIN(UUID()), '2023-01-01', '2023-12-31', 12000.00, 11000.00,
-        (SELECT account_id FROM accounts WHERE account_name = 'Checking Account'));
+VALUES (UNHEX(REPLACE('999a6b10-683c-4f83-96e8-319ec975a333', '-', '')), '2023-01-01', '2023-12-31', 20000.00, 5000.00,
+        UNHEX(REPLACE('888a5b08-573c-4f83-96e8-319ec975a111', '-', '')));
+
+
+INSERT INTO expense_category (expense_category_id, expense_category_name)
+VALUES (UNHEX(REPLACE('111a7b11-793c-4f83-96e8-319ec975a444', '-', '')), 'Groceries'),
+       (UNHEX(REPLACE('222a8c12-813c-4f83-96e8-319ec975a555', '-', '')), 'Utilities');
 
 
 INSERT INTO expense (expense_id, expense_amount, expense_date, expense_transaction_description, expense_category_id,
                      account_id)
-VALUES (UUID_TO_BIN(UUID()), 200.00, '2023-04-01', 'Groceries',
-        (SELECT expense_category_id FROM expense_category WHERE expense_category_name = 'Food'),
-        (SELECT account_id FROM accounts WHERE account_name = 'Checking Account'));
+VALUES (UNHEX(REPLACE('333a9d13-833c-4f83-96e8-319ec975a666', '-', '')), 150.00, '2023-01-15', 'Walmart Purchase',
+        UNHEX(REPLACE('111a7b11-793c-4f83-96e8-319ec975a444', '-', '')),
+        UNHEX(REPLACE('888a5b08-573c-4f83-96e8-319ec975a111', '-', '')));
+
+
+INSERT INTO income_category (income_category_id, income_category_name)
+VALUES (UNHEX(REPLACE('444baf24-843c-4f83-96e8-319ec975a777', '-', '')), 'Salary'),
+       (UNHEX(REPLACE('555cbf25-853c-4f83-96e8-319ec975a888', '-', '')), 'Gifts');
+
 
 INSERT INTO income (income_id, income_amount, income_date, income_transaction_description, income_category_id,
                     account_id)
-VALUES (UUID_TO_BIN(UUID()), 500.00, '2023-04-03', 'Salary',
-        (SELECT income_category_id FROM income_category WHERE income_category_name = 'Salary'),
-        (SELECT account_id FROM accounts WHERE account_name = 'Checking Account'));
-
+VALUES (UNHEX(REPLACE('666dcf26-863c-4f83-96e8-319ec975a999', '-', '')), 3000.00, '2023-01-31', 'Monthly Salary',
+        UNHEX(REPLACE('444baf24-843c-4f83-96e8-319ec975a777', '-', '')),
+        UNHEX(REPLACE('888a5b08-573c-4f83-96e8-319ec975a111', '-', '')));

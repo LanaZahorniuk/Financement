@@ -1,28 +1,10 @@
-CREATE TABLE currency
-(
-    currency_code VARCHAR(3) NOT NULL,
-    symbol        CHAR(3)    NOT NULL,
-    PRIMARY KEY (currency_code)
-);
+USE fin_db;
 
 
-CREATE TABLE expense_category
-(
-    expense_category_id   BINARY(16)  NOT NULL,
-    expense_category_name VARCHAR(50) NOT NULL,
-    PRIMARY KEY (expense_category_id)
-);
+DROP TABLE IF EXISTS user_info, user, account, budget, expense, income, expense_category, income_category, authority_role, role, authority;
 
 
-CREATE TABLE income_category
-(
-    income_category_id   BINARY(16)  NOT NULL,
-    income_category_name VARCHAR(50) NOT NULL,
-    PRIMARY KEY (income_category_id)
-);
-
-
-CREATE TABLE roles
+CREATE TABLE role
 (
     role_id   BINARY(16)  NOT NULL,
     role_name VARCHAR(50) NOT NULL,
@@ -30,7 +12,7 @@ CREATE TABLE roles
 );
 
 
-CREATE TABLE authorities
+CREATE TABLE authority
 (
     authority_id   BINARY(16)  NOT NULL,
     authority_name VARCHAR(50) NOT NULL,
@@ -43,49 +25,46 @@ CREATE TABLE authority_role
     authority_id BINARY(16) NOT NULL,
     role_id      BINARY(16) NOT NULL,
     PRIMARY KEY (authority_id, role_id),
-    FOREIGN KEY (authority_id) REFERENCES authorities (authority_id),
-    FOREIGN KEY (role_id) REFERENCES roles (role_id)
+    FOREIGN KEY (authority_id) REFERENCES authority (authority_id),
+    FOREIGN KEY (role_id) REFERENCES role (role_id)
 );
 
 
-CREATE TABLE users
+CREATE TABLE user
 (
     user_id           BINARY(16)  NOT NULL,
     first_name        VARCHAR(50) NOT NULL,
     last_name         VARCHAR(50) NOT NULL,
     date_of_birth     DATE        NOT NULL,
     registration_date DATE        NOT NULL,
-    user_info_id      BINARY(16),
-    PRIMARY KEY (user_id),
-    UNIQUE INDEX user_info_id_unique (user_info_id)
+    user_info_id      BINARY(16) UNIQUE,
+    PRIMARY KEY (user_id)
 );
 
 
-CREATE TABLE users_info
+CREATE TABLE user_info
 (
     user_info_id BINARY(16)  NOT NULL,
     user_name    VARCHAR(50) NOT NULL,
     email        VARCHAR(50) NOT NULL,
     password     VARCHAR(50) NOT NULL,
     phone_number VARCHAR(50),
-    user_id      BINARY(16),
     role_id      BINARY(16),
     PRIMARY KEY (user_info_id),
-    FOREIGN KEY (user_id) REFERENCES users (user_info_id),
-    FOREIGN KEY (role_id) REFERENCES roles (role_id)
+    FOREIGN KEY (role_id) REFERENCES role (role_id)
 );
 
 
-CREATE TABLE accounts
+CREATE TABLE account
 (
-    account_id    BINARY(16)     NOT NULL,
-    account_name  VARCHAR(50)    NOT NULL,
-    balance       DECIMAL(19, 4) NOT NULL,
-    currency_code VARCHAR(3)     NOT NULL,
-    user_info_id  BINARY(16),
+    account_id   BINARY(16)                                                                                                                   NOT NULL,
+    account_name VARCHAR(50)                                                                                                                  NOT NULL,
+    balance      DECIMAL(19, 4)                                                                                                               NOT NULL,
+    currency     ENUM ('USD', 'EUR', 'JPY', 'GBP', 'AUD', 'PLN', 'UAH', 'CAD', 'CNY', 'CHF', 'INR', 'BRL', 'SEK', 'NZD', 'SGD', 'MXN', 'ZAR') NOT NULL,
+    budget_id    BINARY(16) UNIQUE,
+    user_info_id BINARY(16),
     PRIMARY KEY (account_id),
-    FOREIGN KEY (currency_code) REFERENCES currency (currency_code),
-    FOREIGN KEY (user_info_id) REFERENCES users_info (user_info_id)
+    FOREIGN KEY (user_info_id) REFERENCES user_info (user_info_id)
 );
 
 
@@ -96,9 +75,17 @@ CREATE TABLE budget
     end_date         DATE           NOT NULL,
     planned_income   DECIMAL(19, 4) NOT NULL,
     planned_expenses DECIMAL(19, 4) NOT NULL,
-    account_id       BINARY(16),
+    account_id       BINARY(16) UNIQUE,
     PRIMARY KEY (budget_id),
-    FOREIGN KEY (account_id) REFERENCES accounts (account_id)
+    FOREIGN KEY (account_id) REFERENCES account (account_id)
+);
+
+
+CREATE TABLE expense_category
+(
+    expense_category_id   BINARY(16)  NOT NULL,
+    expense_category_name VARCHAR(50) NOT NULL,
+    PRIMARY KEY (expense_category_id)
 );
 
 
@@ -112,7 +99,15 @@ CREATE TABLE expense
     account_id                      BINARY(16),
     PRIMARY KEY (expense_id),
     FOREIGN KEY (expense_category_id) REFERENCES expense_category (expense_category_id),
-    FOREIGN KEY (account_id) REFERENCES accounts (account_id)
+    FOREIGN KEY (account_id) REFERENCES account (account_id)
+);
+
+
+CREATE TABLE income_category
+(
+    income_category_id   BINARY(16)  NOT NULL,
+    income_category_name VARCHAR(50) NOT NULL,
+    PRIMARY KEY (income_category_id)
 );
 
 
@@ -126,5 +121,5 @@ CREATE TABLE income
     account_id                     BINARY(16),
     PRIMARY KEY (income_id),
     FOREIGN KEY (income_category_id) REFERENCES income_category (income_category_id),
-    FOREIGN KEY (account_id) REFERENCES accounts (account_id)
+    FOREIGN KEY (account_id) REFERENCES account (account_id)
 );
