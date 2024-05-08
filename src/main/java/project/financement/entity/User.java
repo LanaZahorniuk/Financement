@@ -1,5 +1,6 @@
 package project.financement.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -33,8 +34,8 @@ public class User {
     @Column(name = "registration_date")
     private LocalDate registrationDate;
 
-
-    @OneToOne
+    @JsonManagedReference
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_info_id")
     private UserInfo userInfo;
 

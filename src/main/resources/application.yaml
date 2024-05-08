@@ -13,7 +13,6 @@ spring:
     hibernate:
       ddl-auto: none
 
-
   sql:
     init:
       schema-locations:
@@ -21,6 +20,9 @@ spring:
       data-locations:
         classpath:db/data.sql
       mode: always
+
+  server:
+    port: 8080
 
 #  liquibase:
 #    change-log:

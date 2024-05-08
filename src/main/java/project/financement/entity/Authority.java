@@ -25,7 +25,7 @@ public class Authority {
     private String authorityName;
 
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "authority_role",
             joinColumns = @JoinColumn(name = "authority_id"),

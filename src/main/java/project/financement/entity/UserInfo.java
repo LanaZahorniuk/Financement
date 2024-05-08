@@ -1,5 +1,6 @@
 package project.financement.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -33,11 +34,11 @@ public class UserInfo {
     @Column(name = "phone_number")
     private String phoneNumber;
 
-
+    @JsonBackReference
     @OneToOne(mappedBy = "userInfo")
     private User user;
 
-    @OneToMany(mappedBy = "userInfo")
+    @OneToMany(mappedBy = "userInfo", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Account> accounts;
 
     @ManyToOne
