@@ -19,19 +19,24 @@ public class UserController {
     }
 
 
-    @PostMapping("/createU")
+    @PostMapping("/create-user")
     public User createUser(@RequestBody User newUser) {
         return userService.createUser(newUser);
     }
 
-    @PostMapping("/updateUE/{id}/{newEmail}")
+    @PutMapping("/update-Email/{id}/{newEmail}")
     public User updateUserEmail(@PathVariable("id") UUID id, @PathVariable("newEmail") String newEmail) {
         return userService.updateUserEmail(id, newEmail);
     }
 
-    @PostMapping("/updateUP/{id}/{newPassword}")
+    @PutMapping("/update-Password/{id}/{newPassword}")
     public User updateUserPassword(@PathVariable("id") UUID id, @PathVariable("newPassword") String newPassword) {
         return userService.updateUserPassword(id, newPassword);
+    }
+
+    @PutMapping("/update-PhoneNumber/{id}/{newPhoneNumber}")
+    public User updateUserPhoneNumber(@PathVariable("id") UUID id, @PathVariable("newPhoneNumber") String newPhoneNumber) {
+        return userService.updateUserPhoneNumber(id, newPhoneNumber);
     }
 
     @DeleteMapping("/delete/{id}")

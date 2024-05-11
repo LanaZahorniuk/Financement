@@ -63,6 +63,7 @@ public class Account {
 /*
 @PreAuthorize("hasRole('PremiumUser')")
 public void addAccount(Account account) {
+// для PremiumUser
 }
 
 @PreAuthorize("hasRole('FreeUser')")

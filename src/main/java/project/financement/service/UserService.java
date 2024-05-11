@@ -22,7 +22,8 @@ public class UserService {
 
     public User getUserById(UUID id) {
         logger.info("Fetching user with ID {}", id);
-        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+        return userRepository.findById(id).orElseThrow(() ->
+                new UserNotFoundException(id));
     }
 
     @Transactional
@@ -48,7 +49,8 @@ public class UserService {
 
     @Transactional
     public User updateUserEmail(UUID id, String newEmail) {
-        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+        User user = userRepository.findById(id).orElseThrow(() ->
+                new UserNotFoundException(id));
         UserInfo userInfo = user.getUserInfo();
         userInfo.setEmail(newEmail);
         userInfoRepository.save(userInfo);
@@ -57,16 +59,28 @@ public class UserService {
 
     @Transactional
     public User updateUserPassword(UUID id, String newPassword) {
-        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+        User user = userRepository.findById(id).orElseThrow(() ->
+                new UserNotFoundException(id));
         UserInfo userInfo = user.getUserInfo();
         userInfo.setPassword(newPassword);
         userInfoRepository.save(userInfo);
         return user;
     }
 
+    @Transactional
+    public User updateUserPhoneNumber(UUID id, String newPhoneNumber) {
+        User user = userRepository.findById(id).orElseThrow(() ->
+                new UserNotFoundException(id));
+        UserInfo userInfo = user.getUserInfo();
+        userInfo.setPhoneNumber(newPhoneNumber);
+        userInfoRepository.save(userInfo);
+        return user;
+    }
+
     public String deleteUser(UUID id) {
         logger.info("Attempting to delete user with ID {}", id);
-        User user = userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+        User user = userRepository.findById(id).orElseThrow(() ->
+                new UserNotFoundException(id));
         userRepository.delete(user);
         logger.info("User deleted successfully with ID {}", id);
         return "User deleted successfully.";
