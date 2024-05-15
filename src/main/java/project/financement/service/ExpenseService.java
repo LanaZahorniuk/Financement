@@ -37,7 +37,7 @@ public class ExpenseService {
         expenseToUpdate.setExpenseAmount(expense.getExpenseAmount());
         expenseToUpdate.setExpenseDate(expense.getExpenseDate());
         expenseToUpdate.setExpenseTransactionDescription(expense.getExpenseTransactionDescription());
-        return expenseRepository.save(expense);
+        return expenseRepository.save(expenseToUpdate);
     }
 
     @Transactional
@@ -47,7 +47,7 @@ public class ExpenseService {
     }
 
     public List<Expense> findByExpenseCategoryId(UUID expenseCategoryId) {
-        return expenseRepository.findByExpenseCategoryId(expenseCategoryId);
+        return expenseRepository.findByExpenseCategoryNameId(expenseCategoryId);
     }
 
     public List<Expense> findExpensesByDate(LocalDate date) {

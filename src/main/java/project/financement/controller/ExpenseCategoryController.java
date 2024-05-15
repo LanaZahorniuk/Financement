@@ -17,30 +17,28 @@ public class ExpenseCategoryController {
     private final ExpenseCategoryService expenseCategoryService;
 
     @GetMapping
-    public List<ExpenseCategory> getAllExpenseCategories() {
+    public ResponseEntity<List<ExpenseCategory>> getAllExpenseCategories() {
         List<ExpenseCategory> expenseCategories = expenseCategoryService.findAll();
-        return expenseCategories;
+        return ResponseEntity.ok(expenseCategories);
     }
 
     @GetMapping("/{id}")
-    public ExpenseCategory getExpenseCategoryById(@PathVariable UUID id) {
+    public ResponseEntity<ExpenseCategory> getExpenseCategoryById(@PathVariable UUID id) {
         ExpenseCategory expenseCategory = expenseCategoryService.findExpenseCategoryById(id);
-        return expenseCategory;
-        //return expenseCategoryService.findExpenseCategoryById(id);
+        return ResponseEntity.ok(expenseCategory);
     }
 
     @PostMapping("/create-expense-category")
-    public ExpenseCategory createExpenseCategory(@RequestBody ExpenseCategory expenseCategory) {
-//      public ResponseEntity<ExpenseCategory> createExpenseCategory(@RequestBody ExpenseCategory expenseCategory) {
+    public ResponseEntity<ExpenseCategory> createExpenseCategory(@RequestBody ExpenseCategory expenseCategory) {
         ExpenseCategory newExpenseCategory = expenseCategoryService.saveExpenseCategory(expenseCategory);
-//      return ResponseEntity.status(HttpStatus.CREATED).body(newExpenseCategory);
-        return newExpenseCategory;
+        return ResponseEntity.status(HttpStatus.CREATED).body(newExpenseCategory);
+
     }
 
     @PutMapping("/update-expense-category/{id}")
-    public ExpenseCategory updateExpenseCategory(@PathVariable UUID id, @RequestBody ExpenseCategory expenseCategory) {
+    public ResponseEntity<ExpenseCategory> updateExpenseCategory(@PathVariable UUID id, @RequestBody ExpenseCategory expenseCategory) {
         ExpenseCategory updatedExpenseCategory = expenseCategoryService.updateExpenseCategory(id, expenseCategory);
-        return updatedExpenseCategory;
+        return ResponseEntity.ok(updatedExpenseCategory);
     }
 
     @DeleteMapping("/delete-expense-category/{id}")

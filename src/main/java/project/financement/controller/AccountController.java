@@ -3,7 +3,7 @@ package project.financement.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
+ //import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import project.financement.entity.Account;
 import project.financement.service.AccountService;
@@ -17,8 +17,6 @@ public class AccountController {
     private final AccountService accountService;
 
     @GetMapping("/{id}")
-    //public Account getAccount(@PathVariable("id") UUID id) {
-    //return accountService.getAccount(id);
     public ResponseEntity<Account> getAccount(@PathVariable("id") UUID id) {
         return ResponseEntity.ok(accountService.getAccount(id));
 
