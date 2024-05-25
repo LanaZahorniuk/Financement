@@ -14,5 +14,7 @@ public interface ExpenseRepository extends JpaRepository<Expense, UUID> {
     List<Expense> findByExpenseCategoryNameId(@Param("categoryId") UUID expenseCategoryId);
 
     List<Expense> findByExpenseDate(LocalDate date);
+
+    boolean existsByExpenseCategoryName_ExpenseCategoryId(UUID expenseCategoryId);
 }
 

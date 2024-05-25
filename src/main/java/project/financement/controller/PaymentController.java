@@ -19,6 +19,6 @@ public class PaymentController {
     @PostMapping("/upgrade/{userId}")
     public ResponseEntity<String> upgradeUserInfo(@PathVariable UUID userId) {
         paymentService.upgradeUserToPremium(userId);
-        return ResponseEntity.ok("Your account has been upgraded to Premium.");
+        return ResponseEntity.ok("Congratulations! Your account has been upgraded to Premium.");
     }
 }

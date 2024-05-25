@@ -80,6 +80,11 @@ CREATE TABLE budget
     FOREIGN KEY (account_id) REFERENCES accounts (account_id)
 );
 
+ALTER TABLE budget
+    ADD CONSTRAINT FK_account_budget
+        FOREIGN KEY (account_id)
+            REFERENCES accounts(account_id)
+            ON DELETE CASCADE;
 
 CREATE TABLE expense_category
 (

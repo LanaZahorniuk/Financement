@@ -1,45 +1,22 @@
 package project.financement.dto;
 
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
 import project.financement.entity.enums.Currency;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
+@Data
 public class AccountDto {
-    private UUID id;
+
+    @NotBlank(message = "Account name is required.")
     private String accountName;
+
+    @NotNull(message = "Balance is required.")
     private BigDecimal balance;
+
+    @NotNull(message = "Currency is required.")
     private Currency currency;
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getAccountName() {
-        return accountName;
-    }
-
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
-    }
-
-    public BigDecimal getBalance() {
-        return balance;
-    }
-
-    public void setBalance(BigDecimal balance) {
-        this.balance = balance;
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(Currency currency) {
-        this.currency = currency;
-    }
 }

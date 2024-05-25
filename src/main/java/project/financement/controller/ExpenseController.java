@@ -4,7 +4,12 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import project.financement.dto.ExpenseCategoryDto;
+import project.financement.dto.ExpenseDto;
 import project.financement.entity.Expense;
+import project.financement.exception.ExpenseCategoryNotFoundException;
+import project.financement.mapper.ExpenseMapper;
+import project.financement.service.ExpenseCategoryService;
 import project.financement.service.ExpenseService;
 
 import java.time.LocalDate;
@@ -13,28 +18,42 @@ import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/expenses")
+@RequestMapping("/expense")
 public class ExpenseController {
     private final ExpenseService expenseService;
+    private final ExpenseCategoryService expenseCategoryService;
+    private final ExpenseMapper expenseMapper;
 
     @GetMapping("/all-expenses")
-    public ResponseEntity<List<Expense>> getAllExpenses() {
-        return ResponseEntity.ok(expenseService.getAllExpenses());
+    public ResponseEntity<List<ExpenseDto>> getAllExpenses() {
+        List<Expense> expenses = expenseService.getAllExpenses();
+        List<ExpenseDto> expenseDtos = expenseMapper.toDto(expenses);
+        return ResponseEntity.ok(expenseDtos);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Expense> getExpenseById(@PathVariable UUID id) {
-        return ResponseEntity.ok(expenseService.findExpenseById(id));
+    public ResponseEntity<ExpenseDto> getExpenseById(@PathVariable UUID id) {
+        Expense expense = expenseService.findExpenseById(id);
+        ExpenseDto expenseDto = expenseMapper.toDto(expense);
+        return ResponseEntity.ok(expenseDto);
     }
 
     @PostMapping("/create-expense")
-    public ResponseEntity<Expense> createExpense(@RequestBody Expense expense) {
-        return ResponseEntity.ok(expenseService.createExpense(expense));
+    public ResponseEntity<ExpenseDto> createExpense(@RequestBody ExpenseDto expenseDto) {
+        try {
+            ExpenseCategoryDto category = expenseCategoryService.findByExpenseCategoryName(expenseDto.getExpenseCategoryName());
+            Expense newExpense = expenseService.createExpense(expenseDto, category);
+            ExpenseDto newExpenseDto = expenseMapper.toDto(newExpense);
+            return ResponseEntity.ok(newExpenseDto);
+        } catch (ExpenseCategoryNotFoundException ex) {
+            return ResponseEntity.notFound().build();
+        }
     }
 
     @PutMapping("/update-expense/{id}")
-    public ResponseEntity<Expense> updateExpense(@PathVariable UUID id, @RequestBody Expense expenseDetails) {
-        return ResponseEntity.ok(expenseService.updateExpense(id, expenseDetails));
+    public ResponseEntity<ExpenseDto> updateExpense(@PathVariable UUID id, @RequestBody ExpenseDto expenseDetails) {
+        ExpenseDto updatedExpenseDto  = expenseService.updateExpense(id, expenseDetails);
+        return ResponseEntity.ok(updatedExpenseDto);
     }
 
     @DeleteMapping("/delete-expense/{id}")
@@ -44,12 +63,16 @@ public class ExpenseController {
     }
 
     @GetMapping("/by-expense-category/{expenseCategoryId}")
-    public ResponseEntity<List<Expense>> getExpensesByCategory(@PathVariable UUID expenseCategoryId) {
-        return ResponseEntity.ok(expenseService.findByExpenseCategoryId(expenseCategoryId));
+    public ResponseEntity<List<ExpenseDto>> getExpensesByCategory(@PathVariable UUID expenseCategoryId) {
+        List<Expense> expenses = expenseService.findByExpenseCategoryId(expenseCategoryId);
+        List<ExpenseDto> expenseDtos = expenseMapper.toDto(expenses);
+        return ResponseEntity.ok(expenseDtos);
     }
 
     @GetMapping("/expense-by-date")
-    public ResponseEntity<List<Expense>> getExpensesByDate(@RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
-        return ResponseEntity.ok(expenseService.findExpensesByDate(date));
+    public ResponseEntity<List<ExpenseDto>> getExpensesByDate(@RequestParam("date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
+        List<Expense> expenses = expenseService.findExpensesByDate(date);
+        List<ExpenseDto> expenseDtos = expenseMapper.toDto(expenses);
+        return ResponseEntity.ok(expenseDtos);
     }
 }
