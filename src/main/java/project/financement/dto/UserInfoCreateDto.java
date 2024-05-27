@@ -24,4 +24,6 @@ public class UserInfoCreateDto {
 
     String phoneNumber;
 
+    String role;
+
 }

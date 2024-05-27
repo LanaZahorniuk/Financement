@@ -35,7 +35,7 @@ public class User {
     private LocalDate registrationDate;
 
     @JsonManagedReference
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_info_id")
     private UserInfo userInfo;
 

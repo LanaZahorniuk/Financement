@@ -15,6 +15,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @RequestMapping("/user")
 public class UserController {
+
     private final UserService userService;
 
     @GetMapping("/{id}")

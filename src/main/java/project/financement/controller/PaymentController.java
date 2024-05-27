@@ -14,6 +14,7 @@ import java.util.UUID;
 @RequestMapping("/payments")
 @RequiredArgsConstructor
 public class PaymentController {
+
     private final PaymentService paymentService;
 
     @PostMapping("/upgrade/{userId}")

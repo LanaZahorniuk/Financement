@@ -15,6 +15,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @RequestMapping("/expense-category")
 public class ExpenseCategoryController {
+
     private final ExpenseCategoryService expenseCategoryService;
 
     @GetMapping("/all")
@@ -23,29 +24,29 @@ public class ExpenseCategoryController {
         return ResponseEntity.ok(expenseCategories);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<ExpenseCategoryDto> getExpenseCategoryById(@PathVariable UUID id) {
-        ExpenseCategoryDto expenseCategory = expenseCategoryService.findExpenseCategoryById(id);
+    @GetMapping("/{expenseCategoryName}")
+    public ResponseEntity<ExpenseCategoryDto> getExpenseCategoryByName(@PathVariable String expenseCategoryName) {
+        ExpenseCategoryDto expenseCategory = expenseCategoryService.findByExpenseCategoryName(expenseCategoryName);
         return ResponseEntity.ok(expenseCategory);
     }
 
-    @PostMapping("/create-expense-category")
-    public ResponseEntity<ExpenseCategoryDto> createExpenseCategory(@RequestBody ExpenseCategoryDto expenseCategoryDto) {
-        ExpenseCategoryDto newExpenseCategoryDto = expenseCategoryService.saveExpenseCategory(expenseCategoryDto);
+    @PostMapping("/create-expense-category/{userId}")
+    public ResponseEntity<ExpenseCategoryDto> createExpenseCategory(@PathVariable UUID userId, @RequestBody ExpenseCategoryDto expenseCategoryDto) {
+        ExpenseCategoryDto newExpenseCategoryDto = expenseCategoryService.saveExpenseCategory(userId, expenseCategoryDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(newExpenseCategoryDto);
 
     }
 
-    @PutMapping("/update-expense-category/{id}")
-    public ResponseEntity<ExpenseCategoryDto> updateExpenseCategory(@PathVariable UUID id, @RequestBody ExpenseCategoryDto expenseCategoryDto) {
-        ExpenseCategoryDto updatedExpenseCategory = expenseCategoryService.updateExpenseCategory(id, expenseCategoryDto);
+    @PutMapping("/update-expense-category/{expenseCategoryName}")
+    public ResponseEntity<ExpenseCategoryDto> updateExpenseCategory(@PathVariable String expenseCategoryName, @RequestBody ExpenseCategoryDto expenseCategoryDto) {
+        ExpenseCategoryDto updatedExpenseCategory = expenseCategoryService.updateExpenseCategory(expenseCategoryName, expenseCategoryDto);
         return ResponseEntity.ok(updatedExpenseCategory);
     }
 
-    @DeleteMapping("/delete-expense-category/{id}")
-    public ResponseEntity<String> deleteExpenseCategory(@PathVariable UUID id) {
+    @DeleteMapping("/delete-expense-category/{expenseCategoryName}")
+    public ResponseEntity<String> deleteExpenseCategory(@PathVariable String expenseCategoryName) {
         try {
-            expenseCategoryService.deleteExpenseCategoryById(id);
+            expenseCategoryService.deleteExpenseCategoryByName(expenseCategoryName);
             return ResponseEntity.ok("Deleted expense category.");
         } catch (ExpenseCategoryDeletionException e) {
             return ResponseEntity.status(HttpStatus.CONFLICT)

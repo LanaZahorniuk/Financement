@@ -2,6 +2,7 @@ package project.financement.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import project.financement.dto.UserAfterCreationDto;
 import project.financement.dto.UserCreateDto;
@@ -32,7 +33,7 @@ public class UserService {
         return userMapper.toDto(user);
     }
 
-    @Transactional
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public UserAfterCreationDto createUser(UserCreateDto newUserDto) {
         User user = userMapper.toEntity(newUserDto);
         user.setRegistrationDate(LocalDate.from(LocalDateTime.now()));
@@ -72,6 +73,7 @@ public class UserService {
         return userMapper.toDto(user);
     }
 
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public String deleteUser(UUID id) {
         User user = userRepository.findById(id).orElseThrow(() ->
                 new UserNotFoundException(id));

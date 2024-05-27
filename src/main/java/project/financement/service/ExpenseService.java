@@ -3,6 +3,7 @@ package project.financement.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import project.financement.dto.ExpenseCategoryDto;
 import project.financement.dto.ExpenseDto;
@@ -29,7 +30,7 @@ public class ExpenseService {
     private final ExpenseCategoryRepository expenseCategoryRepository;
     private final ExpenseMapper expenseMapper;
 
-    @Transactional
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public Expense createExpense(ExpenseDto expenseDto, ExpenseCategoryDto categoryDto) {
         Account account = accountRepository.findById(expenseDto.getAccountId())
                 .orElseThrow(() -> new AccountNotFoundException(expenseDto.getAccountId()));
@@ -53,7 +54,7 @@ public class ExpenseService {
                 new ExpenseNotFoundException(id));
     }
 
-    @Transactional
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public ExpenseDto updateExpense(UUID id, ExpenseDto expenseDto) {
         Expense expenseToUpdate = expenseRepository.findById(id).
                 orElseThrow(() -> new ExpenseNotFoundException(id));
@@ -69,17 +70,18 @@ public class ExpenseService {
         return expenseMapper.toDto(updatedExpense);
     }
 
-    @Transactional
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public void deleteExpense(UUID id) {
         Expense expense = findExpenseById(id);
         expenseRepository.delete(expense);
     }
 
-
+    @Transactional
     public List<Expense> findByExpenseCategoryId(UUID expenseCategoryId) {
         return expenseRepository.findByExpenseCategoryNameId(expenseCategoryId);
     }
 
+    @Transactional
     public List<Expense> findExpensesByDate(LocalDate date) {
         return expenseRepository.findByExpenseDate(date);
     }

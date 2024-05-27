@@ -6,4 +6,5 @@ import project.financement.entity.UserInfo;
 import java.util.UUID;
 
 public interface UserInfoRepository extends JpaRepository<UserInfo, UUID> {
+
 }

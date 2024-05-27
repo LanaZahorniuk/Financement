@@ -4,15 +4,15 @@ VALUES (UNHEX(REPLACE('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304', '-', '')), 'Premiu
 
 
 INSERT INTO authorities (authority_id, authority_name)
-VALUES (UNHEX(REPLACE('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea', '-', '')), 'ManageAccount'),
-       (UNHEX(REPLACE('f06c6c8e-8772-4f1a-b52e-c5ab8bef9f2f', '-', '')), 'ViewAccount');
-
+VALUES (UNHEX(REPLACE('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea', '-', '')), 'deleting_expense_category');
 
 INSERT INTO authority_role (authority_id, role_id)
-VALUES (UNHEX(REPLACE('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea', '-', '')),
-        UNHEX(REPLACE('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304', '-', ''))),
-       (UNHEX(REPLACE('f06c6c8e-8772-4f1a-b52e-c5ab8bef9f2f', '-', '')),
-        UNHEX(REPLACE('aeead63a-55b8-4f56-9c94-855322fdefb9', '-', '')));
+VALUES
+-- PremiumUser:
+(UNHEX(REPLACE('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea', '-', '')),
+ UNHEX(REPLACE('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304', '-', '')));
+
+-- FreeUser:
 
 
 INSERT INTO users_info (user_info_id, user_name, email, password, phone_number, role_id)
@@ -39,7 +39,13 @@ VALUES (UNHEX(REPLACE('999a6b10-683c-4f83-96e8-319ec975a333', '-', '')), '2023-0
 
 INSERT INTO expense_category (expense_category_id, expense_category_name)
 VALUES (UNHEX(REPLACE('111a7b11-793c-4f83-96e8-319ec975a444', '-', '')), 'Groceries'),
-       (UNHEX(REPLACE('222a8c12-813c-4f83-96e8-319ec975a555', '-', '')), 'Utilities');
+       (UNHEX(REPLACE('222a8c12-813c-4f83-96e8-319ec975a555', '-', '')), 'Utilities'),
+       (UNHEX(REPLACE('333a8c12-812c-4f83-96e8-319ec975a666', '-', '')), 'Transport'),
+       (UNHEX(REPLACE('444a8c12-283c-4f83-96e8-319ec975a777', '-', '')), 'Housing'),
+       (UNHEX(REPLACE('555a8c12-433c-4f83-96e8-319ec975a888', '-', '')), 'Health'),
+       (UNHEX(REPLACE('666a8c12-533c-4f83-96e8-319ec975a999', '-', '')), 'Personal Expenses'),
+       (UNHEX(REPLACE('777a8c12-113c-4f83-96e8-319ec975a000', '-', '')), 'Education'),
+       (UNHEX(REPLACE('888a8c12-841c-4f83-96e8-319ec975a111', '-', '')), 'Entertainment');
 
 
 INSERT INTO expense (expense_id, expense_amount, expense_date, expense_transaction_description, expense_category_id,

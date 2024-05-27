@@ -20,6 +20,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @RequestMapping("/expense")
 public class ExpenseController {
+
     private final ExpenseService expenseService;
     private final ExpenseCategoryService expenseCategoryService;
     private final ExpenseMapper expenseMapper;
@@ -29,13 +30,6 @@ public class ExpenseController {
         List<Expense> expenses = expenseService.getAllExpenses();
         List<ExpenseDto> expenseDtos = expenseMapper.toDto(expenses);
         return ResponseEntity.ok(expenseDtos);
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<ExpenseDto> getExpenseById(@PathVariable UUID id) {
-        Expense expense = expenseService.findExpenseById(id);
-        ExpenseDto expenseDto = expenseMapper.toDto(expense);
-        return ResponseEntity.ok(expenseDto);
     }
 
     @PostMapping("/create-expense")
@@ -52,7 +46,7 @@ public class ExpenseController {
 
     @PutMapping("/update-expense/{id}")
     public ResponseEntity<ExpenseDto> updateExpense(@PathVariable UUID id, @RequestBody ExpenseDto expenseDetails) {
-        ExpenseDto updatedExpenseDto  = expenseService.updateExpense(id, expenseDetails);
+        ExpenseDto updatedExpenseDto = expenseService.updateExpense(id, expenseDetails);
         return ResponseEntity.ok(updatedExpenseDto);
     }
 

@@ -23,7 +23,7 @@ public interface UserMapper {
     @Mapping(target = "userInfo.user", ignore = true)
     @Mapping(target = "userInfo.accounts", ignore = true)
 
-    //@Mapping(target = "userInfo.role.roleName", constant = "FreeUser")
+    @Mapping(target = "userInfo.role.roleName", source = "userInfo.role")
     User toEntity(UserCreateDto newUserDto);
 
     @Mapping(target = "userId", source = "userId")

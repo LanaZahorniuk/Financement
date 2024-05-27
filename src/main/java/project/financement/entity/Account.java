@@ -45,7 +45,7 @@ public class Account {
     private Set<Income> incomes;
 
     @ManyToOne
-    @JoinColumn(name = "user_info_id")
+    @JoinColumn(name = "user_info_id", nullable = false)
     private UserInfo userInfo;
 
     @Override
@@ -59,15 +59,3 @@ public class Account {
     }
 }
 
-
-/*
-@PreAuthorize("hasRole('PremiumUser')")
-public void addAccount(Account account) {
-// для PremiumUser
-}
-
-@PreAuthorize("hasRole('FreeUser')")
-public void addLimitedAccount(Account account) {
-    // для FreeUser
-}
- */
