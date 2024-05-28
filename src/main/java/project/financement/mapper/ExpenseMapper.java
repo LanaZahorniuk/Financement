@@ -22,6 +22,7 @@ public interface ExpenseMapper {
     @Mapping(target = "account.accountName", ignore = true)
     @Mapping(target = "account.balance", ignore = true)
     @Mapping(target = "account.currency", ignore = true)
+    @Mapping(target = "expenseId", ignore = true)
     Expense toEntity(ExpenseDto expense);
 
 

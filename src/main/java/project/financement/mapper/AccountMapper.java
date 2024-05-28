@@ -14,6 +14,10 @@ public interface AccountMapper {
     @Mapping(target = "currency", source = "currency")
 
     @Mapping(target = "accountId", ignore = true)
+    @Mapping(target = "budget", ignore = true)
+    @Mapping(target = "expenses", ignore = true)
+    @Mapping(target = "incomes", ignore = true)
+    @Mapping(target = "userInfo", ignore = true)
     Account toEntity(AccountDto accountDto);
 
     @Mapping(target = "accountName", source = "accountName")
