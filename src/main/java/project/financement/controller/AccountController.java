@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import project.financement.dto.AccountDto;
 import project.financement.dto.AccountInfoDto;
-import project.financement.service.AccountService;
+import project.financement.service.impl.AccountServiceImpl;
 
 import java.util.List;
 import java.util.UUID;
@@ -16,7 +16,7 @@ import java.util.UUID;
 @RequestMapping("/account")
 public class AccountController {
 
-    private final AccountService accountService;
+    private final AccountServiceImpl accountService;
 
     @GetMapping("/all/{userId}")
     public ResponseEntity<List<AccountInfoDto>> getAllUsersAccounts(@PathVariable String userId) {

@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import project.financement.dto.ExpenseCategoryDto;
 import project.financement.exception.ExpenseCategoryDeletionException;
-import project.financement.service.ExpenseCategoryService;
+import project.financement.service.impl.ExpenseCategoryServiceImpl;
 
 import java.util.List;
 import java.util.UUID;
@@ -16,7 +16,7 @@ import java.util.UUID;
 @RequestMapping("/expense-category")
 public class ExpenseCategoryController {
 
-    private final ExpenseCategoryService expenseCategoryService;
+    private final ExpenseCategoryServiceImpl expenseCategoryService;
 
     @GetMapping("/all")
     public ResponseEntity<List<ExpenseCategoryDto>> getAllExpenseCategories() {

@@ -1,4 +1,4 @@
-package project.financement.service;
+package project.financement.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,21 +14,22 @@ import project.financement.mapper.AccountInfoMapper;
 import project.financement.mapper.AccountMapper;
 import project.financement.repository.AccountRepository;
 import project.financement.repository.UserRepository;
+import project.financement.service.AccountService;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class AccountService {
+public class AccountServiceImpl implements AccountService {
+
     private final AccountRepository accountRepository;
     private final UserRepository userRepository;
     private final AccountMapper accountMapper;
     private final AccountInfoMapper accountInfoMapper;
 
-
+    @Override
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public List<AccountInfoDto> findAllAccountsByUserId(UUID userId) {
         List<Account> accounts = accountRepository.findByUserInfo_User_UserId(userId);
@@ -37,6 +38,7 @@ public class AccountService {
                 .collect(Collectors.toList());
     }
 
+    @Override
     @Transactional(isolation = Isolation.READ_UNCOMMITTED)
     public AccountDto createAccount(UUID userId, AccountDto newAccountDto) {
         User user = userRepository.findUserById(userId)
@@ -50,13 +52,14 @@ public class AccountService {
         return accountMapper.toDto(account);
     }
 
-    private void checkAccountLimit(User user) {
+    @Override
+    public void checkAccountLimit(User user) {
         if (user.getUserInfo().getRole().getRoleName().equals("FreeUser") && user.getUserInfo().getAccounts().size() >= 2) {
             throw new RuntimeException("Free users can only have up to 2 accounts.");
         }
     }
 
-
+    @Override
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public AccountDto updateAccountName(UUID id, String newAccountName) {
         Account account = accountRepository.findById(id).orElseThrow(() ->
@@ -66,6 +69,7 @@ public class AccountService {
         return accountMapper.toDto(updatedAccount);
     }
 
+    @Override
     @Transactional
     public void deleteAccount(UUID id) {
         Account account = accountRepository.findById(id).orElseThrow(() ->

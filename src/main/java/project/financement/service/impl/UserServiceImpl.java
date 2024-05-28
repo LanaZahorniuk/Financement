@@ -1,4 +1,4 @@
-package project.financement.service;
+package project.financement.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,6 +13,7 @@ import project.financement.exception.UserNotFoundException;
 import project.financement.mapper.UserMapper;
 import project.financement.repository.UserInfoRepository;
 import project.financement.repository.UserRepository;
+import project.financement.service.UserService;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -20,12 +21,14 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserServiceImpl implements UserService {
+
     private final UserRepository userRepository;
     private final UserInfoRepository userInfoRepository;
     private final UserMapper userMapper;
-    private final RoleService roleService;
+    private final RoleServiceImpl roleService;
 
+    @Override
     @Transactional
     public UserAfterCreationDto getUserById(UUID id) {
         User user = userRepository.findById(id).orElseThrow(() ->
@@ -33,6 +36,7 @@ public class UserService {
         return userMapper.toDto(user);
     }
 
+    @Override
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public UserAfterCreationDto createUser(UserCreateDto newUserDto) {
         User user = userMapper.toEntity(newUserDto);
@@ -43,6 +47,7 @@ public class UserService {
         return userMapper.toDto(savedUser);
     }
 
+    @Override
     @Transactional
     public UserAfterCreationDto updateUserEmail(UUID id, String newEmail) {
         User user = userRepository.findById(id).orElseThrow(() ->
@@ -53,6 +58,7 @@ public class UserService {
         return userMapper.toDto(user);
     }
 
+    @Override
     @Transactional
     public UserAfterCreationDto updateUserPassword(UUID id, String newPassword) {
         User user = userRepository.findById(id).orElseThrow(() ->
@@ -63,6 +69,7 @@ public class UserService {
         return userMapper.toDto(user);
     }
 
+    @Override
     @Transactional
     public UserAfterCreationDto updateUserPhoneNumber(UUID id, String newPhoneNumber) {
         User user = userRepository.findById(id).orElseThrow(() ->
@@ -73,6 +80,7 @@ public class UserService {
         return userMapper.toDto(user);
     }
 
+    @Override
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public String deleteUser(UUID id) {
         User user = userRepository.findById(id).orElseThrow(() ->

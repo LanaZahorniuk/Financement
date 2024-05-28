@@ -1,4 +1,4 @@
-package project.financement.service;
+package project.financement.service.impl;
 
 
 import lombok.RequiredArgsConstructor;
@@ -17,6 +17,7 @@ import project.financement.mapper.ExpenseMapper;
 import project.financement.repository.AccountRepository;
 import project.financement.repository.ExpenseCategoryRepository;
 import project.financement.repository.ExpenseRepository;
+import project.financement.service.ExpenseService;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -24,12 +25,14 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class ExpenseService {
+public class ExpenseServiceImpl implements ExpenseService {
+
     private final ExpenseRepository expenseRepository;
     private final AccountRepository accountRepository;
     private final ExpenseCategoryRepository expenseCategoryRepository;
     private final ExpenseMapper expenseMapper;
 
+    @Override
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public Expense createExpense(ExpenseDto expenseDto, ExpenseCategoryDto categoryDto) {
         Account account = accountRepository.findById(expenseDto.getAccountId())
@@ -43,17 +46,20 @@ public class ExpenseService {
         return expenseRepository.save(expense);
     }
 
+    @Override
     @Transactional
     public List<Expense> getAllExpenses() {
         return expenseRepository.findAll();
     }
 
+    @Override
     @Transactional
     public Expense findExpenseById(UUID id) {
         return expenseRepository.findById(id).orElseThrow(() ->
                 new ExpenseNotFoundException(id));
     }
 
+    @Override
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public ExpenseDto updateExpense(UUID id, ExpenseDto expenseDto) {
         Expense expenseToUpdate = expenseRepository.findById(id).
@@ -70,17 +76,20 @@ public class ExpenseService {
         return expenseMapper.toDto(updatedExpense);
     }
 
+    @Override
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public void deleteExpense(UUID id) {
         Expense expense = findExpenseById(id);
         expenseRepository.delete(expense);
     }
 
+    @Override
     @Transactional
     public List<Expense> findByExpenseCategoryId(UUID expenseCategoryId) {
         return expenseRepository.findByExpenseCategoryNameId(expenseCategoryId);
     }
 
+    @Override
     @Transactional
     public List<Expense> findExpensesByDate(LocalDate date) {
         return expenseRepository.findByExpenseDate(date);

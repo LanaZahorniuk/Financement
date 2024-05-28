@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import project.financement.dto.UserAfterCreationDto;
 import project.financement.dto.UserCreateDto;
-import project.financement.service.UserService;
+import project.financement.service.impl.UserServiceImpl;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -16,7 +16,7 @@ import java.util.UUID;
 @RequestMapping("/user")
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceImpl userService;
 
     @GetMapping("/{id}")
     public ResponseEntity<UserAfterCreationDto> getUserById(@PathVariable("id") String id) {

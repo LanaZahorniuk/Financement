@@ -1,4 +1,4 @@
-package project.financement.service;
+package project.financement.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,6 +12,7 @@ import project.financement.exception.UserNotFoundException;
 import project.financement.mapper.ExpenseCategoryMapper;
 import project.financement.repository.ExpenseCategoryRepository;
 import project.financement.repository.UserRepository;
+import project.financement.service.ExpenseCategoryService;
 
 import java.util.Arrays;
 import java.util.List;
@@ -19,17 +20,20 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class ExpenseCategoryService {
+public class ExpenseCategoryServiceImpl implements ExpenseCategoryService {
+
     private final ExpenseCategoryRepository expenseCategoryRepository;
     private final UserRepository userRepository;
     private final ExpenseCategoryMapper expenseCategoryMapper;
 
+    @Override
     @Transactional
     public List<ExpenseCategoryDto> findAll() {
         List<ExpenseCategory> expenseCategories = expenseCategoryRepository.findAll();
         return expenseCategoryMapper.toDto(expenseCategories);
     }
 
+    @Override
     @Transactional
     public ExpenseCategoryDto findByExpenseCategoryName(String expenseCategoryName) {
         ExpenseCategory expenseCategory = expenseCategoryRepository.findByExpenseCategoryName(expenseCategoryName)
@@ -37,6 +41,7 @@ public class ExpenseCategoryService {
         return expenseCategoryMapper.toDto(expenseCategory);
     }
 
+    @Override
     @Transactional
     public ExpenseCategoryDto saveExpenseCategory(UUID userId, ExpenseCategoryDto expenseCategoryDto) {
         User user = userRepository.findById(userId)
@@ -51,6 +56,7 @@ public class ExpenseCategoryService {
         return expenseCategoryMapper.toDto(savedExpenseCategory);
     }
 
+    @Override
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public ExpenseCategoryDto updateExpenseCategory(String expenseCategoryName, ExpenseCategoryDto expenseCategoryDto) {
         ExpenseCategory expenseCategoryToUpdate = expenseCategoryRepository.findByExpenseCategoryName(expenseCategoryName)
@@ -60,6 +66,7 @@ public class ExpenseCategoryService {
         return expenseCategoryMapper.toDto(updatedExpenseCategory);
     }
 
+    @Override
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public void deleteExpenseCategoryByName(String expenseCategoryName) {
         ExpenseCategory expenseCategory = expenseCategoryRepository.findByExpenseCategoryName(expenseCategoryName)

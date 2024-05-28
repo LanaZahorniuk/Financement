@@ -9,8 +9,8 @@ import project.financement.dto.ExpenseDto;
 import project.financement.entity.Expense;
 import project.financement.exception.ExpenseCategoryNotFoundException;
 import project.financement.mapper.ExpenseMapper;
-import project.financement.service.ExpenseCategoryService;
-import project.financement.service.ExpenseService;
+import project.financement.service.impl.ExpenseCategoryServiceImpl;
+import project.financement.service.impl.ExpenseServiceImpl;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -21,8 +21,8 @@ import java.util.UUID;
 @RequestMapping("/expense")
 public class ExpenseController {
 
-    private final ExpenseService expenseService;
-    private final ExpenseCategoryService expenseCategoryService;
+    private final ExpenseServiceImpl expenseService;
+    private final ExpenseCategoryServiceImpl expenseCategoryService;
     private final ExpenseMapper expenseMapper;
 
     @GetMapping("/all-expenses")
