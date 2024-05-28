@@ -18,8 +18,8 @@ public class PaymentController {
     private final PaymentService paymentService;
 
     @PostMapping("/upgrade/{userId}")
-    public ResponseEntity<String> upgradeUserInfo(@PathVariable UUID userId) {
-        paymentService.upgradeUserToPremium(userId);
+    public ResponseEntity<String> upgradeUserInfo(@PathVariable String userId) {
+        paymentService.upgradeUserToPremium(UUID.fromString(userId));
         return ResponseEntity.ok("Congratulations! Your account has been upgraded to Premium.");
     }
 }

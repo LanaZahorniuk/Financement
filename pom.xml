@@ -29,10 +29,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.liquibase</groupId>-->
-<!--			<artifactId>liquibase-core</artifactId>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>4.26.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.mysql</groupId>
@@ -83,12 +84,19 @@
 			<version>2.2.224</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>project</groupId>
-			<artifactId>Financement</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>test</scope>
-		</dependency>
+
+
+
+<!--		<dependency>-->
+<!--			<groupId>project</groupId>-->
+<!--			<artifactId>Financement</artifactId>-->
+<!--			<version>0.0.1-SNAPSHOT</version>-->
+<!--			<scope>test</scope>-->
+<!--		</dependency>-->
+
+
+
+
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
@@ -130,6 +138,18 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>4.8.0</version>
+				<configuration>
+					<changeLogFile>src/main/resources/db/changelog/changelog-master.xml</changeLogFile>
+					<url>jdbc:mysql://localhost:3306/fin_db</url>
+					<username>root</username>
+					<password>Denisdzi88</password>
+					<driver>com.mysql.cj.jdbc.Driver</driver>
 				</configuration>
 			</plugin>
 		</plugins>

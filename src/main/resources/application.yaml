@@ -3,21 +3,23 @@ spring:
     banner-mode: off
 
   datasource:
-    url: ${DATASOURCE_URL}
+    url: ${DATASOURCE_URL}?allowMultiQueries=true
     username: ${DATASOURCE_USERNAME}
     password: ${DATASOURCE_PASSWORD}
 
 
   jpa:
-    show-sql: true
+#    show-sql: true
     hibernate:
       ddl-auto: none
 
-  sql:
-    init:
-      schema-locations: classpath:db/schema.sql
-      data-locations: classpath:db/data.sql
-      mode: always
+#  sql:
+#    init:
+#      schema-locations: classpath:db/schema.sql
+#      data-locations: classpath:db/data.sql
+#      mode: always
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
 
 logging:
   level:

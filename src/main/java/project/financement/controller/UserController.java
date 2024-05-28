@@ -19,8 +19,8 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserAfterCreationDto> getUserById(@PathVariable("id") UUID id) {
-        return ResponseEntity.ok(userService.getUserById(id));
+    public ResponseEntity<UserAfterCreationDto> getUserById(@PathVariable("id") String id) {
+        return ResponseEntity.ok(userService.getUserById(UUID.fromString(id)));
     }
 
     @PostMapping("/create-user")
@@ -30,22 +30,22 @@ public class UserController {
     }
 
     @PutMapping("/update-Email/{id}/{newEmail}")
-    public ResponseEntity<UserAfterCreationDto> updateUserEmail(@PathVariable("id") UUID id, @PathVariable("newEmail") String newEmail) {
-        return ResponseEntity.ok(userService.updateUserEmail(id, newEmail));
+    public ResponseEntity<UserAfterCreationDto> updateUserEmail(@PathVariable("id") String id, @PathVariable("newEmail") String newEmail) {
+        return ResponseEntity.ok(userService.updateUserEmail(UUID.fromString(id), newEmail));
     }
 
     @PutMapping("/update-Password/{id}/{newPassword}")
-    public ResponseEntity<UserAfterCreationDto> updateUserPassword(@PathVariable("id") UUID id, @PathVariable("newPassword") String newPassword) {
-        return ResponseEntity.ok(userService.updateUserPassword(id, newPassword));
+    public ResponseEntity<UserAfterCreationDto> updateUserPassword(@PathVariable("id") String id, @PathVariable("newPassword") String newPassword) {
+        return ResponseEntity.ok(userService.updateUserPassword(UUID.fromString(id), newPassword));
     }
 
     @PutMapping("/update-PhoneNumber/{id}/{newPhoneNumber}")
-    public ResponseEntity<UserAfterCreationDto> updateUserPhoneNumber(@PathVariable("id") UUID id, @PathVariable("newPhoneNumber") String newPhoneNumber) {
-        return ResponseEntity.ok(userService.updateUserPhoneNumber(id, newPhoneNumber));
+    public ResponseEntity<UserAfterCreationDto> updateUserPhoneNumber(@PathVariable("id") String id, @PathVariable("newPhoneNumber") String newPhoneNumber) {
+        return ResponseEntity.ok(userService.updateUserPhoneNumber(UUID.fromString(id), newPhoneNumber));
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> deleteUser(@PathVariable("id") UUID id) {
-        return ResponseEntity.ok(userService.deleteUser(id));
+    public ResponseEntity<String> deleteUser(@PathVariable("id") String id) {
+        return ResponseEntity.ok(userService.deleteUser(UUID.fromString(id)));
     }
 }

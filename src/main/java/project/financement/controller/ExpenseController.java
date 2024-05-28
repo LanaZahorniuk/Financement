@@ -45,20 +45,20 @@ public class ExpenseController {
     }
 
     @PutMapping("/update-expense/{id}")
-    public ResponseEntity<ExpenseDto> updateExpense(@PathVariable UUID id, @RequestBody ExpenseDto expenseDetails) {
-        ExpenseDto updatedExpenseDto = expenseService.updateExpense(id, expenseDetails);
+    public ResponseEntity<ExpenseDto> updateExpense(@PathVariable String id, @RequestBody ExpenseDto expenseDetails) {
+        ExpenseDto updatedExpenseDto = expenseService.updateExpense(UUID.fromString(id), expenseDetails);
         return ResponseEntity.ok(updatedExpenseDto);
     }
 
     @DeleteMapping("/delete-expense/{id}")
-    public ResponseEntity<String> deleteExpense(@PathVariable UUID id) {
-        expenseService.deleteExpense(id);
+    public ResponseEntity<String> deleteExpense(@PathVariable String id) {
+        expenseService.deleteExpense(UUID.fromString(id));
         return ResponseEntity.ok("Deleted expense");
     }
 
     @GetMapping("/by-expense-category/{expenseCategoryId}")
-    public ResponseEntity<List<ExpenseDto>> getExpensesByCategory(@PathVariable UUID expenseCategoryId) {
-        List<Expense> expenses = expenseService.findByExpenseCategoryId(expenseCategoryId);
+    public ResponseEntity<List<ExpenseDto>> getExpensesByCategory(@PathVariable String expenseCategoryId) {
+        List<Expense> expenses = expenseService.findByExpenseCategoryId(UUID.fromString(expenseCategoryId));
         List<ExpenseDto> expenseDtos = expenseMapper.toDto(expenses);
         return ResponseEntity.ok(expenseDtos);
     }

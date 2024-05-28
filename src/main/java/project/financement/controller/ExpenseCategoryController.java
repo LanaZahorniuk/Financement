@@ -31,8 +31,8 @@ public class ExpenseCategoryController {
     }
 
     @PostMapping("/create-expense-category/{userId}")
-    public ResponseEntity<ExpenseCategoryDto> createExpenseCategory(@PathVariable UUID userId, @RequestBody ExpenseCategoryDto expenseCategoryDto) {
-        ExpenseCategoryDto newExpenseCategoryDto = expenseCategoryService.saveExpenseCategory(userId, expenseCategoryDto);
+    public ResponseEntity<ExpenseCategoryDto> createExpenseCategory(@PathVariable String userId, @RequestBody ExpenseCategoryDto expenseCategoryDto) {
+        ExpenseCategoryDto newExpenseCategoryDto = expenseCategoryService.saveExpenseCategory(UUID.fromString(userId), expenseCategoryDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(newExpenseCategoryDto);
 
     }

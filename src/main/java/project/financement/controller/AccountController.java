@@ -19,26 +19,26 @@ public class AccountController {
     private final AccountService accountService;
 
     @GetMapping("/all/{userId}")
-    public ResponseEntity<List<AccountInfoDto>> getAllUsersAccounts(@PathVariable UUID userId) {
-        List<AccountInfoDto> AccountInfoDtoList = accountService.findAllAccountsByUserId(userId);
+    public ResponseEntity<List<AccountInfoDto>> getAllUsersAccounts(@PathVariable String userId) {
+        List<AccountInfoDto> AccountInfoDtoList = accountService.findAllAccountsByUserId(UUID.fromString(userId));
         return new ResponseEntity<>(AccountInfoDtoList, HttpStatus.OK);
     }
 
     @PostMapping("/create-account/{userId}")
-    public ResponseEntity<AccountDto> createAccount(@PathVariable UUID userId, @RequestBody AccountDto newAccountDto) {
-        AccountDto accountDto = accountService.createAccount(userId, newAccountDto);
+    public ResponseEntity<AccountDto> createAccount(@PathVariable String userId, @RequestBody AccountDto newAccountDto) {
+        AccountDto accountDto = accountService.createAccount(UUID.fromString(userId), newAccountDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(accountDto);
     }
 
     @PatchMapping("/update-accountName/{id}/{newAccountName}")
-    public ResponseEntity<AccountDto> updateAccountName(@PathVariable("id") UUID id, @PathVariable("newAccountName") String newAccountName) {
-        AccountDto updatedAccount = accountService.updateAccountName(id, newAccountName);
+    public ResponseEntity<AccountDto> updateAccountName(@PathVariable("id") String id, @PathVariable("newAccountName") String newAccountName) {
+        AccountDto updatedAccount = accountService.updateAccountName(UUID.fromString(id), newAccountName);
         return ResponseEntity.ok(updatedAccount);
     }
 
     @DeleteMapping("/delete-account/{id}")
-    public ResponseEntity<String> deleteAccount(@PathVariable("id") UUID id) {
-        accountService.deleteAccount(id);
+    public ResponseEntity<String> deleteAccount(@PathVariable("id") String id) {
+        accountService.deleteAccount(UUID.fromString(id));
         return ResponseEntity.ok("Deleted account.");
     }
 }
