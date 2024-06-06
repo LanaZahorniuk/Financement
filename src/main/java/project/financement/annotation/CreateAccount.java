@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import project.financement.dto.AccountDto;
 import project.financement.entity.Account;
 import project.financement.handler.ResponseExceptionHandler;
 
@@ -36,7 +37,7 @@ import java.lang.annotation.Target;
                         examples = {
                                 @ExampleObject(
                                         name = "Example request with valid userId",
-                                        value = "76e127e7-ec0a-4129-b1c0-10b6c5aa1212"
+                                        value = "12345678-1234-5678-1234-567812345678"
                                 )
                         }
                 )
@@ -46,7 +47,19 @@ import java.lang.annotation.Target;
                 required = true,
                 content = @Content(
                         mediaType = "application/json",
-                        schema = @Schema(implementation = Account.class)
+                        schema = @Schema(implementation = AccountDto.class),
+                        examples = {
+                                @ExampleObject(
+                                        name = "Good request",
+                                        value = """
+                                                {
+                                                  "accountName": "accountName",
+                                                  "balance": 15000.000,
+                                                  "currency": "EUR"
+                                                }
+                                                """
+                                )
+                        }
                 )
         ),
         responses = {

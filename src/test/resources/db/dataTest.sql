@@ -21,7 +21,7 @@ VALUES (CAST('456def23-3214-45ec-8c1a-2ff297ae8f3d' as binary(16)), 'johnsmith',
 
 
 INSERT INTO users (user_id, first_name, last_name, date_of_birth, registration_date, user_info_id)
-VALUES (CAST('76e127e7-ec0a-4129-b1c0-10b6c5aa1212' as binary(16)), 'John', 'Smith', '1990-01-01', '2020-01-01',
+VALUES (CAST('12345678-1234-5678-1234-567812345678' as binary(16)), 'John', 'Smith', '1990-01-01', '2020-01-01',
         CAST('456def23-3214-45ec-8c1a-2ff297ae8f3d' as binary(16)));
 
 

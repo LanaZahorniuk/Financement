@@ -34,7 +34,19 @@ import java.lang.annotation.Target;
                         examples = {
                                 @io.swagger.v3.oas.annotations.media.ExampleObject(
                                         name = "Example request with new user details",
-                                        value = "{ \"name\": \"John Doe\", \"email\": \"john.doe@example.com\", \"password\": \"securepassword\", \"phoneNumber\": \"+123456789\" }"
+                                        value = """
+                                                {
+                                                   "firstName": "Thomas",
+                                                   "lastName": "Lin",
+                                                   "dateOfBirth": "1971-12-01",
+                                                   "userInfo": {
+                                                     "username": "tomtom",
+                                                     "email": "lin.t@example.com",
+                                                     "password": "password123",
+                                                     "phoneNumber": "7771167890"
+                                                   }
+                                                 }
+                                                """
                                 )
                         }
                 )

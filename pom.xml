@@ -128,6 +128,47 @@
 				</configuration>
 			</plugin>
 			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.11</version>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-site</id>
+						<phase>package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jcc-report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<excludes>
+						<exclude>project/financement/configuration/*</exclude>
+						<exclude>project/financement/controller/*</exclude>
+						<exclude>project/financement/dto/*</exclude>
+						<exclude>project/financement/entity/*</exclude>
+						<exclude>project/financement/entity/enums/*</exclude>
+						<exclude>project/financement/exception/*</exclude>
+						<exclude>project/financement/handler/*</exclude>
+						<exclude>project/financement/mapper/*</exclude>
+						<exclude>project/financement/FinancementApplication.class</exclude>
+						<exclude>project/financement/FinancementApplication.class/*</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.liquibase</groupId>
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<version>4.8.0</version>
