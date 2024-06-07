@@ -155,6 +155,7 @@
 				</executions>
 				<configuration>
 					<excludes>
+						<exclude>project/financement/annotation/*</exclude>
 						<exclude>project/financement/configuration/*</exclude>
 						<exclude>project/financement/controller/*</exclude>
 						<exclude>project/financement/dto/*</exclude>
