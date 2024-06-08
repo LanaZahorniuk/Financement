@@ -54,7 +54,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void checkAccountLimit(User user) {
-        if (user.getUserInfo().getRole().getRoleName().equals("FreeUser") && user.getUserInfo().getAccounts().size() >= 2) {
+        if (user.getUserInfo().getRole().getRoleName().equals("ROLE_FreeUser") && user.getUserInfo().getAccounts().size() >= 2) {
             throw new RuntimeException("Free users can only have up to 2 accounts.");
         }
     }

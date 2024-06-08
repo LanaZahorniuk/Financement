@@ -47,7 +47,7 @@ public class ExpenseCategoryServiceImpl implements ExpenseCategoryService {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new UserNotFoundException(userId));
 
-        if (user.getUserInfo().getRole().getRoleName().equals("FreeUser")) {
+        if (user.getUserInfo().getRole().getRoleName().equals("ROLE_FreeUser")) {
             throw new RuntimeException("FreeUser cannot create custom expense categories.");
         }
 

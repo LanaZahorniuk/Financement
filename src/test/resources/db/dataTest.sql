@@ -1,6 +1,6 @@
 INSERT INTO roles (role_id, role_name)
-VALUES (CAST('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304' as binary(16)), 'PremiumUser'),
-       (CAST('aeead63a-55b8-4f56-9c94-855322fdefb9' as binary(16)), 'FreeUser');
+VALUES (CAST('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304' as binary(16)), 'ROLE_PremiumUser'),
+       (CAST('aeead63a-55b8-4f56-9c94-855322fdefb9' as binary(16)), 'ROLE_FreeUser');
 
 
 INSERT INTO authorities (authority_id, authority_name)

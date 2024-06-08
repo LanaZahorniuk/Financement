@@ -1,6 +1,6 @@
 INSERT INTO roles (role_id, role_name)
-VALUES (UNHEX(REPLACE('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304', '-', '')), 'PremiumUser'),
-       (UNHEX(REPLACE('aeead63a-55b8-4f56-9c94-855322fdefb9', '-', '')), 'FreeUser');
+VALUES (UNHEX(REPLACE('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304', '-', '')), 'ROLE_PremiumUser'),
+       (UNHEX(REPLACE('aeead63a-55b8-4f56-9c94-855322fdefb9', '-', '')), 'ROLE_FreeUser');
 
 
 INSERT INTO authorities (authority_id, authority_name)

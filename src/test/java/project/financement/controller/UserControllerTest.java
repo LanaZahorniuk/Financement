@@ -34,9 +34,9 @@ class UserControllerTest {
     void createUserPositiveTest() throws Exception {
         UserCreateDto userCreateDto = new UserCreateDto();
         userCreateDto.setFirstName("Christian");
-        userCreateDto.setLastName("Karl");
+        userCreateDto.setLastName("Carl");
         userCreateDto.setDateOfBirth(LocalDate.of(1989, 7, 8));
-        UserInfoCreateDto userInfoCreateDto = new UserInfoCreateDto("Chris", "karl.t@example.com", "password123", "+7771167890", "FreeUser");
+        UserInfoCreateDto userInfoCreateDto = new UserInfoCreateDto("Chris", "carl.t@example.com", "password123", "+7771167890", "ROLE_FreeUser");
         userCreateDto.setUserInfo(userInfoCreateDto);
 
         String json = objectMapper.writeValueAsString(userCreateDto);
@@ -83,9 +83,9 @@ class UserControllerTest {
     void getUserByIdPositiveTest() throws Exception {
         UserCreateDto userCreateDto = new UserCreateDto();
         userCreateDto.setFirstName("Christian");
-        userCreateDto.setLastName("Karl");
+        userCreateDto.setLastName("Carl");
         userCreateDto.setDateOfBirth(LocalDate.of(1989, 7, 8));
-        UserInfoCreateDto userInfoCreateDto = new UserInfoCreateDto("Chris", "karl.t@example.com", "password123", "+7771167890", "FreeUser");
+        UserInfoCreateDto userInfoCreateDto = new UserInfoCreateDto("Chris", "carl.t@example.com", "password123", "+7771167890", "ROLE_FreeUser");
         userCreateDto.setUserInfo(userInfoCreateDto);
 
         String json = objectMapper.writeValueAsString(userCreateDto);

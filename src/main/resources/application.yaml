@@ -6,6 +6,7 @@ spring:
     url: ${DATASOURCE_URL}?allowMultiQueries=true
     username: ${DATASOURCE_USERNAME}
     password: ${DATASOURCE_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 
   jpa:
@@ -19,22 +20,20 @@ spring:
 #      data-locations: classpath:db/data.sql
 #      mode: always
   liquibase:
-    change-log: classpath:/db/changelog/changelog-master.xml
+    enabled: true
+    change-log: classpath:db/changelog/changelog-master.xml
+    #   clear-checksums: true
+
 
 logging:
   level:
     # org.springframework.jdbc.datasource.init.ScriptUtils: debug
-    root: warn
+    root: info
 
 
 
 
 server:
     port: 8080
-      
 
-
-#  liquibase:
-#    change-log:
-#      classpath:db/changelog/changelog-master.xml
 

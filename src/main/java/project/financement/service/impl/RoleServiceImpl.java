@@ -16,14 +16,14 @@ public class RoleServiceImpl implements RoleService {
     @Override
     @Transactional(readOnly = true)
     public Role getDefaultRole() {
-        return roleRepository.findByRoleName("FreeUser")
+        return roleRepository.findByRoleName("ROLE_FreeUser")
                 .orElseThrow(() -> new RuntimeException("Default role not found"));
     }
 
     @Override
     @Transactional(readOnly = true)
     public Role getPremiumRole() {
-        return roleRepository.findByRoleName("PremiumUser")
+        return roleRepository.findByRoleName("ROLE_PremiumUser")
                 .orElseThrow(() -> new RuntimeException("Premium role not found"));
     }
 }
