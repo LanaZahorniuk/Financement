@@ -2,7 +2,6 @@ package project.financement.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import project.financement.entity.Role;
 import project.financement.entity.User;
@@ -20,7 +19,7 @@ public class PaymentServiceImpl implements PaymentService {
     private final RoleServiceImpl roleService;
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public void upgradeUserToPremium(UUID userId) {
         User user = userRepository.findById(userId).orElseThrow(() ->
                 new UserNotFoundException(userId));

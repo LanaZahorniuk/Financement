@@ -3,7 +3,6 @@ package project.financement.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import project.financement.dto.ExpenseCategoryDto;
 import project.financement.dto.ExpenseDto;
@@ -19,6 +18,7 @@ import project.financement.repository.ExpenseCategoryRepository;
 import project.financement.repository.ExpenseRepository;
 import project.financement.service.ExpenseService;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
@@ -33,7 +33,7 @@ public class ExpenseServiceImpl implements ExpenseService {
     private final ExpenseMapper expenseMapper;
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public Expense createExpense(ExpenseDto expenseDto, ExpenseCategoryDto categoryDto) {
         Account account = accountRepository.findById(expenseDto.getAccountId())
                 .orElseThrow(() -> new AccountNotFoundException(expenseDto.getAccountId()));
@@ -43,6 +43,8 @@ public class ExpenseServiceImpl implements ExpenseService {
         expense.setExpenseId(UUID.randomUUID());
         expense.setExpenseCategoryName(expenseCategory);
         expense.setAccount(account);
+        BigDecimal newBalance = account.getBalance().subtract(expenseDto.getExpenseAmount());
+        account.setBalance(newBalance);
         return expenseRepository.save(expense);
     }
 
@@ -60,7 +62,7 @@ public class ExpenseServiceImpl implements ExpenseService {
     }
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public ExpenseDto updateExpense(UUID id, ExpenseDto expenseDto) {
         Expense expenseToUpdate = expenseRepository.findById(id).
                 orElseThrow(() -> new ExpenseNotFoundException(id));
@@ -77,7 +79,7 @@ public class ExpenseServiceImpl implements ExpenseService {
     }
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public void deleteExpense(UUID id) {
         Expense expense = findExpenseById(id);
         expenseRepository.delete(expense);

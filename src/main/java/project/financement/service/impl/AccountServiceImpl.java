@@ -2,7 +2,6 @@ package project.financement.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import project.financement.dto.AccountDto;
 import project.financement.dto.AccountInfoDto;
@@ -30,7 +29,7 @@ public class AccountServiceImpl implements AccountService {
     private final AccountInfoMapper accountInfoMapper;
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public List<AccountInfoDto> findAllAccountsByUserId(UUID userId) {
         List<Account> accounts = accountRepository.findByUserInfo_User_UserId(userId);
         return accounts.stream()
@@ -39,7 +38,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    @Transactional(isolation = Isolation.READ_UNCOMMITTED)
+    @Transactional
     public AccountDto createAccount(UUID userId, AccountDto newAccountDto) {
         User user = userRepository.findUserById(userId)
                 .orElseThrow(() -> new UserNotFoundException(userId));
@@ -60,7 +59,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public AccountDto updateAccountName(UUID id, String newAccountName) {
         Account account = accountRepository.findById(id).orElseThrow(() ->
                 new AccountNotFoundException(id));

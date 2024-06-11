@@ -2,7 +2,6 @@ package project.financement.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import project.financement.dto.ExpenseCategoryDto;
 import project.financement.entity.ExpenseCategory;
@@ -50,6 +49,9 @@ public class ExpenseCategoryServiceImpl implements ExpenseCategoryService {
         if (user.getUserInfo().getRole().getRoleName().equals("ROLE_FreeUser")) {
             throw new RuntimeException("FreeUser cannot create custom expense categories.");
         }
+        if (expenseCategoryRepository.findByExpenseCategoryName(expenseCategoryDto.getExpenseCategoryName()).isPresent()) {
+            throw new RuntimeException("An expense category with that name already exists. Please choose a different name.");
+        }
 
         ExpenseCategory expenseCategory = expenseCategoryMapper.toEntity(expenseCategoryDto);
         ExpenseCategory savedExpenseCategory = expenseCategoryRepository.save(expenseCategory);
@@ -57,7 +59,7 @@ public class ExpenseCategoryServiceImpl implements ExpenseCategoryService {
     }
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public ExpenseCategoryDto updateExpenseCategory(String expenseCategoryName, ExpenseCategoryDto expenseCategoryDto) {
         ExpenseCategory expenseCategoryToUpdate = expenseCategoryRepository.findByExpenseCategoryName(expenseCategoryName)
                 .orElseThrow(() -> new ExpenseCategoryNotFoundException(expenseCategoryName));
@@ -67,7 +69,7 @@ public class ExpenseCategoryServiceImpl implements ExpenseCategoryService {
     }
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public void deleteExpenseCategoryByName(String expenseCategoryName) {
         ExpenseCategory expenseCategory = expenseCategoryRepository.findByExpenseCategoryName(expenseCategoryName)
                 .orElseThrow(() -> new ExpenseCategoryNotFoundException("Expense category with name " + expenseCategoryName + " not found."));

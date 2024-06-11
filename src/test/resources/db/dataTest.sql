@@ -4,7 +4,7 @@ VALUES (CAST('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304' as binary(16)), 'ROLE_Premiu
 
 
 INSERT INTO authorities (authority_id, authority_name)
-VALUES (CAST('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea' as binary(16)), 'deleting_expense_category');
+VALUES (CAST('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea' as binary(16)), 'AUTHORITY_deleting_expense_category');
 
 INSERT INTO authority_role (authority_id, role_id)
 VALUES
@@ -17,7 +17,7 @@ VALUES
 
 INSERT INTO users_info (user_info_id, user_name, email, password, phone_number, role_id)
 VALUES (CAST('456def23-3214-45ec-8c1a-2ff297ae8f3d' as binary(16)), 'johnsmith', 'john.smith@example.com',
-        'password123', '1234567890', CAST('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304' as binary(16)));
+        '$2y$10$Rh3cV7Suf6rg7V.qEhBE5OT.7aOfo32b.ox.W1myl83K/fO/fVvia', '1234567890', CAST('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304' as binary(16)));
 
 
 INSERT INTO users (user_id, first_name, last_name, date_of_birth, registration_date, user_info_id)

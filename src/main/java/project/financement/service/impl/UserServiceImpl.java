@@ -2,7 +2,6 @@ package project.financement.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 import project.financement.dto.UserAfterCreationDto;
 import project.financement.dto.UserCreateDto;
@@ -37,7 +36,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public UserAfterCreationDto createUser(UserCreateDto newUserDto) {
         User user = userMapper.toEntity(newUserDto);
         user.setRegistrationDate(LocalDate.from(LocalDateTime.now()));
@@ -81,7 +80,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional(isolation = Isolation.SERIALIZABLE)
+    @Transactional
     public String deleteUser(UUID id) {
         User user = userRepository.findById(id).orElseThrow(() ->
                 new UserNotFoundException(id));
