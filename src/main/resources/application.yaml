@@ -27,13 +27,14 @@ spring:
 
 logging:
   level:
-    # org.springframework.jdbc.datasource.init.ScriptUtils: debug
+    org.springframework.jdbc.datasource.init.ScriptUtils: debug
     root: info
-
-
-
 
 server:
     port: 8080
+
+
+
+
 
 

@@ -4,7 +4,7 @@ VALUES (UNHEX(REPLACE('76e6a7e7-ec0a-4129-b1c0-10b6c5aa0304', '-', '')), 'ROLE_P
 
 
 INSERT INTO authorities (authority_id, authority_name)
-VALUES (UNHEX(REPLACE('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea', '-', '')), 'AUTHORITY_deleting_expense_category');
+VALUES (UNHEX(REPLACE('a9872ecf-4b23-488f-aacb-1e4e8e9cd8ea', '-', '')), 'deleting_expense_category');
 
 INSERT INTO authority_role (authority_id, role_id)
 VALUES

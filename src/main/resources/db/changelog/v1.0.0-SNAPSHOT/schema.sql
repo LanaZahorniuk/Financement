@@ -47,7 +47,7 @@ CREATE TABLE users_info
     user_info_id BINARY(16)  NOT NULL,
     user_name    VARCHAR(50) NOT NULL,
     email        VARCHAR(50) NOT NULL,
-    password     VARCHAR(50) NOT NULL,
+    password     VARCHAR(100) NOT NULL,
     phone_number VARCHAR(50),
     role_id      BINARY(16),
     PRIMARY KEY (user_info_id),
