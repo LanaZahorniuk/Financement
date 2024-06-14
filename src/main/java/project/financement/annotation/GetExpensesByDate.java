@@ -4,9 +4,9 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,9 +33,9 @@ import java.lang.annotation.Target;
                         in = ParameterIn.QUERY,
                         schema = @Schema(type = "string", format = "date"),
                         examples = {
-                                @io.swagger.v3.oas.annotations.media.ExampleObject(
+                                @ExampleObject(
                                         name = "Example request with valid date",
-                                        value = "2024-06-01"
+                                        value = "2023-01-15"
                                 )
                         }
                 )
@@ -57,9 +57,6 @@ import java.lang.annotation.Target;
                                 schema = @Schema(implementation = ResponseExceptionHandler.class)
                         )
                 )
-        },
-        security = {
-                @SecurityRequirement(name = "bearerAuth")
         }
 )
 public @interface GetExpensesByDate {

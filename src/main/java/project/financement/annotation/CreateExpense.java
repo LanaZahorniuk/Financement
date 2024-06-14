@@ -2,9 +2,9 @@ package project.financement.annotation;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,7 +29,21 @@ import java.util.concurrent.RejectedExecutionHandler;
                 required = true,
                 content = @Content(
                         mediaType = "application/json",
-                        schema = @Schema(implementation = ExpenseDto.class)
+                        schema = @Schema(implementation = ExpenseDto.class),
+                        examples = {
+                                @ExampleObject(
+                                        name = "New expense",
+                                        value = """
+                                                {
+                                                    "expenseAmount": 1000.000,
+                                                    "expenseDate": "2007-08-08",
+                                                    "expenseCategoryName": "Groceries",
+                                                    "accountId": "888a5b08-573c-4f83-96e8-319ec975a111",
+                                                    "expenseTransactionDescription": "food for dinner"
+                                                }
+                                                """
+                                )
+                        }
                 )
         ),
         responses = {
@@ -57,9 +71,6 @@ import java.util.concurrent.RejectedExecutionHandler;
                                 schema = @Schema(implementation = ResponseExceptionHandler.class)
                         )
                 )
-        },
-        security = {
-                @SecurityRequirement(name = "bearerAuth")
         }
 )
 public @interface CreateExpense {

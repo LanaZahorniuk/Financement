@@ -17,6 +17,12 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * Controller class handling HTTP requests related to expenses.
+ * Contains endpoints for managing expenses including creation, retrieval, update, and deletion.
+ */
+
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/expense")

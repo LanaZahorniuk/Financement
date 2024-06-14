@@ -4,9 +4,9 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,14 +31,26 @@ import java.lang.annotation.Target;
                         description = "The unique identifier of the user",
                         required = true,
                         in = ParameterIn.PATH,
-                        schema = @Schema(type = "string", format = "uuid")
+                        schema = @Schema(type = "string", format = "uuid"),
+                        examples = {
+                                @ExampleObject(
+                                        name = "Example request with valid userId",
+                                        value = "12345678-1234-5678-1234-567812345678"
+                                )
+                        }
                 ),
                 @Parameter(
                         name = "newPassword",
                         description = "The new password for the user",
                         required = true,
                         in = ParameterIn.PATH,
-                        schema = @Schema(type = "string")
+                        schema = @Schema(type = "string"),
+                        examples = {
+                                @ExampleObject(
+                                        name = "Example of a new password",
+                                        value = "anotherPaSsWord**123"
+                                )
+                        }
                 )
         },
         responses = {
@@ -66,9 +78,6 @@ import java.lang.annotation.Target;
                                 schema = @Schema(implementation = ResponseExceptionHandler.class)
                         )
                 )
-        },
-        security = {
-                @SecurityRequirement(name = "bearerAuth")
         }
 )
 public @interface UpdateUserPassword {

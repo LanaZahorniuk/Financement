@@ -12,6 +12,12 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+/**
+ * Controller class handling HTTP requests related to users.
+ * Contains endpoints for retrieving user by ID, creating a new user,
+ * updating user's email, password, and phone number, and deleting a user.
+ */
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/user")

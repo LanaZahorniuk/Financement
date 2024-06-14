@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithAnonymousUser;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
@@ -23,7 +24,6 @@ import java.util.UUID;
 @AutoConfigureMockMvc
 @Sql("/db/schemaTest.sql")
 @Sql("/db/dataTest.sql")
-@WithMockUser(value = "Chris", password = "password123", roles = "FreeUser")
 class UserControllerTest {
 
     @Autowired
@@ -33,6 +33,7 @@ class UserControllerTest {
     private ObjectMapper objectMapper;
 
     @Test
+    @WithAnonymousUser
     void createUserPositiveTest() throws Exception {
         UserCreateDto userCreateDto = new UserCreateDto();
         userCreateDto.setFirstName("Christian");
@@ -58,6 +59,7 @@ class UserControllerTest {
 
 
     @Test
+    @WithAnonymousUser
     void createUserNegativeTest() throws Exception {
         UserCreateDto userCreateDto = new UserCreateDto();
         userCreateDto.setLastName("Karl");
@@ -82,6 +84,8 @@ class UserControllerTest {
 
 
     @Test
+    //@WithMockUser(value = "johnsmith", password = "123123", roles = "PremiumUser")
+    @WithAnonymousUser
     void getUserByIdPositiveTest() throws Exception {
         UserCreateDto userCreateDto = new UserCreateDto();
         userCreateDto.setFirstName("Christian");
@@ -117,6 +121,7 @@ class UserControllerTest {
 
 
     @Test
+    @WithMockUser(value = "User", password = "123123", roles = "FreeUser")
     void getUserByIdNegativeTest() throws Exception {
         UUID nonExistentUserId = UUID.randomUUID();
 

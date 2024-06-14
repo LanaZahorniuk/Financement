@@ -7,13 +7,23 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import project.financement.annotation.*;
+import project.financement.annotation.CreateExpenseCategory;
+import project.financement.annotation.DeleteExpenseCategory;
+import project.financement.annotation.GetAllExpenseCategories;
+import project.financement.annotation.GetExpenseCategoryByName;
 import project.financement.dto.ExpenseCategoryDto;
 import project.financement.exception.ExpenseCategoryDeletionException;
 import project.financement.service.impl.ExpenseCategoryServiceImpl;
 
 import java.util.List;
 import java.util.UUID;
+
+/**
+ * Controller class handling HTTP requests related to expense categories.
+ * Contains endpoints for managing expense categories including creation, retrieval by name,
+ * deletion by name, and retrieval of all existing categories.
+ */
+
 
 @RestController
 @RequiredArgsConstructor
@@ -38,12 +48,6 @@ public class ExpenseCategoryController {
     public ResponseEntity<ExpenseCategoryDto> getExpenseCategoryByName(@PathVariable String expenseCategoryName) {
         ExpenseCategoryDto expenseCategory = expenseCategoryService.findByExpenseCategoryName(expenseCategoryName);
         return ResponseEntity.ok(expenseCategory);
-    }
-
-    @UpdateExpenseCategory(path = "/update-expense-category/{expenseCategoryName}")
-    public ResponseEntity<ExpenseCategoryDto> updateExpenseCategory(@PathVariable String expenseCategoryName, @RequestBody ExpenseCategoryDto expenseCategoryDto) {
-        ExpenseCategoryDto updatedExpenseCategory = expenseCategoryService.updateExpenseCategory(expenseCategoryName, expenseCategoryDto);
-        return ResponseEntity.ok(updatedExpenseCategory);
     }
 
     @DeleteExpenseCategory(path = "/delete-expense-category/{expenseCategoryName}")

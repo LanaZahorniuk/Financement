@@ -5,7 +5,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -68,9 +67,6 @@ import java.lang.annotation.Target;
                                 schema = @Schema(implementation = ResponseExceptionHandler.class)
                         )
                 )
-        },
-        security = {
-                @SecurityRequirement(name = "bearerAuth")
         }
 )
 public @interface CreateUser {

@@ -5,6 +5,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
+import project.financement.generator.UuidTimeSequenceGenerator;
 
 import java.util.Set;
 import java.util.UUID;
@@ -17,7 +19,8 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Role {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", type = UuidTimeSequenceGenerator.class)
     @Column(name = "role_id")
     private UUID roleId;
 
@@ -25,7 +28,7 @@ public class Role {
     private String roleName;
 
 
-    @ManyToMany(mappedBy = "roles")
+    @ManyToMany(mappedBy = "roles", fetch = FetchType.EAGER)
     private Set<Authority> authoritySet;
 
     @OneToMany(mappedBy = "role")

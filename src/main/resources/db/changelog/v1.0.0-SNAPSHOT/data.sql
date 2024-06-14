@@ -26,9 +26,9 @@ VALUES (UNHEX(REPLACE('12345678-1234-5678-1234-567812345678', '-', '')), 'John',
 
 
 INSERT INTO accounts (account_id, account_name, balance, currency, user_info_id)
-VALUES (UNHEX(REPLACE('888a5b08-573c-4f83-96e8-319ec975a111', '-', '')), 'Savings Account', 15000.00, 'USD',
+VALUES (UNHEX(REPLACE('888a5b08-573c-4f83-96e8-319ec975a111', '-', '')), 'Salary', 15000.00, 'USD',
         UNHEX(REPLACE('456def23-3214-45ec-8c1a-2ff297ae8f3d', '-', ''))),
-       (UNHEX(REPLACE('777a4b09-473c-4f83-96e8-319ec975a222', '-', '')), 'Checking Account', 3000.00, 'EUR',
+       (UNHEX(REPLACE('777a4b09-473c-4f83-96e8-319ec975a222', '-', '')), 'Cash', 3000.00, 'EUR',
         UNHEX(REPLACE('456def23-3214-45ec-8c1a-2ff297ae8f3d', '-', '')));
 
 

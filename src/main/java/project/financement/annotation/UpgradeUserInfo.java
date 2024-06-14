@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -36,7 +35,7 @@ import java.lang.annotation.Target;
                         examples = {
                                 @ExampleObject(
                                         name = "Example request with valid userId",
-                                        value = "123e4567-e89b-12d3-a456-426614174000"
+                                        value = "12345678-1234-5678-1234-567812345678"
                                 )
                         }
                 )
@@ -66,9 +65,6 @@ import java.lang.annotation.Target;
                                 schema = @Schema(implementation = ResponseExceptionHandler.class)
                         )
                 )
-        },
-        security = {
-                @SecurityRequirement(name = "bearerAuth")
         }
 )
 public @interface UpgradeUserInfo {

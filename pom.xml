@@ -170,6 +170,7 @@
                 <configuration>
                     <excludes>
                         <exclude>project/financement/annotation/*</exclude>
+                        <exclude>project/financement/aspect/*</exclude>
                         <exclude>project/financement/configuration/*</exclude>
                         <exclude>project/financement/controller/*</exclude>
                         <exclude>project/financement/dto/*</exclude>
@@ -178,6 +179,9 @@
                         <exclude>project/financement/exception/*</exclude>
                         <exclude>project/financement/handler/*</exclude>
                         <exclude>project/financement/mapper/*</exclude>
+                        <exclude>project/financement/repository/*</exclude>
+                        <exclude>project/financement/security/*</exclude>
+                        <exclude>project/financement/security/utils/*</exclude>
                         <exclude>project/financement/FinancementApplication.class</exclude>
                         <exclude>project/financement/FinancementApplication.class/*</exclude>
                     </excludes>

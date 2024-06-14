@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,7 +34,7 @@ import java.lang.annotation.Target;
                         examples = {
                                 @ExampleObject(
                                         name = "Example request with valid category name",
-                                        value = "Food"
+                                        value = "Vacation"
                                 )
                         }
                 )
@@ -49,6 +48,14 @@ import java.lang.annotation.Target;
                         )
                 ),
                 @ApiResponse(
+                        responseCode = "404",
+                        description = "Expense category not found",
+                        content = @Content(
+                                mediaType = "application/json",
+                                schema = @Schema(implementation = ResponseExceptionHandler.class)
+                        )
+                ),
+                @ApiResponse(
                         responseCode = "409",
                         description = "Cannot delete expense category because it is referenced by one or more expenses",
                         content = @Content(
@@ -56,9 +63,6 @@ import java.lang.annotation.Target;
                                 schema = @Schema(implementation = ResponseExceptionHandler.class)
                         )
                 )
-        },
-        security = {
-                @SecurityRequirement(name = "bearerAuth")
         }
 )
 public @interface DeleteExpenseCategory {

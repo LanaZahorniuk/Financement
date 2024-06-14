@@ -17,5 +17,6 @@ public class AuthorizationRightsRoles {
             "/expense/**",
             "/expense-category/**",
             "/user/**",
+
     };
 }

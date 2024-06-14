@@ -5,6 +5,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
+import project.financement.generator.UuidTimeSequenceGenerator;
 
 import java.time.LocalDate;
 
@@ -19,7 +21,8 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Income {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", type = UuidTimeSequenceGenerator.class)
     @Column(name = "income_id")
     private UUID incomeId;
 

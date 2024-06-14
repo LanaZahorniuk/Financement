@@ -26,9 +26,9 @@ VALUES (CAST('12345678-1234-5678-1234-567812345678' as binary(16)), 'John', 'Smi
 
 
 INSERT INTO accounts (account_id, account_name, balance, currency, user_info_id)
-VALUES (CAST('888a5b08-573c-4f83-96e8-319ec975a111' as binary(16)), 'Savings Account', 15000.00, 'USD',
+VALUES (CAST('888a5b08-573c-4f83-96e8-319ec975a111' as binary(16)), 'Salary', 15000.00, 'USD',
         CAST('456def23-3214-45ec-8c1a-2ff297ae8f3d' as binary(16))),
-       (CAST('777a4b09-473c-4f83-96e8-319ec975a222' as binary(16)), 'Checking Account', 3000.00, 'EUR',
+       (CAST('777a4b09-473c-4f83-96e8-319ec975a222' as binary(16)), 'Cash', 3000.00, 'EUR',
         CAST('456def23-3214-45ec-8c1a-2ff297ae8f3d' as binary(16)));
 
 

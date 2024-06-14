@@ -6,6 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import project.financement.dto.ExpenseCategoryDto;
 import project.financement.entity.ExpenseCategory;
 import project.financement.entity.User;
+import project.financement.exception.ExpenseCategoryAlreadyExistsException;
 import project.financement.exception.ExpenseCategoryNotFoundException;
 import project.financement.exception.UserNotFoundException;
 import project.financement.mapper.ExpenseCategoryMapper;
@@ -50,22 +51,12 @@ public class ExpenseCategoryServiceImpl implements ExpenseCategoryService {
             throw new RuntimeException("FreeUser cannot create custom expense categories.");
         }
         if (expenseCategoryRepository.findByExpenseCategoryName(expenseCategoryDto.getExpenseCategoryName()).isPresent()) {
-            throw new RuntimeException("An expense category with that name already exists. Please choose a different name.");
+            throw new ExpenseCategoryAlreadyExistsException("An expense category with that name already exists. Please choose a different name.");
         }
 
         ExpenseCategory expenseCategory = expenseCategoryMapper.toEntity(expenseCategoryDto);
         ExpenseCategory savedExpenseCategory = expenseCategoryRepository.save(expenseCategory);
         return expenseCategoryMapper.toDto(savedExpenseCategory);
-    }
-
-    @Override
-    @Transactional
-    public ExpenseCategoryDto updateExpenseCategory(String expenseCategoryName, ExpenseCategoryDto expenseCategoryDto) {
-        ExpenseCategory expenseCategoryToUpdate = expenseCategoryRepository.findByExpenseCategoryName(expenseCategoryName)
-                .orElseThrow(() -> new ExpenseCategoryNotFoundException(expenseCategoryName));
-        expenseCategoryToUpdate.setExpenseCategoryName(expenseCategoryDto.getExpenseCategoryName());
-        ExpenseCategory updatedExpenseCategory = expenseCategoryRepository.save(expenseCategoryToUpdate);
-        return expenseCategoryMapper.toDto(updatedExpenseCategory);
     }
 
     @Override

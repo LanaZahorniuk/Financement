@@ -13,7 +13,5 @@ public interface ExpenseCategoryService {
 
     ExpenseCategoryDto saveExpenseCategory(UUID userId, ExpenseCategoryDto expenseCategoryDto);
 
-    ExpenseCategoryDto updateExpenseCategory(String expenseCategoryName, ExpenseCategoryDto expenseCategoryDto);
-
     void deleteExpenseCategoryByName(String expenseCategoryName);
 }

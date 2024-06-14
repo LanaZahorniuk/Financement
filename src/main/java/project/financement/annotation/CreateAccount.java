@@ -7,7 +7,6 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -50,10 +49,10 @@ import java.lang.annotation.Target;
                         schema = @Schema(implementation = AccountDto.class),
                         examples = {
                                 @ExampleObject(
-                                        name = "Good request",
+                                        name = "Create a new account",
                                         value = """
                                                 {
-                                                  "accountName": "accountName",
+                                                  "accountName": "Credit card",
                                                   "balance": 15000.000,
                                                   "currency": "EUR"
                                                 }
@@ -72,7 +71,7 @@ import java.lang.annotation.Target;
                         )
                 ),
                 @ApiResponse(
-                        responseCode =  "400",
+                        responseCode = "400",
                         description = "Invalid request",
                         content = @Content(
                                 mediaType = "application/json",
@@ -88,9 +87,6 @@ import java.lang.annotation.Target;
                         )
                 )
 
-        },
-        security = {
-                @SecurityRequirement(name = "bearerAuth")
         }
 
 )

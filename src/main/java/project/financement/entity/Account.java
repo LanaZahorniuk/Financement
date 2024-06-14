@@ -5,7 +5,9 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 import project.financement.entity.enums.Currency;
+import project.financement.generator.UuidTimeSequenceGenerator;
 
 import java.math.BigDecimal;
 import java.util.Set;
@@ -19,7 +21,8 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Account {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", type = UuidTimeSequenceGenerator.class)
     @Column(name = "account_id")
     private UUID accountId;
 

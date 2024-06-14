@@ -3,7 +3,10 @@ package project.financement.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import project.financement.annotation.CreateAccount;
 import project.financement.annotation.DeleteAccount;
 import project.financement.annotation.GetAllAccounts;
@@ -14,6 +17,12 @@ import project.financement.service.impl.AccountServiceImpl;
 
 import java.util.List;
 import java.util.UUID;
+
+/**
+ * Controller class handling HTTP requests related to accounts.
+ * Contains endpoints for retrieving all accounts of a user, creating a new account,
+ * updating an account's name, and deleting an account.
+ */
 
 @RestController
 @RequiredArgsConstructor
