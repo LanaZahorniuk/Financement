@@ -3,13 +3,17 @@ package project.financement.configuration;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.models.OpenAPI;
+import io.swagger.v3.oas.models.security.SecurityRequirement;
+import io.swagger.v3.oas.models.security.SecurityScheme;
+import io.swagger.v3.oas.models.security.SecurityScheme.Type;
 import io.swagger.v3.oas.models.tags.Tag;
-import org.springdoc.core.models.GroupedOpenApi;
+import org.springdoc.core.GroupedOpenApi;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+
 @OpenAPIDefinition(
         info = @Info(
                 title = "Financement",
@@ -22,6 +26,8 @@ import org.springframework.context.annotation.Configuration;
                 )
         )
 )
+
+@Configuration
 public class SwaggerConfig {
 
     @Value("${swagger.swaggerPackage:project.financement}")
@@ -32,7 +38,7 @@ public class SwaggerConfig {
         return GroupedOpenApi.builder()
                 .group("public")
                 .packagesToScan(swaggerPackage)
-                .addOpenApiCustomizer(openApi -> {
+                .addOpenApiCustomiser(openApi -> {
                     openApi.addTagsItem(new Tag().name("Account Service").description("API for managing accounts"));
                     openApi.addTagsItem(new Tag().name("Expense Category Service").description("API for managing expense categories"));
                     openApi.addTagsItem(new Tag().name("Expense Service").description("API for managing expenses"));
@@ -43,21 +49,14 @@ public class SwaggerConfig {
                 .build();
     }
 
-//    @Bean
-//    public OpenAPI customOpenAPI() {
-//        return new OpenAPI()
-//                .components(new Components().addSecuritySchemes("bearerAuth",
-//                        new SecurityScheme().type(SecurityScheme.Type.HTTP).scheme("bearer").bearerFormat("JWT")))
-//                .addSecurityItem(new SecurityRequirement().addList("bearerAuth"));
-//    }
-//
-//    @Bean
-//    public OpenAPI customOpenAPI() {
-//        return new OpenAPI()
-//                .addSecurityItem(new SecurityRequirement().addList("basicAuth"))
-//                .components(new io.swagger.v3.oas.models.Components()
-//                        .addSecuritySchemes("basicAuth", new SecurityScheme()
-//                                .type(Type.HTTP)
-//                                .scheme("basic")));
-//    }
+    @Bean
+    public OpenAPI customOpenAPI() {
+        return new OpenAPI()
+                .addSecurityItem(new SecurityRequirement().addList("basicAuth"))
+                .components(new io.swagger.v3.oas.models.Components()
+                        .addSecuritySchemes("basicAuth", new SecurityScheme()
+                                .type(SecurityScheme.Type.HTTP)
+                                .scheme("basic")));
+    }
 }
+

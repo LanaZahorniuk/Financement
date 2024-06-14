@@ -1,6 +1,7 @@
 package project.financement.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import project.financement.dto.UserAfterCreationDto;
@@ -26,6 +27,7 @@ public class UserServiceImpl implements UserService {
     private final UserInfoRepository userInfoRepository;
     private final UserMapper userMapper;
     private final RoleServiceImpl roleService;
+    private final PasswordEncoder passwordEncoder;
 
     @Override
     @Transactional
@@ -42,6 +44,8 @@ public class UserServiceImpl implements UserService {
         user.setRegistrationDate(LocalDate.from(LocalDateTime.now()));
         Role defaultRole = roleService.getDefaultRole();
         user.getUserInfo().setRole(defaultRole);
+        String encodedPassword = passwordEncoder.encode(newUserDto.getUserInfo().getPassword());
+        user.getUserInfo().setPassword(encodedPassword);
         User savedUser = userRepository.save(user);
         return userMapper.toDto(savedUser);
     }

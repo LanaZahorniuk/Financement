@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 @Component
-public class MyAccessDeniedHandler implements AccessDeniedHandler {
+public class FinancementAccessDeniedHandler implements AccessDeniedHandler {
     @Override
     public void handle(HttpServletRequest request, HttpServletResponse response, AccessDeniedException accessDeniedException) throws IOException {
         response.setStatus(HttpServletResponse.SC_FORBIDDEN);
         response.setContentType("application/json");
-        response.getWriter().write("You don't have permission to access this resource.");
+        response.getWriter().write("{\"error\":\"You don't have permission to access this resource.\"}");
     }
 }
