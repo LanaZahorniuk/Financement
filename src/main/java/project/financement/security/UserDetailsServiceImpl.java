@@ -21,18 +21,18 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class UserDetailsServiceImpl implements UserDetailsService {
-
-    private final UserInfoRepository repository;
-
+    private final UserInfoRepository userInfoRepository;
 
     @Override
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        UserInfo userInfo = repository.findByUsername(username);
+        UserInfo userInfo = userInfoRepository.findByUsername(username);
         if (userInfo == null) {
-            throw new UsernameNotFoundException("User not found with username: " + username);
+            throw new UsernameNotFoundException("User with login '" + username + "' not found");
         }
-        return User.withUsername(userInfo.getUsername())
+
+        return User.withUsername(username)
+                .username(userInfo.getUsername())
                 .password(userInfo.getPassword())
                 .authorities(getAuthorities(Collections.singletonList(userInfo.getRole())))
                 .build();
@@ -42,11 +42,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         List<GrantedAuthority> authorities = new ArrayList<>();
         for (Role r : roles) {
             authorities.add(new SimpleGrantedAuthority(r.getRoleName()));
-
             r.getAuthoritySet().forEach(authority ->
                     authorities.add(new SimpleGrantedAuthority(authority.getAuthorityName())));
         }
+
         return authorities;
     }
 }
-
