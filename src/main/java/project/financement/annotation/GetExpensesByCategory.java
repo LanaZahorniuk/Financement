@@ -35,8 +35,8 @@ import java.lang.annotation.Target;
                         schema = @Schema(type = "string", format = "uuid"),
                         examples = {
                                 @ExampleObject(
-                                        name = "Example request with expense category",
-                                        value = "Groceries"
+                                        name = "Example request expenseCategoryId",
+                                        value = "111a7b11-793c-4f83-96e8-319ec975a444"
                                 )
                         }
                 )

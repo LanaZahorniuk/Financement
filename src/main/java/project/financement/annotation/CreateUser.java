@@ -41,7 +41,7 @@ import java.lang.annotation.Target;
                                                    "userInfo": {
                                                      "username": "tomtom",
                                                      "email": "lin.t@example.com",
-                                                     "password": "password123",
+                                                     "password": "123123",
                                                      "phoneNumber": "7771167890"
                                                    }
                                                  }

@@ -22,6 +22,7 @@ public class PaymentController {
 
     private final PaymentServiceImpl paymentService;
 
+
     @UpgradeUserInfo(path = "/upgrade/{userId}")
     public ResponseEntity<String> upgradeUserInfo(@PathVariable String userId) {
         paymentService.upgradeUserToPremium(UUID.fromString(userId));
