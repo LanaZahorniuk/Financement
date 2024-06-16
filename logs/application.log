@@ -978,3 +978,1145 @@ END OF REQUEST
 2024-06-16 19:29:55.072 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-16 19:29:55.074 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-06-16 19:29:55.077 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 19:46:17.821 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 19:46:17.865 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 30708 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 19:46:17.865 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 19:46:17.866 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 19:46:18.578 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 19:46:18.631 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 6 JPA repository interfaces.
+2024-06-16 19:46:19.276 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 19:46:19.284 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 19:46:19.286 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 19:46:19.286 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 19:46:19.335 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 19:46:19.335 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1441 ms
+2024-06-16 19:46:19.477 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 19:46:19.788 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cb195dd
+2024-06-16 19:46:19.789 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 19:46:20.152 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 19:46:20.158 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 19:46:20.161 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 19:46:20.684 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 19:46:20.691 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 19:46:20.694 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 19:46:20.694 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 19:46:20.811 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 19:46:20.841 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 19:46:20.885 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 19:46:20.885 [main] INFO  liquibase.command - Using deploymentId: 8559980885
+2024-06-16 19:46:20.887 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 19:46:20.900 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 19:46:21.220 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 19:46:21.221 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 320ms
+2024-06-16 19:46:21.229 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 19:46:21.249 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 19:46:21.251 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 22ms
+2024-06-16 19:46:21.259 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 19:46:21.259 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 19:46:21.259 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 19:46:21.259 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 19:46:21.260 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 19:46:21.260 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 19:46:21.260 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 19:46:21.263 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 19:46:21.263 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 19:46:21.266 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 19:46:21.267 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 19:46:21.351 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 19:46:21.411 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 19:46:21.439 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 19:46:21.618 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 19:46:22.441 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 19:46:22.443 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 19:46:22.980 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 19:46:23.616 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 19:46:24.350 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@178e125f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c16b2f7, org.springframework.security.web.context.SecurityContextHolderFilter@69e87cbe, org.springframework.security.web.authentication.logout.LogoutFilter@4febb6e6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@14726e69, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7988fd6e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1b10963a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@48187168, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ae30b05, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52602c48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16f453c9, org.springframework.security.web.access.ExceptionTranslationFilter@ba8d7c7, org.springframework.security.web.access.intercept.AuthorizationFilter@310cd0d2]
+2024-06-16 19:46:24.830 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 19:46:24.848 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 19:46:24.856 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.421 seconds (process running for 8.05)
+2024-06-16 19:46:30.904 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 19:46:30.904 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 19:46:30.906 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-06-16 19:46:31.542 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 321 ms
+2024-06-16 19:48:39.652 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 19:48:39.671 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 19:48:39.700 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 19:57:00.595 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 19:57:00.698 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 16424 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 19:57:00.699 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 19:57:00.699 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 19:57:01.685 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 19:57:01.754 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 6 JPA repository interfaces.
+2024-06-16 19:57:02.705 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 19:57:02.719 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 19:57:02.722 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 19:57:02.722 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 19:57:02.835 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 19:57:02.837 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2082 ms
+2024-06-16 19:57:03.123 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 19:57:03.559 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7db162f2
+2024-06-16 19:57:03.561 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 19:57:03.888 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 19:57:03.893 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 19:57:03.898 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 19:57:04.397 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 19:57:04.409 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 19:57:04.413 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 19:57:04.413 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 19:57:04.537 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 19:57:04.561 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 19:57:04.613 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 19:57:04.615 [main] INFO  liquibase.command - Using deploymentId: 8560624613
+2024-06-16 19:57:04.617 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 19:57:04.632 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 19:57:05.041 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 19:57:05.043 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 409ms
+2024-06-16 19:57:05.051 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 19:57:05.073 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 19:57:05.077 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 25ms
+2024-06-16 19:57:05.087 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 19:57:05.087 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 19:57:05.087 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 19:57:05.087 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 19:57:05.087 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 19:57:05.087 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 19:57:05.088 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 19:57:05.090 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 19:57:05.090 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 19:57:05.096 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 19:57:05.097 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 19:57:05.198 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 19:57:05.263 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 19:57:05.303 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 19:57:05.538 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 19:57:06.420 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 19:57:06.422 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 19:57:06.965 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 19:57:07.608 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 19:57:08.334 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@49f1ac93, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8937f62, org.springframework.security.web.context.SecurityContextHolderFilter@6f88319b, org.springframework.security.web.authentication.logout.LogoutFilter@6afafa48, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63cb06df, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3605d078, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@33d57d51, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@336e59a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@232e1f66, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@431298ef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d6bed7b, org.springframework.security.web.access.ExceptionTranslationFilter@35929bc7, org.springframework.security.web.access.intercept.AuthorizationFilter@238bee26]
+2024-06-16 19:57:08.812 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 19:57:08.830 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 19:57:08.838 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 8.939 seconds (process running for 9.701)
+2024-06-16 19:57:16.103 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 19:57:16.103 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 19:57:16.106 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-06-16 19:57:17.315 [http-nio-8080-exec-5] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 549 ms
+2024-06-16 19:58:05.677 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 19:58:05.679 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 19:58:05.685 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:01:30.870 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:01:30.910 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 9332 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:01:30.911 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:01:30.911 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:01:31.642 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:01:31.696 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:01:32.321 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:01:32.328 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:01:32.330 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:01:32.330 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:01:32.380 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:01:32.380 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1440 ms
+2024-06-16 20:01:32.528 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:01:32.794 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3e2c4d4b
+2024-06-16 20:01:32.800 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:01:33.095 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:01:33.100 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:01:33.104 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:01:33.561 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:01:33.569 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:01:33.571 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:01:33.571 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:01:33.693 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:01:33.716 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:01:33.758 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:01:33.759 [main] INFO  liquibase.command - Using deploymentId: 8560893758
+2024-06-16 20:01:33.760 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:01:33.773 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:01:34.076 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:01:34.077 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 303ms
+2024-06-16 20:01:34.082 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:01:34.098 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:01:34.099 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 17ms
+2024-06-16 20:01:34.107 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:01:34.107 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:01:34.107 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:01:34.107 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:01:34.107 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:01:34.107 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:01:34.108 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:01:34.109 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:01:34.109 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:01:34.114 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:01:34.114 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:01:34.189 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:01:34.239 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:01:34.265 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:01:34.457 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:01:35.287 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:01:35.289 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:01:35.842 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:01:36.483 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:01:37.181 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b2234a5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a5bccb8, org.springframework.security.web.context.SecurityContextHolderFilter@6dc6608c, org.springframework.security.web.authentication.logout.LogoutFilter@12e035a8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@460fe6e3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4eab4474, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@43da05ee, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6080230a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6317f6d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37a53e65, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@418422c3, org.springframework.security.web.access.ExceptionTranslationFilter@5c10216f, org.springframework.security.web.access.intercept.AuthorizationFilter@cc65ea1]
+2024-06-16 20:01:37.677 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:01:37.697 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:01:37.704 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.244 seconds (process running for 7.806)
+2024-06-16 20:01:46.090 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:01:46.091 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:01:46.092 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 20:01:46.723 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 339 ms
+2024-06-16 20:02:09.579 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:02:09.581 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 20:02:09.588 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:15:17.194 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:15:17.234 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 17000 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:15:17.234 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:15:17.234 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:15:17.983 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:15:18.042 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:15:18.659 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:15:18.667 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:15:18.669 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:15:18.669 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:15:18.720 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:15:18.721 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1457 ms
+2024-06-16 20:15:18.870 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:15:19.195 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70b196d3
+2024-06-16 20:15:19.196 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:15:19.562 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:15:19.567 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:15:19.571 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:15:20.108 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:15:20.117 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:15:20.119 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:15:20.119 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:15:20.240 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:15:20.274 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:15:20.321 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:15:20.321 [main] INFO  liquibase.command - Using deploymentId: 8561720321
+2024-06-16 20:15:20.323 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:15:20.337 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:15:20.641 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:15:20.642 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 305ms
+2024-06-16 20:15:20.648 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:15:20.663 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:15:20.664 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 16ms
+2024-06-16 20:15:20.671 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:15:20.672 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:15:20.672 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:15:20.672 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:15:20.672 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:15:20.672 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:15:20.672 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:15:20.674 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:15:20.674 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:15:20.678 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:15:20.678 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:15:20.758 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:15:20.810 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:15:20.837 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:15:21.027 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:15:21.858 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:15:21.859 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:15:22.418 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:15:23.105 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:15:23.850 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@662b17b3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a7b523b, org.springframework.security.web.context.SecurityContextHolderFilter@58d7a3bb, org.springframework.security.web.authentication.logout.LogoutFilter@5fefb35c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3f5298a5, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@eb3ceb4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@41c77861, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1af2c5c8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66d2bb60, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b5fc36d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f5a7737, org.springframework.security.web.access.ExceptionTranslationFilter@61b2ca5a, org.springframework.security.web.access.intercept.AuthorizationFilter@4bd214c]
+2024-06-16 20:15:24.383 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:15:24.404 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:15:24.412 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.602 seconds (process running for 8.268)
+2024-06-16 20:15:28.553 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:15:28.554 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:15:28.556 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-06-16 20:15:29.204 [http-nio-8080-exec-3] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 377 ms
+2024-06-16 20:15:49.148 [http-nio-8080-exec-2] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-16 20:15:49.153 [http-nio-8080-exec-2] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-16 20:15:49.154 [http-nio-8080-exec-2] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-16 20:15:49.318 [http-nio-8080-exec-2] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-2243-391d-1d1d-b44f5e64403e, userInfoAfterCreation=UserInfoAfterCreationDto(username=tomtom))
+END OF REQUEST
+2024-06-16 20:16:07.763 [http-nio-8080-exec-8] WARN  o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [112] milliseconds.
+2024-06-16 20:17:31.613 [http-nio-8080-exec-6] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-16 20:17:31.621 [http-nio-8080-exec-6] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-16 20:17:31.622 [http-nio-8080-exec-6] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-16 20:17:31.768 [http-nio-8080-exec-6] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-2244-c963-9bcd-f2a7eef34c7a, userInfoAfterCreation=UserInfoAfterCreationDto(username=test))
+END OF REQUEST
+2024-06-16 20:19:59.017 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:19:59.050 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 20:19:59.136 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:21:59.874 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:21:59.916 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 22480 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:21:59.916 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:21:59.917 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:22:00.645 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:22:00.703 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:22:01.329 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:22:01.337 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:22:01.339 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:22:01.339 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:22:01.384 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:22:01.384 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1436 ms
+2024-06-16 20:22:01.520 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:22:01.807 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cb195dd
+2024-06-16 20:22:01.809 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:22:02.157 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:22:02.162 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:22:02.166 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:22:02.672 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:22:02.684 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:22:02.686 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:22:02.686 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:22:02.815 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:22:02.844 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:22:02.893 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:22:02.894 [main] INFO  liquibase.command - Using deploymentId: 8562122893
+2024-06-16 20:22:02.896 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:22:02.909 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:22:03.273 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:22:03.274 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 364ms
+2024-06-16 20:22:03.281 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:22:03.298 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:22:03.299 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 18ms
+2024-06-16 20:22:03.306 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:22:03.307 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:22:03.307 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:22:03.307 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:22:03.307 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:22:03.307 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:22:03.307 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:22:03.309 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:22:03.309 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:22:03.313 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:22:03.314 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:22:03.388 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:22:03.437 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:22:03.463 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:22:03.647 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:22:04.451 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:22:04.453 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:22:04.993 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:22:05.629 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:22:06.356 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@12e035a8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c082a7d, org.springframework.security.web.context.SecurityContextHolderFilter@cfec1ec, org.springframework.security.web.authentication.logout.LogoutFilter@4eab4474, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@404f1907, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@617275e0, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@74b795da, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7eb3ba2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3f5298a5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ca0546a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e6b556d, org.springframework.security.web.access.ExceptionTranslationFilter@62b9d56e, org.springframework.security.web.access.intercept.AuthorizationFilter@74f6fa34]
+2024-06-16 20:22:06.828 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:22:06.845 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:22:06.855 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.382 seconds (process running for 7.997)
+2024-06-16 20:22:11.661 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:22:11.662 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:22:11.663 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 20:22:12.317 [http-nio-8080-exec-9] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 332 ms
+2024-06-16 20:22:31.228 [http-nio-8080-exec-8] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-16 20:22:31.240 [http-nio-8080-exec-8] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-16 20:22:31.241 [http-nio-8080-exec-8] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-16 20:22:31.589 [http-nio-8080-exec-8] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-2249-5c70-d42f-36fb87874119, userInfoAfterCreation=UserInfoAfterCreationDto(username=tomtom))
+END OF REQUEST
+2024-06-16 20:23:32.386 [http-nio-8080-exec-7] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/expense-category/all
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.ExpenseCategoryController.getAllExpenseCategories
+2024-06-16 20:23:32.387 [http-nio-8080-exec-7] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.ExpenseCategoryServiceImpl.findAll
+2024-06-16 20:23:32.397 [http-nio-8080-exec-7] INFO  p.financement.aspect.LoggingAspect - 
+Return value: <200 OK OK,[ExpenseCategoryDto(expenseCategoryName=Groceries), ExpenseCategoryDto(expenseCategoryName=Utilities), ExpenseCategoryDto(expenseCategoryName=Transport), ExpenseCategoryDto(expenseCategoryName=Housing), ExpenseCategoryDto(expenseCategoryName=Health), ExpenseCategoryDto(expenseCategoryName=Personal Expenses), ExpenseCategoryDto(expenseCategoryName=Education), ExpenseCategoryDto(expenseCategoryName=Entertainment)],[]>
+END OF REQUEST
+2024-06-16 20:23:48.490 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:23:48.493 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 20:23:48.499 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:23:52.498 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:23:52.535 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 14240 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:23:52.535 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:23:52.536 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:23:53.159 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:23:53.212 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:23:53.903 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:23:53.910 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:23:53.911 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:23:53.911 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:23:53.960 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:23:53.960 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1399 ms
+2024-06-16 20:23:54.088 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:23:54.340 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72001c71
+2024-06-16 20:23:54.341 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:23:54.646 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:23:54.651 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:23:54.655 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:23:55.081 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:23:55.088 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:23:55.090 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:23:55.091 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:23:55.208 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:23:55.232 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:23:55.276 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:23:55.276 [main] INFO  liquibase.command - Using deploymentId: 8562235276
+2024-06-16 20:23:55.278 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:23:55.290 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:23:55.619 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:23:55.621 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 330ms
+2024-06-16 20:23:55.626 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:23:55.641 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:23:55.644 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 18ms
+2024-06-16 20:23:55.651 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:23:55.651 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:23:55.651 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:23:55.651 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:23:55.651 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:23:55.651 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:23:55.651 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:23:55.653 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:23:55.653 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:23:55.658 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:23:55.658 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:23:55.749 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:23:55.814 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:23:55.846 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:23:56.050 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:23:56.908 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:23:56.911 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:23:57.452 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:23:58.103 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:23:58.816 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7eb3ba2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@404f1907, org.springframework.security.web.context.SecurityContextHolderFilter@fe32f34, org.springframework.security.web.authentication.logout.LogoutFilter@7b6b3ed6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@67807d9a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6a7b523b, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2447d039, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1fab1909, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2040722f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@cfec1ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12e035a8, org.springframework.security.web.access.ExceptionTranslationFilter@4bd214c, org.springframework.security.web.access.intercept.AuthorizationFilter@24697504]
+2024-06-16 20:23:59.274 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:23:59.291 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:23:59.298 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.199 seconds (process running for 7.722)
+2024-06-16 20:24:02.640 [http-nio-8080-exec-8] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:24:02.640 [http-nio-8080-exec-8] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:24:02.641 [http-nio-8080-exec-8] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 20:24:03.511 [http-nio-8080-exec-6] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 488 ms
+2024-06-16 20:24:32.420 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:24:32.422 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 20:24:32.432 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:24:36.501 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:24:36.535 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 35880 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:24:36.536 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:24:36.536 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:24:37.126 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:24:37.174 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:24:37.733 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:24:37.746 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:24:37.748 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:24:37.748 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:24:37.797 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:24:37.797 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1235 ms
+2024-06-16 20:24:37.971 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:24:38.245 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d96d434
+2024-06-16 20:24:38.246 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:24:38.558 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:24:38.563 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:24:38.569 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:24:39.006 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:24:39.014 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:24:39.017 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:24:39.019 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:24:39.206 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:24:39.229 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:24:39.276 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:24:39.276 [main] INFO  liquibase.command - Using deploymentId: 8562279276
+2024-06-16 20:24:39.278 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:24:39.286 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:24:39.565 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:24:39.566 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 279ms
+2024-06-16 20:24:39.572 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:24:39.586 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:24:39.588 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 16ms
+2024-06-16 20:24:39.594 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:24:39.595 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:24:39.595 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:24:39.595 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:24:39.595 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:24:39.595 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:24:39.595 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:24:39.596 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:24:39.596 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:24:39.601 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:24:39.601 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:24:39.681 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:24:39.746 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:24:39.782 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:24:39.987 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:24:40.886 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:24:40.888 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:24:41.432 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:24:42.083 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:24:42.786 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d4f7d5e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30f51f8a, org.springframework.security.web.context.SecurityContextHolderFilter@6bd0047f, org.springframework.security.web.authentication.logout.LogoutFilter@2b56774b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4eab4474, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@67662433, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@24697504, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@68e4b277, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5fefb35c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f92ded0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a4484e6, org.springframework.security.web.access.ExceptionTranslationFilter@33cbd883, org.springframework.security.web.access.intercept.AuthorizationFilter@308034aa]
+2024-06-16 20:24:43.255 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:24:43.273 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:24:43.281 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.167 seconds (process running for 7.672)
+2024-06-16 20:24:43.468 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:24:43.468 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:24:43.469 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 20:24:44.213 [http-nio-8080-exec-8] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 513 ms
+2024-06-16 20:25:26.645 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:25:26.647 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 20:25:26.653 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:25:30.049 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:25:30.085 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 11704 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:25:30.086 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:25:30.086 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:25:30.714 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:25:30.767 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:25:31.346 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:25:31.358 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:25:31.359 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:25:31.359 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:25:31.407 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:25:31.408 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1295 ms
+2024-06-16 20:25:31.537 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:25:31.792 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6dc2279c
+2024-06-16 20:25:31.793 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:25:32.090 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:25:32.096 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:25:32.099 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:25:32.503 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:25:32.511 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:25:32.513 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:25:32.513 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:25:32.608 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:25:32.627 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:25:32.671 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:25:32.671 [main] INFO  liquibase.command - Using deploymentId: 8562332671
+2024-06-16 20:25:32.672 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:25:32.681 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:25:32.976 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:25:32.978 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 296ms
+2024-06-16 20:25:32.983 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:25:33.000 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:25:33.002 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 18ms
+2024-06-16 20:25:33.009 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:25:33.009 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:25:33.009 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:25:33.009 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:25:33.009 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:25:33.009 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:25:33.010 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:25:33.011 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:25:33.011 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:25:33.015 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:25:33.016 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:25:33.082 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:25:33.114 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:25:33.133 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:25:33.283 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:25:34.256 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:25:34.259 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:25:34.820 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:25:35.450 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:25:36.159 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fcbb165, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6317f6d, org.springframework.security.web.context.SecurityContextHolderFilter@70b9cdcc, org.springframework.security.web.authentication.logout.LogoutFilter@1af2c5c8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@308034aa, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6b2cbea, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@37a53e65, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@53534c15, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@745690d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2603ff76, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69b9ea1d, org.springframework.security.web.access.ExceptionTranslationFilter@e700641, org.springframework.security.web.access.intercept.AuthorizationFilter@617275e0]
+2024-06-16 20:25:36.657 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:25:36.680 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:25:36.687 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.017 seconds (process running for 7.538)
+2024-06-16 20:25:36.725 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:25:36.725 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:25:36.726 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 20:25:37.431 [http-nio-8080-exec-10] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 456 ms
+2024-06-16 20:26:06.399 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:26:06.402 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 20:26:06.408 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:37:53.888 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:37:53.927 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 35452 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:37:53.927 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:37:53.928 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:37:54.649 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:37:54.702 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:37:55.322 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:37:55.333 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:37:55.335 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:37:55.335 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:37:55.386 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:37:55.386 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1427 ms
+2024-06-16 20:37:55.528 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:37:55.819 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@780129bc
+2024-06-16 20:37:55.820 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:37:56.175 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:37:56.181 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:37:56.184 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:37:56.680 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:37:56.688 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:37:56.690 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:37:56.690 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:37:56.808 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:37:56.834 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:37:56.878 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:37:56.879 [main] INFO  liquibase.command - Using deploymentId: 8563076878
+2024-06-16 20:37:56.881 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:37:56.895 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:37:57.240 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:37:57.241 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 346ms
+2024-06-16 20:37:57.247 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:37:57.267 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:37:57.269 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 21ms
+2024-06-16 20:37:57.276 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:37:57.277 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:37:57.277 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:37:57.277 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:37:57.277 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:37:57.277 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:37:57.277 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:37:57.279 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:37:57.279 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:37:57.283 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:37:57.284 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:37:57.363 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:37:57.413 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:37:57.440 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:37:57.622 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:37:58.446 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:37:58.448 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:37:58.989 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:37:59.628 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:38:00.361 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4e55d96, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e83d546, org.springframework.security.web.context.SecurityContextHolderFilter@7cf517f6, org.springframework.security.web.authentication.logout.LogoutFilter@317e9cf5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5e5af20c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@37b3e8b3, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7408c08, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@674db438, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1a8251ba, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@69b66787, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@767f03c5, org.springframework.security.web.access.ExceptionTranslationFilter@43da05ee, org.springframework.security.web.access.intercept.AuthorizationFilter@50798d39]
+2024-06-16 20:38:00.862 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:38:00.880 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:38:00.888 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.389 seconds (process running for 8.063)
+2024-06-16 20:38:05.903 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:38:05.903 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:38:05.904 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 20:38:06.632 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 329 ms
+2024-06-16 20:38:35.355 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:38:35.357 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 20:38:35.364 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:50:58.515 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:50:58.558 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 26808 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:50:58.558 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:50:58.559 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:50:59.303 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:50:59.364 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:51:00.037 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:51:00.046 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:51:00.047 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:51:00.047 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:51:00.101 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:51:00.101 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1513 ms
+2024-06-16 20:51:00.250 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:51:00.552 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e7b0bec
+2024-06-16 20:51:00.553 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:51:00.924 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:51:00.929 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:51:00.933 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:51:01.465 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:51:01.472 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:51:01.475 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:51:01.475 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:51:01.603 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:51:01.637 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:51:01.692 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:51:01.693 [main] INFO  liquibase.command - Using deploymentId: 8563861692
+2024-06-16 20:51:01.695 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:51:01.710 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:51:02.062 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:51:02.063 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 351ms
+2024-06-16 20:51:02.073 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:51:02.097 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:51:02.099 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 26ms
+2024-06-16 20:51:02.107 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:51:02.107 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:51:02.107 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:51:02.107 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:51:02.107 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:51:02.107 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:51:02.108 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:51:02.109 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:51:02.111 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:51:02.115 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:51:02.116 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:51:02.207 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:51:02.258 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:51:02.286 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:51:02.478 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:51:03.409 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:51:03.411 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:51:04.102 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:51:05.020 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:51:05.853 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@323b4e2a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6a79a909, org.springframework.security.web.context.SecurityContextHolderFilter@35d9d10b, org.springframework.web.filter.CorsFilter@721d3a03, org.springframework.security.web.authentication.logout.LogoutFilter@6fe1a8f9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@52294ab7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1bee8888, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@76d404ab, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6c86938f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@321b0237, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62de6b17, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ef64e45, org.springframework.security.web.access.ExceptionTranslationFilter@20ecbeda, org.springframework.security.web.access.intercept.AuthorizationFilter@1e25f6]
+2024-06-16 20:51:06.378 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:51:06.401 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:51:06.412 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 8.327 seconds (process running for 9.033)
+2024-06-16 20:51:09.798 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:51:09.798 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:51:09.799 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 20:51:10.424 [http-nio-8080-exec-5] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 347 ms
+2024-06-16 20:52:01.158 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:52:01.173 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 20:52:01.189 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:52:05.273 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:52:05.318 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 26800 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:52:05.318 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:52:05.319 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:52:06.000 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:52:06.057 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:52:06.785 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:52:06.795 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:52:06.797 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:52:06.797 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:52:06.855 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:52:06.856 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1504 ms
+2024-06-16 20:52:07.024 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:52:07.332 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67ceeffd
+2024-06-16 20:52:07.334 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:52:07.725 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:52:07.733 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:52:07.738 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:52:08.421 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:52:08.431 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:52:08.434 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:52:08.434 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:52:08.582 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:52:08.628 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:52:08.786 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:52:08.786 [main] INFO  liquibase.command - Using deploymentId: 8563928786
+2024-06-16 20:52:08.788 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:52:08.837 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:52:09.599 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:52:09.600 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 762ms
+2024-06-16 20:52:09.610 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:52:09.634 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:52:09.640 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 28ms
+2024-06-16 20:52:09.652 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:52:09.652 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:52:09.652 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:52:09.652 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:52:09.652 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:52:09.652 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:52:09.652 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:52:09.656 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:52:09.656 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:52:09.668 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:52:09.669 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:52:09.746 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:52:09.801 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:52:09.830 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:52:10.012 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:52:10.938 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:52:10.940 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:52:11.715 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:52:12.433 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:52:13.419 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@43874120, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1786e7a5, org.springframework.security.web.context.SecurityContextHolderFilter@5709c30b, org.springframework.web.filter.CorsFilter@7bdfd631, org.springframework.security.web.authentication.logout.LogoutFilter@58d8e971, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@780296e2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@37bdd4b1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@78f9b1ec, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@380d8b0e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@eecf56b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28f6137b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10e7192, org.springframework.security.web.access.ExceptionTranslationFilter@14df8bee, org.springframework.security.web.access.intercept.AuthorizationFilter@627ceaf]
+2024-06-16 20:52:14.133 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:52:14.164 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:52:14.172 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 9.336 seconds (process running for 9.917)
+2024-06-16 20:52:18.034 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:52:18.034 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:52:18.035 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 20:52:18.775 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 446 ms
+2024-06-16 20:52:40.867 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:52:40.868 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 20:52:40.874 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 20:59:30.341 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 20:59:30.383 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 25956 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 20:59:30.384 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 20:59:30.384 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 20:59:31.075 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 20:59:31.129 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 6 JPA repository interfaces.
+2024-06-16 20:59:31.738 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 20:59:31.745 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:59:31.747 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 20:59:31.747 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 20:59:31.794 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 20:59:31.794 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1381 ms
+2024-06-16 20:59:31.931 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 20:59:32.216 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@342a1f84
+2024-06-16 20:59:32.217 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 20:59:32.549 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:59:32.554 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 20:59:32.559 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 20:59:33.081 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 20:59:33.089 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 20:59:33.092 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 20:59:33.092 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:59:33.209 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 20:59:33.233 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:59:33.283 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 20:59:33.283 [main] INFO  liquibase.command - Using deploymentId: 8564373283
+2024-06-16 20:59:33.285 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 20:59:33.299 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 20:59:33.669 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:59:33.669 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 369ms
+2024-06-16 20:59:33.675 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 20:59:33.692 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 20:59:33.694 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 19ms
+2024-06-16 20:59:33.700 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 20:59:33.700 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 20:59:33.700 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 20:59:33.700 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 20:59:33.700 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 20:59:33.700 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 20:59:33.701 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 20:59:33.703 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 20:59:33.703 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 20:59:33.706 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 20:59:33.707 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 20:59:33.781 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 20:59:33.830 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 20:59:33.857 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 20:59:34.044 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 20:59:34.854 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 20:59:34.856 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 20:59:35.392 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 20:59:36.017 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 20:59:36.739 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6aff891f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f58e7d5, org.springframework.security.web.context.SecurityContextHolderFilter@656605e7, org.springframework.web.filter.CorsFilter@4289feba, org.springframework.security.web.authentication.logout.LogoutFilter@1d033ae1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@113d9226, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@19273390, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4ed343ea, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@24fe3184, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50798d39, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9b8d3db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@58f28c5e, org.springframework.security.web.access.ExceptionTranslationFilter@6a94ccde, org.springframework.security.web.access.intercept.AuthorizationFilter@780296e2]
+2024-06-16 20:59:37.251 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 20:59:37.277 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 20:59:37.287 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.391 seconds (process running for 8.079)
+2024-06-16 20:59:43.210 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 20:59:43.210 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 20:59:43.211 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 20:59:43.980 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 380 ms
+2024-06-16 21:01:25.363 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:01:25.365 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 21:01:25.373 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 21:06:17.049 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 21:06:17.095 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 14056 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 21:06:17.096 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 21:06:17.097 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 21:06:17.873 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 21:06:17.934 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 6 JPA repository interfaces.
+2024-06-16 21:06:18.561 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 21:06:18.569 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:06:18.570 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 21:06:18.570 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 21:06:18.617 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 21:06:18.617 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1486 ms
+2024-06-16 21:06:18.755 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 21:06:19.025 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@342a1f84
+2024-06-16 21:06:19.029 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 21:06:19.327 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:06:19.332 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 21:06:19.337 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 21:06:19.786 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 21:06:19.794 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 21:06:19.797 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 21:06:19.797 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:06:19.930 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 21:06:19.952 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:06:19.999 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:06:20.000 [main] INFO  liquibase.command - Using deploymentId: 8564780000
+2024-06-16 21:06:20.002 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:06:20.016 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 21:06:20.334 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:06:20.335 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 318ms
+2024-06-16 21:06:20.341 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 21:06:20.356 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:06:20.358 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 17ms
+2024-06-16 21:06:20.365 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 21:06:20.365 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 21:06:20.365 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 21:06:20.365 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 21:06:20.366 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 21:06:20.366 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 21:06:20.366 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 21:06:20.368 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 21:06:20.368 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 21:06:20.372 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 21:06:20.372 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:06:20.454 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 21:06:20.513 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 21:06:20.544 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 21:06:20.744 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 21:06:21.674 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 21:06:21.677 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:06:22.230 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 21:06:22.866 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 21:06:23.579 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e6b556d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d35707d, org.springframework.security.web.context.SecurityContextHolderFilter@55de1b68, org.springframework.web.filter.CorsFilter@70e3f664, org.springframework.security.web.authentication.logout.LogoutFilter@762cfcc1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4c082a7d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@41c77861, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@38b2a4e7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@12e035a8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cfec1ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1af2c5c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cc65ea1, org.springframework.security.web.access.ExceptionTranslationFilter@34a82874, org.springframework.security.web.access.intercept.AuthorizationFilter@4c89b58]
+2024-06-16 21:06:24.059 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:06:24.078 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 21:06:24.086 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.537 seconds (process running for 8.319)
+2024-06-16 21:06:31.999 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 21:06:31.999 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 21:06:32.000 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 21:06:32.652 [http-nio-8080-exec-7] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 337 ms
+2024-06-16 21:07:15.137 [http-nio-8080-exec-9] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-16 21:07:15.139 [http-nio-8080-exec-9] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-16 21:07:15.139 [http-nio-8080-exec-9] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-16 21:07:15.356 [http-nio-8080-exec-9] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-2272-4fdb-5e77-09a32d434c19, userInfoAfterCreation=UserInfoAfterCreationDto(username=tomtom))
+END OF REQUEST
+2024-06-16 21:07:43.299 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:07:43.301 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 21:07:43.307 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 21:07:58.819 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 21:07:58.857 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 16964 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 21:07:58.857 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 21:07:58.858 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 21:07:59.476 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 21:07:59.529 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 6 JPA repository interfaces.
+2024-06-16 21:08:00.115 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 21:08:00.127 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:08:00.128 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 21:08:00.128 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 21:08:00.175 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 21:08:00.175 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1291 ms
+2024-06-16 21:08:00.307 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 21:08:00.557 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@58636b50
+2024-06-16 21:08:00.559 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 21:08:00.852 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:08:00.859 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 21:08:00.863 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 21:08:01.273 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 21:08:01.280 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 21:08:01.283 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 21:08:01.283 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:08:01.397 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 21:08:01.420 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:08:01.463 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:08:01.463 [main] INFO  liquibase.command - Using deploymentId: 8564881463
+2024-06-16 21:08:01.465 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:08:01.473 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 21:08:01.795 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:08:01.796 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 322ms
+2024-06-16 21:08:01.803 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 21:08:01.819 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:08:01.821 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 18ms
+2024-06-16 21:08:01.829 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 21:08:01.829 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 21:08:01.829 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 21:08:01.829 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 21:08:01.829 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 21:08:01.829 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 21:08:01.830 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 21:08:01.831 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 21:08:01.831 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 21:08:01.835 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 21:08:01.835 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:08:01.908 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 21:08:01.971 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 21:08:01.999 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 21:08:02.203 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 21:08:03.047 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 21:08:03.049 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:08:03.562 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 21:08:04.164 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 21:08:04.856 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6f139a8f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7cf517f6, org.springframework.security.web.context.SecurityContextHolderFilter@7b6b3ed6, org.springframework.security.web.authentication.logout.LogoutFilter@70e3f664, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@418422c3, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6a4484e6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1c07b091, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@43da05ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@68e4b277, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4eab4474, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a8251ba, org.springframework.security.web.access.ExceptionTranslationFilter@6317f6d, org.springframework.security.web.access.intercept.AuthorizationFilter@4f6d3889]
+2024-06-16 21:08:05.301 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:08:05.317 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 21:08:05.325 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 6.882 seconds (process running for 7.363)
+2024-06-16 21:08:05.359 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 21:08:05.359 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 21:08:05.360 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 21:08:06.114 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 399 ms
+2024-06-16 21:08:30.367 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:08:30.368 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 21:08:30.373 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 21:14:28.377 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 21:14:28.423 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 15884 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 21:14:28.423 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 21:14:28.423 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 21:14:29.181 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 21:14:29.240 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 6 JPA repository interfaces.
+2024-06-16 21:14:29.876 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 21:14:29.885 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:14:29.885 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 21:14:29.885 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 21:14:29.934 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 21:14:29.934 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1477 ms
+2024-06-16 21:14:30.072 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 21:14:30.363 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@342a1f84
+2024-06-16 21:14:30.368 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 21:14:30.718 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:14:30.723 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 21:14:30.727 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 21:14:31.231 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 21:14:31.239 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 21:14:31.242 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 21:14:31.242 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:14:31.462 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 21:14:31.496 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:14:31.542 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:14:31.543 [main] INFO  liquibase.command - Using deploymentId: 8565271543
+2024-06-16 21:14:31.545 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:14:31.557 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 21:14:31.880 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:14:31.881 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 324ms
+2024-06-16 21:14:31.890 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 21:14:31.911 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:14:31.914 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 23ms
+2024-06-16 21:14:31.921 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 21:14:31.921 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 21:14:31.921 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 21:14:31.921 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 21:14:31.922 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 21:14:31.922 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 21:14:31.922 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 21:14:31.923 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 21:14:31.925 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 21:14:31.929 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 21:14:31.929 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:14:32.003 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 21:14:32.053 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 21:14:32.080 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 21:14:32.263 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 21:14:33.121 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 21:14:33.123 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:14:33.685 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 21:14:34.323 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 21:14:35.066 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@705a793a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ee5d723, org.springframework.security.web.context.SecurityContextHolderFilter@78f9b1ec, org.springframework.web.filter.CorsFilter@6f88319b, org.springframework.security.web.authentication.logout.LogoutFilter@7e0a7b9e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@35929bc7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4289feba, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1e25f6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7b48b933, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@219505d9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24fe3184, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@232e1f66, org.springframework.security.web.access.ExceptionTranslationFilter@43874120, org.springframework.security.web.access.intercept.AuthorizationFilter@634fa039]
+2024-06-16 21:14:35.867 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:14:35.902 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 21:14:35.913 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 8.057 seconds (process running for 8.821)
+2024-06-16 21:14:36.158 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 21:14:36.159 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 21:14:36.160 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 21:14:37.009 [http-nio-8080-exec-3] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 518 ms
+2024-06-16 21:15:46.791 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:15:46.793 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 21:15:46.799 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 21:15:50.263 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 21:15:50.300 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 11360 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 21:15:50.300 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 21:15:50.301 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 21:15:50.938 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 21:15:50.993 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 6 JPA repository interfaces.
+2024-06-16 21:15:51.592 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 21:15:51.600 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:15:51.601 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 21:15:51.601 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 21:15:51.650 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 21:15:51.650 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1322 ms
+2024-06-16 21:15:51.780 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 21:15:52.039 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f4f1536
+2024-06-16 21:15:52.041 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 21:15:52.464 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:15:52.472 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 21:15:52.476 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 21:15:52.982 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 21:15:52.992 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 21:15:52.995 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 21:15:52.995 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:15:53.136 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 21:15:53.161 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:15:53.211 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:15:53.212 [main] INFO  liquibase.command - Using deploymentId: 8565353212
+2024-06-16 21:15:53.214 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:15:53.228 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 21:15:53.615 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:15:53.616 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 387ms
+2024-06-16 21:15:53.624 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 21:15:53.650 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:15:53.653 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 26ms
+2024-06-16 21:15:53.660 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 21:15:53.660 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 21:15:53.660 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 21:15:53.661 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 21:15:53.661 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 21:15:53.661 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 21:15:53.661 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 21:15:53.663 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 21:15:53.663 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 21:15:53.666 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 21:15:53.667 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:15:53.749 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 21:15:53.801 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 21:15:53.831 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 21:15:54.031 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 21:15:55.090 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 21:15:55.092 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:15:55.641 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 21:15:56.370 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 21:15:57.215 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1b5860fb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5575b4c2, org.springframework.security.web.context.SecurityContextHolderFilter@41116c0e, org.springframework.web.filter.CorsFilter@4c89b58, org.springframework.security.web.authentication.logout.LogoutFilter@27b94ed9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6c67a17d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4bd214c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@472cf6af, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6a4484e6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f92ded0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@248ad8a1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fab1909, org.springframework.security.web.access.ExceptionTranslationFilter@4a1a9f57, org.springframework.security.web.access.intercept.AuthorizationFilter@7b6b3ed6]
+2024-06-16 21:15:57.734 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:15:57.754 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 21:15:57.764 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.876 seconds (process running for 8.359)
+2024-06-16 21:16:18.916 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 21:16:18.917 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 21:16:18.918 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 21:16:19.522 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 369 ms
+2024-06-16 21:16:37.431 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:16:37.433 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 21:16:37.439 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-16 21:22:50.626 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-16 21:22:50.671 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 27924 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-16 21:22:50.671 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-16 21:22:50.671 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-16 21:22:51.353 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-16 21:22:51.408 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 6 JPA repository interfaces.
+2024-06-16 21:22:52.059 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-16 21:22:52.068 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:22:52.070 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-16 21:22:52.070 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-16 21:22:52.122 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-16 21:22:52.122 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1418 ms
+2024-06-16 21:22:52.261 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-16 21:22:52.556 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@342a1f84
+2024-06-16 21:22:52.557 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-16 21:22:52.912 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:22:52.918 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-16 21:22:52.925 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-16 21:22:53.445 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-16 21:22:53.454 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-16 21:22:53.456 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-16 21:22:53.456 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:22:53.586 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-16 21:22:53.620 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:22:53.674 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-16 21:22:53.674 [main] INFO  liquibase.command - Using deploymentId: 8565773674
+2024-06-16 21:22:53.676 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-16 21:22:53.689 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-16 21:22:54.017 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:22:54.019 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 329ms
+2024-06-16 21:22:54.027 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-16 21:22:54.043 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-16 21:22:54.044 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 17ms
+2024-06-16 21:22:54.053 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-16 21:22:54.053 [main] INFO  liquibase.util - Run:                          2
+2024-06-16 21:22:54.053 [main] INFO  liquibase.util - Previously run:               0
+2024-06-16 21:22:54.053 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-16 21:22:54.053 [main] INFO  liquibase.util - -------------------------------
+2024-06-16 21:22:54.053 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-16 21:22:54.053 [main] INFO  liquibase.util - Update summary generated
+2024-06-16 21:22:54.055 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-16 21:22:54.056 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-16 21:22:54.059 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-16 21:22:54.060 [main] INFO  liquibase.command - Command execution complete
+2024-06-16 21:22:54.136 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-16 21:22:54.187 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-16 21:22:54.212 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-16 21:22:54.396 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-16 21:22:55.259 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-16 21:22:55.261 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:22:55.827 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-16 21:22:56.451 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-16 21:22:57.180 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1d033ae1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5de4f44e, org.springframework.security.web.context.SecurityContextHolderFilter@2fce55d6, org.springframework.security.web.authentication.logout.LogoutFilter@19273390, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6ff08304, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@25607b86, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@36e7a455, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4630c2e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cfa5b9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a6b2564, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@627ceaf, org.springframework.security.web.access.ExceptionTranslationFilter@36d5677, org.springframework.security.web.access.intercept.AuthorizationFilter@7408c08]
+2024-06-16 21:22:57.644 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-16 21:22:57.666 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-16 21:22:57.674 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.435 seconds (process running for 8.126)
+2024-06-16 21:23:03.796 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-16 21:23:03.796 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-16 21:23:03.797 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-16 21:23:04.598 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 529 ms
+2024-06-16 21:23:26.984 [http-nio-8080-exec-10] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-16 21:23:26.985 [http-nio-8080-exec-10] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-16 21:23:26.985 [http-nio-8080-exec-10] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-16 21:23:27.163 [http-nio-8080-exec-10] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-2281-2419-1b56-dab04f0f4e21, userInfoAfterCreation=UserInfoAfterCreationDto(username=tomtom))
+END OF REQUEST
+2024-06-16 21:23:39.488 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-16 21:23:39.490 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-16 21:23:39.502 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -15,6 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import project.financement.security.UserDetailsServiceImpl;
+import project.financement.security.utils.FinancementAccessDeniedHandler;
 
 import static project.financement.security.utils.AuthorityRoleList.*;
 
@@ -24,6 +25,7 @@ import static project.financement.security.utils.AuthorityRoleList.*;
 @RequiredArgsConstructor
 public class SecurityConfig implements WebMvcConfigurer {
     private final UserDetailsServiceImpl userDetailsService;
+    private final FinancementAccessDeniedHandler accessDeniedHandler;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -55,9 +57,10 @@ public class SecurityConfig implements WebMvcConfigurer {
                 .headers(headers -> headers
                         .cacheControl(Customizer.withDefaults()).disable())
                 .httpBasic(Customizer.withDefaults())
-                .formLogin(Customizer.withDefaults());
+                .formLogin(Customizer.withDefaults())
+                .exceptionHandling(ex -> ex.accessDeniedHandler(accessDeniedHandler));
+
         return http.build();
     }
 }
-
 
