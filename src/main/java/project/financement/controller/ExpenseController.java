@@ -3,6 +3,7 @@ package project.financement.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import project.financement.annotation.*;
 import project.financement.dto.ExpenseCategoryDto;
@@ -22,7 +23,7 @@ import java.util.UUID;
  * Contains endpoints for managing expenses including creation, retrieval, update, and deletion.
  */
 
-
+@Validated
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/expense")
@@ -52,19 +53,19 @@ public class ExpenseController {
     }
 
     @UpdateExpense(path = "/update-expense/{id}")
-    public ResponseEntity<ExpenseDto> updateExpense(@PathVariable String id, @RequestBody ExpenseDto expenseDetails) {
+    public ResponseEntity<ExpenseDto> updateExpense(@UuidFormatChecker @PathVariable String id, @RequestBody ExpenseDto expenseDetails) {
         ExpenseDto updatedExpenseDto = expenseService.updateExpense(UUID.fromString(id), expenseDetails);
         return ResponseEntity.ok(updatedExpenseDto);
     }
 
     @DeleteExpense(path = "/delete-expense/{id}")
-    public ResponseEntity<String> deleteExpense(@PathVariable String id) {
+    public ResponseEntity<String> deleteExpense(@UuidFormatChecker @PathVariable String id) {
         expenseService.deleteExpense(UUID.fromString(id));
         return ResponseEntity.ok("Deleted expense");
     }
 
     @GetExpensesByCategory(path = "/expense-by-category/{expenseCategoryId}")
-    public ResponseEntity<List<ExpenseDto>> getExpensesByCategory(@PathVariable String expenseCategoryId) {
+    public ResponseEntity<List<ExpenseDto>> getExpensesByCategory(@UuidFormatChecker @PathVariable String expenseCategoryId) {
         List<Expense> expenses = expenseService.findByExpenseCategoryId(UUID.fromString(expenseCategoryId));
         List<ExpenseDto> expenseDtos = expenseMapper.toDto(expenses);
         return ResponseEntity.ok(expenseDtos);

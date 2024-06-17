@@ -14,7 +14,7 @@ import java.util.Objects;
 @Aspect
 @Component
 @Slf4j
-public class LoggingAspect {
+public class  LoggingAspect {
 
     @Pointcut("execution(public * project.financement.controller.*.*(..))")
     public void controllerLog() {

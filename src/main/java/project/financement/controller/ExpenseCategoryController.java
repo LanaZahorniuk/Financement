@@ -3,14 +3,13 @@ package project.financement.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import project.financement.annotation.CreateExpenseCategory;
-import project.financement.annotation.DeleteExpenseCategory;
-import project.financement.annotation.GetAllExpenseCategories;
-import project.financement.annotation.GetExpenseCategoryByName;
+import project.financement.annotation.*;
 import project.financement.dto.ExpenseCategoryDto;
 import project.financement.exception.ExpenseCategoryDeletionException;
 import project.financement.service.impl.ExpenseCategoryServiceImpl;
@@ -24,7 +23,7 @@ import java.util.UUID;
  * deletion by name, and retrieval of all existing categories.
  */
 
-
+@Validated
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/expense-category")
@@ -39,7 +38,7 @@ public class ExpenseCategoryController {
     }
 
     @CreateExpenseCategory(path = "/create-expense-category/{userId}")
-    public ResponseEntity<ExpenseCategoryDto> createExpenseCategory(@PathVariable String userId, @RequestBody ExpenseCategoryDto expenseCategoryDto) {
+    public ResponseEntity<ExpenseCategoryDto> createExpenseCategory(@UuidFormatChecker @PathVariable String userId, @RequestBody ExpenseCategoryDto expenseCategoryDto) {
         ExpenseCategoryDto newExpenseCategoryDto = expenseCategoryService.saveExpenseCategory(UUID.fromString(userId), expenseCategoryDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(newExpenseCategoryDto);
     }
@@ -50,6 +49,7 @@ public class ExpenseCategoryController {
         return ResponseEntity.ok(expenseCategory);
     }
 
+    @PreAuthorize("hasAnyRole('PremiumUser')")
     @DeleteExpenseCategory(path = "/delete-expense-category/{expenseCategoryName}")
     public ResponseEntity<String> deleteExpenseCategory(@PathVariable String expenseCategoryName) {
         try {

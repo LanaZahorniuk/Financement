@@ -82,44 +82,6 @@ class UserControllerTest {
 
     }
 
-
-//    @Test
-//    //@WithMockUser(value = "johnsmith", password = "123123", roles = "PremiumUser")
-//    @WithAnonymousUser
-//    void getUserByIdPositiveTest() throws Exception {
-//        UserCreateDto userCreateDto = new UserCreateDto();
-//        userCreateDto.setFirstName("Christian");
-//        userCreateDto.setLastName("Carl");
-//        userCreateDto.setDateOfBirth(LocalDate.of(1989, 7, 8));
-//        UserInfoCreateDto userInfoCreateDto = new UserInfoCreateDto("Chris", "carl.t@example.com", "password123", "+7771167890", "ROLE_FreeUser");
-//        userCreateDto.setUserInfo(userInfoCreateDto);
-//
-//        String json = objectMapper.writeValueAsString(userCreateDto);
-//
-//        MvcResult createResult = mockMvc.perform(MockMvcRequestBuilders.post("/user/create-user")
-//                        .contentType(MediaType.APPLICATION_JSON)
-//                        .content(json))
-//                .andReturn();
-//
-//        Assertions.assertEquals(200, createResult.getResponse().getStatus());
-//
-//        String jsonCreateResult = createResult.getResponse().getContentAsString();
-//        UserAfterCreationDto createdUser = objectMapper.readValue(jsonCreateResult, UserAfterCreationDto.class);
-//        UUID testUserId = createdUser.getUserId();
-//
-//        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/user/{id}", testUserId)
-//                        .accept(MediaType.APPLICATION_JSON))
-//                .andReturn();
-//
-//        Assertions.assertEquals(200, result.getResponse().getStatus());
-//
-//        String jsonResult = result.getResponse().getContentAsString();
-//        UserAfterCreationDto userAfterCreationDto = objectMapper.readValue(jsonResult, UserAfterCreationDto.class);
-//        Assertions.assertNotNull(userAfterCreationDto.getUserId());
-//        Assertions.assertEquals("Chris", userAfterCreationDto.getUserInfoAfterCreation().getUsername());
-//    }
-
-
     @Test
     @WithMockUser(value = "User", password = "123123", roles = "FreeUser")
     void getUserByIdNegativeTest() throws Exception {

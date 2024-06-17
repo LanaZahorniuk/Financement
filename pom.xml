@@ -246,6 +246,7 @@
             </plugin>
 
         </plugins>
+        <finalName>fin</finalName>
     </build>
 
 </project>

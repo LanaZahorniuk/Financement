@@ -13,7 +13,6 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import project.financement.security.UserDetailsServiceImpl;
 import project.financement.security.utils.FinancementAccessDeniedHandler;
 
@@ -23,7 +22,7 @@ import static project.financement.security.utils.AuthorityRoleList.*;
 @EnableWebSecurity
 @EnableMethodSecurity
 @RequiredArgsConstructor
-public class SecurityConfig implements WebMvcConfigurer {
+public class SecurityConfig {
     private final UserDetailsServiceImpl userDetailsService;
     private final FinancementAccessDeniedHandler accessDeniedHandler;
 
@@ -51,8 +50,8 @@ public class SecurityConfig implements WebMvcConfigurer {
                 .authorizeHttpRequests(req -> req
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .requestMatchers("/user/create-user").anonymous()
-                        .requestMatchers(FREE_USER_LIST).hasRole(FreeUser)
-                        .requestMatchers(PREMIUM_USER_LIST).hasRole(PremiumUser)
+                        .requestMatchers(SWAGGER_LIST).hasAnyRole(FreeUser, PremiumUser)
+                        .requestMatchers(AUTH_LIST).hasAnyRole(FreeUser, PremiumUser)
                         .anyRequest().authenticated())
                 .headers(headers -> headers
                         .cacheControl(Customizer.withDefaults()).disable())
