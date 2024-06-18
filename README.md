@@ -1,4 +1,4 @@
-**Financial Management Application** 
+### Financement
 
 **Project Description:**
 
@@ -133,7 +133,6 @@ This structured database schema enables efficient management and tracking of use
     - **Swagger:** Annotations for generating API documentation.
     - **jBCrypt:** Library for secure password hashing.
     - **Liquibase:** Handles database schema changes via migrations.
-    - **JavaFaker:** Provides fake data for testing purposes.
 
 **Database:**
 - **MySQL:** Main database for storing application data.
