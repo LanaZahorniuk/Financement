@@ -3,9 +3,9 @@ spring:
     banner-mode: off
 
   datasource:
-    url: ${DATASOURCE_URL}?allowMultiQueries=true
-    username: ${DATASOURCE_USERNAME}
-    password: ${DATASOURCE_PASSWORD}
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DATABASE:fin_db}?allowMultiQueries=true
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASSWORD:Denisdzi88}
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 

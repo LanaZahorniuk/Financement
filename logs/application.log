@@ -117,3 +117,1328 @@ SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.getUserById
 2024-06-18 00:21:56.868 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-06-18 00:21:56.870 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2024-06-18 00:21:56.876 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 00:57:18.982 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 00:57:19.087 [main] INFO  p.f.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.5 with PID 21964 (started by Huawei in D:\Financement)
+2024-06-18 00:57:19.087 [main] DEBUG p.f.controller.UserControllerTest - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 00:57:19.088 [main] INFO  p.f.controller.UserControllerTest - The following 1 profile is active: "test"
+2024-06-18 00:57:20.287 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 00:57:20.382 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 6 JPA repository interfaces.
+2024-06-18 00:57:21.428 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 00:57:21.536 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 00:57:21.591 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 00:57:21.980 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 00:57:22.025 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 00:57:22.439 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testDB user=SA
+2024-06-18 00:57:22.441 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 00:57:22.483 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 00:57:23.941 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 00:57:23.945 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 00:57:24.951 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 00:57:25.984 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 00:57:27.385 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1fd6c8c7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@289d9ae3, org.springframework.security.web.context.SecurityContextHolderFilter@73cb1ae3, org.springframework.security.web.authentication.logout.LogoutFilter@63e89f48, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@78042608, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@79c52145, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@71f0dd9e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2e5325e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51ddb935, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18316934, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e4b9a44, org.springframework.security.web.access.ExceptionTranslationFilter@3e939338, org.springframework.security.web.access.intercept.AuthorizationFilter@5ac5e36c]
+2024-06-18 00:57:28.173 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-06-18 00:57:28.173 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-06-18 00:57:28.174 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-06-18 00:57:28.201 [main] INFO  p.f.controller.UserControllerTest - Started UserControllerTest in 9.833 seconds (process running for 11.674)
+2024-06-18 00:57:29.052 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 00:57:29.084 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 00:57:29.084 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 00:57:29.390 [main] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-286b-7504-13c1-b19635ce4dd9, userInfoAfterCreation=UserInfoAfterCreationDto(username=Chris))
+END OF REQUEST
+2024-06-18 00:57:29.476 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 00:57:29.477 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 00:57:29.477 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 00:57:29.548 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23502, SQLState: 23502
+2024-06-18 00:57:29.548 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]
+2024-06-18 00:57:29.554 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [UserCreateDto(firstName=null, lastName=Karl, dateOfBirth=1989-07-08, userInfo=UserInfoCreateDto(username=Chris, email=karl.t@example.com, password=password123, phoneNumber=+7771167890, role=FreeUser), registrationDate=2024-06-18)]. could not execute statement [NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]] [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; SQL [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; constraint [null]
+2024-06-18 00:57:29.621 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/7ca2241e-36b8-44d9-8f66-5280061558ec
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.UserController.getUserById
+2024-06-18 00:57:29.637 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.getUserById
+2024-06-18 00:57:29.657 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [7ca2241e-36b8-44d9-8f66-5280061558ec]. User not found with ID: 7ca2241e-36b8-44d9-8f66-5280061558ec
+2024-06-18 00:57:29.717 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 00:57:29.719 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 00:57:29.721 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 01:09:15.739 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 01:09:15.853 [main] INFO  p.f.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.5 with PID 26424 (started by Huawei in D:\Financement)
+2024-06-18 01:09:15.854 [main] DEBUG p.f.controller.UserControllerTest - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 01:09:15.854 [main] INFO  p.f.controller.UserControllerTest - The following 1 profile is active: "test"
+2024-06-18 01:09:16.943 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 01:09:17.037 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 6 JPA repository interfaces.
+2024-06-18 01:09:18.014 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 01:09:18.110 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 01:09:18.161 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 01:09:18.637 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 01:09:18.691 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 01:09:19.079 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testDB user=SA
+2024-06-18 01:09:19.082 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 01:09:19.121 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 01:09:20.658 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 01:09:20.661 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 01:09:21.496 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 01:09:22.450 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 01:09:23.750 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44e894f3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73f9a4dc, org.springframework.security.web.context.SecurityContextHolderFilter@44edde1d, org.springframework.security.web.authentication.logout.LogoutFilter@77ebc959, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@27af1bd1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@522ec9b9, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2c5748e1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2cd37eac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32f33a85, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f7774f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19846908, org.springframework.security.web.access.ExceptionTranslationFilter@5e161501, org.springframework.security.web.access.intercept.AuthorizationFilter@31f42606]
+2024-06-18 01:09:24.580 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-06-18 01:09:24.581 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-06-18 01:09:24.583 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-06-18 01:09:24.619 [main] INFO  p.f.controller.UserControllerTest - Started UserControllerTest in 9.459 seconds (process running for 11.257)
+2024-06-18 01:09:25.386 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 01:09:25.423 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 01:09:25.424 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 01:09:25.765 [main] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-2876-6352-c28c-168b9a1d4763, userInfoAfterCreation=UserInfoAfterCreationDto(username=Chris))
+END OF REQUEST
+2024-06-18 01:09:25.851 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 01:09:25.851 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 01:09:25.852 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 01:09:25.922 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23502, SQLState: 23502
+2024-06-18 01:09:25.923 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]
+2024-06-18 01:09:25.929 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [UserCreateDto(firstName=null, lastName=Karl, dateOfBirth=1989-07-08, userInfo=UserInfoCreateDto(username=Chris, email=karl.t@example.com, password=password123, phoneNumber=+7771167890, role=FreeUser), registrationDate=2024-06-18)]. could not execute statement [NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]] [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; SQL [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; constraint [null]
+2024-06-18 01:09:25.990 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/f1cba1ab-bb77-4851-bbd0-334da7689b01
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.UserController.getUserById
+2024-06-18 01:09:26.004 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.getUserById
+2024-06-18 01:09:26.018 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [f1cba1ab-bb77-4851-bbd0-334da7689b01]. User not found with ID: f1cba1ab-bb77-4851-bbd0-334da7689b01
+2024-06-18 01:09:26.059 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 01:09:26.061 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 01:09:26.063 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 01:16:25.784 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 01:16:25.892 [main] INFO  p.f.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.5 with PID 20872 (started by Huawei in D:\Financement)
+2024-06-18 01:16:25.893 [main] DEBUG p.f.controller.UserControllerTest - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 01:16:25.894 [main] INFO  p.f.controller.UserControllerTest - The following 1 profile is active: "test"
+2024-06-18 01:16:27.125 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 01:16:27.239 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 6 JPA repository interfaces.
+2024-06-18 01:16:28.358 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 01:16:28.467 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 01:16:28.524 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 01:16:28.930 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 01:16:28.979 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 01:16:29.389 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testDB user=SA
+2024-06-18 01:16:29.391 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 01:16:29.427 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 01:16:30.787 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 01:16:30.792 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 01:16:31.790 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 01:16:32.874 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 01:16:34.492 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37bc27b6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@336e6e97, org.springframework.security.web.context.SecurityContextHolderFilter@6a7b3f7, org.springframework.security.web.authentication.logout.LogoutFilter@6c81ee61, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1982bc76, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7631518, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3f831580, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@475861cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@254c2b9e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@284cbd6a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2e5325e3, org.springframework.security.web.access.ExceptionTranslationFilter@38244b4c, org.springframework.security.web.access.intercept.AuthorizationFilter@d37556a]
+2024-06-18 01:16:35.368 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-06-18 01:16:35.369 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-06-18 01:16:35.371 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-06-18 01:16:35.395 [main] INFO  p.f.controller.UserControllerTest - Started UserControllerTest in 10.215 seconds (process running for 12.134)
+2024-06-18 01:16:36.198 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 01:16:36.241 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 01:16:36.241 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 01:16:36.589 [main] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-287c-f646-ce73-76914e954f6f, userInfoAfterCreation=UserInfoAfterCreationDto(username=Chris))
+END OF REQUEST
+2024-06-18 01:16:36.679 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 01:16:36.680 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 01:16:36.680 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 01:16:36.765 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23502, SQLState: 23502
+2024-06-18 01:16:36.765 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]
+2024-06-18 01:16:36.774 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [UserCreateDto(firstName=null, lastName=Karl, dateOfBirth=1989-07-08, userInfo=UserInfoCreateDto(username=Chris, email=karl.t@example.com, password=password123, phoneNumber=+7771167890, role=FreeUser), registrationDate=2024-06-18)]. could not execute statement [NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]] [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; SQL [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; constraint [null]
+2024-06-18 01:16:36.830 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/c20e2c43-cc75-4bf7-ae11-85d87e7ebb10
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.UserController.getUserById
+2024-06-18 01:16:36.841 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.getUserById
+2024-06-18 01:16:36.854 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [c20e2c43-cc75-4bf7-ae11-85d87e7ebb10]. User not found with ID: c20e2c43-cc75-4bf7-ae11-85d87e7ebb10
+2024-06-18 01:16:36.907 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 01:16:36.909 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 01:16:36.911 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 01:17:53.476 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 01:17:53.609 [main] INFO  p.f.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.5 with PID 12904 (started by Huawei in D:\Financement)
+2024-06-18 01:17:53.610 [main] DEBUG p.f.controller.UserControllerTest - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 01:17:53.611 [main] INFO  p.f.controller.UserControllerTest - The following 1 profile is active: "test"
+2024-06-18 01:17:55.208 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 01:17:55.318 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 6 JPA repository interfaces.
+2024-06-18 01:17:56.458 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 01:17:56.569 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 01:17:56.621 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 01:17:57.022 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 01:17:57.071 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 01:17:57.478 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testDB user=SA
+2024-06-18 01:17:57.481 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 01:17:57.528 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 01:17:58.981 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 01:17:58.986 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 01:18:00.049 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 01:18:01.384 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 01:18:03.247 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@78042608, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38dee549, org.springframework.security.web.context.SecurityContextHolderFilter@134f9b9f, org.springframework.security.web.authentication.logout.LogoutFilter@6c1d22de, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3f831580, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3754e4b2, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1fd6c8c7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@336e6e97, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73cb1ae3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ea14e1d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@289d9ae3, org.springframework.security.web.access.ExceptionTranslationFilter@592d49d2, org.springframework.security.web.access.intercept.AuthorizationFilter@7eaf9503]
+2024-06-18 01:18:04.297 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-06-18 01:18:04.298 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-06-18 01:18:04.299 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-06-18 01:18:04.333 [main] INFO  p.f.controller.UserControllerTest - Started UserControllerTest in 11.471 seconds (process running for 13.456)
+2024-06-18 01:18:05.298 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 01:18:05.333 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 01:18:05.334 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 01:18:05.767 [main] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-287e-5295-d6be-aac673424655, userInfoAfterCreation=UserInfoAfterCreationDto(username=Chris))
+END OF REQUEST
+2024-06-18 01:18:05.891 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 01:18:05.892 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 01:18:05.892 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 01:18:05.971 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23502, SQLState: 23502
+2024-06-18 01:18:05.971 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]
+2024-06-18 01:18:05.983 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [UserCreateDto(firstName=null, lastName=Karl, dateOfBirth=1989-07-08, userInfo=UserInfoCreateDto(username=Chris, email=karl.t@example.com, password=password123, phoneNumber=+7771167890, role=FreeUser), registrationDate=2024-06-18)]. could not execute statement [NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]] [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; SQL [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; constraint [null]
+2024-06-18 01:18:06.055 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/80d45bc0-f4a6-48fa-8491-fa82ba8ce24e
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.UserController.getUserById
+2024-06-18 01:18:06.069 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.getUserById
+2024-06-18 01:18:06.088 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [80d45bc0-f4a6-48fa-8491-fa82ba8ce24e]. User not found with ID: 80d45bc0-f4a6-48fa-8491-fa82ba8ce24e
+2024-06-18 01:18:06.151 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 01:18:06.153 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 01:18:06.156 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 02:25:16.102 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 02:25:16.150 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 27860 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-18 02:25:16.151 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 02:25:16.152 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 02:25:16.928 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 02:25:16.991 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 6 JPA repository interfaces.
+2024-06-18 02:25:17.595 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-18 02:25:17.603 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-18 02:25:17.604 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 02:25:17.604 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-18 02:25:17.660 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 02:25:17.660 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1473 ms
+2024-06-18 02:25:17.835 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 02:25:18.910 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:291)
+	at liquibase.Scope.lambda$child$0(Scope.java:186)
+	at liquibase.Scope.child(Scope.java:195)
+	at liquibase.Scope.child(Scope.java:185)
+	at liquibase.Scope.child(Scope.java:164)
+	at liquibase.Scope.child(Scope.java:252)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at project.financement.FinancementApplication.main(FinancementApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 37 common frames omitted
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 40 common frames omitted
+2024-06-18 02:25:18.916 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [project/financement/configuration/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-06-18 02:25:18.920 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-06-18 02:25:18.931 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-18 02:25:18.944 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [project/financement/configuration/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at project.financement.FinancementApplication.main(FinancementApplication.java:10)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 18 common frames omitted
+Caused by: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:296)
+	at liquibase.Scope.lambda$child$0(Scope.java:186)
+	at liquibase.Scope.child(Scope.java:195)
+	at liquibase.Scope.child(Scope.java:185)
+	at liquibase.Scope.child(Scope.java:164)
+	at liquibase.Scope.child(Scope.java:252)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:287)
+	... 20 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:291)
+	... 26 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 37 common frames omitted
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 40 common frames omitted
+2024-06-18 02:27:28.755 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 02:27:28.795 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 2328 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-18 02:27:28.796 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 02:27:28.796 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 02:27:29.475 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 02:27:29.535 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 6 JPA repository interfaces.
+2024-06-18 02:27:30.172 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-18 02:27:30.182 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-18 02:27:30.184 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 02:27:30.184 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-18 02:27:30.252 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 02:27:30.252 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1424 ms
+2024-06-18 02:27:30.396 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 02:27:31.462 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:291)
+	at liquibase.Scope.lambda$child$0(Scope.java:186)
+	at liquibase.Scope.child(Scope.java:195)
+	at liquibase.Scope.child(Scope.java:185)
+	at liquibase.Scope.child(Scope.java:164)
+	at liquibase.Scope.child(Scope.java:252)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at project.financement.FinancementApplication.main(FinancementApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 37 common frames omitted
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 40 common frames omitted
+2024-06-18 02:27:31.469 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [project/financement/configuration/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-06-18 02:27:31.471 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-06-18 02:27:31.481 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-18 02:27:31.493 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [project/financement/configuration/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at project.financement.FinancementApplication.main(FinancementApplication.java:10)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 18 common frames omitted
+Caused by: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:296)
+	at liquibase.Scope.lambda$child$0(Scope.java:186)
+	at liquibase.Scope.child(Scope.java:195)
+	at liquibase.Scope.child(Scope.java:185)
+	at liquibase.Scope.child(Scope.java:164)
+	at liquibase.Scope.child(Scope.java:252)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:287)
+	... 20 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:291)
+	... 26 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 37 common frames omitted
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 40 common frames omitted
+2024-06-18 02:28:53.937 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 02:28:53.977 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 22224 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-18 02:28:53.977 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 02:28:53.978 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 02:28:54.689 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 02:28:54.742 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 6 JPA repository interfaces.
+2024-06-18 02:28:55.299 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-18 02:28:55.306 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-18 02:28:55.307 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 02:28:55.307 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-18 02:28:55.359 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 02:28:55.359 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1353 ms
+2024-06-18 02:28:55.493 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 02:28:55.802 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6dcbbb49
+2024-06-18 02:28:55.803 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 02:28:56.196 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-18 02:28:56.202 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-18 02:28:56.206 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-18 02:28:56.766 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-18 02:28:56.775 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-18 02:28:56.777 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-18 02:28:56.778 [main] INFO  liquibase.command - Command execution complete
+2024-06-18 02:28:56.903 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-18 02:28:56.933 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-18 02:28:56.978 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-18 02:28:56.979 [main] INFO  liquibase.command - Using deploymentId: 8670536978
+2024-06-18 02:28:56.981 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-18 02:28:56.994 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-18 02:28:57.339 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-18 02:28:57.340 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 345ms
+2024-06-18 02:28:57.349 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-18 02:28:57.372 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-18 02:28:57.374 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 25ms
+2024-06-18 02:28:57.381 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-18 02:28:57.382 [main] INFO  liquibase.util - Run:                          2
+2024-06-18 02:28:57.382 [main] INFO  liquibase.util - Previously run:               0
+2024-06-18 02:28:57.382 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-18 02:28:57.382 [main] INFO  liquibase.util - -------------------------------
+2024-06-18 02:28:57.382 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-18 02:28:57.382 [main] INFO  liquibase.util - Update summary generated
+2024-06-18 02:28:57.384 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-18 02:28:57.384 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-18 02:28:57.389 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-18 02:28:57.389 [main] INFO  liquibase.command - Command execution complete
+2024-06-18 02:28:57.468 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 02:28:57.516 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 02:28:57.543 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 02:28:57.739 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 02:28:58.580 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 02:28:58.582 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 02:28:59.117 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 02:28:59.746 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 02:29:00.498 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1dabeb92, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fe27001, org.springframework.security.web.context.SecurityContextHolderFilter@55781d31, org.springframework.security.web.authentication.logout.LogoutFilter@4834e816, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@52602c48, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@35f18100, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3cb303d9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6ae30b05, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6df38b48, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f4e9eee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7988fd6e, org.springframework.security.web.access.ExceptionTranslationFilter@65fbb726, org.springframework.security.web.access.intercept.AuthorizationFilter@3e8a1137]
+2024-06-18 02:29:00.971 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-18 02:29:00.987 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-18 02:29:00.995 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.412 seconds (process running for 7.851)
+2024-06-18 02:29:17.580 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 02:29:17.582 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 02:29:17.588 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 02:36:07.108 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 02:36:07.158 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 36592 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-18 02:36:07.159 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 02:36:07.159 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 02:36:07.876 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 02:36:07.932 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 6 JPA repository interfaces.
+2024-06-18 02:36:08.538 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-18 02:36:08.545 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-18 02:36:08.547 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 02:36:08.547 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-18 02:36:08.595 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 02:36:08.596 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1406 ms
+2024-06-18 02:36:08.733 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 02:36:09.803 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:291)
+	at liquibase.Scope.lambda$child$0(Scope.java:186)
+	at liquibase.Scope.child(Scope.java:195)
+	at liquibase.Scope.child(Scope.java:185)
+	at liquibase.Scope.child(Scope.java:164)
+	at liquibase.Scope.child(Scope.java:252)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at project.financement.FinancementApplication.main(FinancementApplication.java:10)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 37 common frames omitted
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 40 common frames omitted
+2024-06-18 02:36:09.807 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [project/financement/configuration/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2024-06-18 02:36:09.809 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-06-18 02:36:09.820 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-18 02:36:09.830 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [project/financement/configuration/LiquibaseConfig.class]: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1234)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:952)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at project.financement.FinancementApplication.main(FinancementApplication.java:10)
+Caused by: liquibase.exception.UnexpectedLiquibaseException: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:304)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 18 common frames omitted
+Caused by: liquibase.exception.DatabaseException: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:296)
+	at liquibase.Scope.lambda$child$0(Scope.java:186)
+	at liquibase.Scope.child(Scope.java:195)
+	at liquibase.Scope.child(Scope.java:185)
+	at liquibase.Scope.child(Scope.java:164)
+	at liquibase.Scope.child(Scope.java:252)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:287)
+	... 20 common frames omitted
+Caused by: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at liquibase.integration.spring.SpringLiquibase.lambda$afterPropertiesSet$0(SpringLiquibase.java:291)
+	... 26 common frames omitted
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:104)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:149)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:165)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:88)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:120)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:935)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:805)
+	... 37 common frames omitted
+Caused by: java.net.SocketException: Network is unreachable: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:597)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:62)
+	... 40 common frames omitted
+2024-06-18 02:38:57.565 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 02:38:57.605 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 26780 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-18 02:38:57.606 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 02:38:57.606 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 02:38:58.276 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 02:38:58.340 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 6 JPA repository interfaces.
+2024-06-18 02:38:58.980 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-18 02:38:58.989 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-18 02:38:58.990 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 02:38:58.990 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-18 02:38:59.037 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 02:38:59.037 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1398 ms
+2024-06-18 02:38:59.197 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 02:38:59.482 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@39e3ea78
+2024-06-18 02:38:59.484 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 02:38:59.862 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-18 02:38:59.868 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-18 02:38:59.872 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-18 02:39:00.487 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-18 02:39:00.499 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-18 02:39:00.502 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-18 02:39:00.502 [main] INFO  liquibase.command - Command execution complete
+2024-06-18 02:39:00.649 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-18 02:39:00.718 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-18 02:39:00.792 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-18 02:39:00.793 [main] INFO  liquibase.command - Using deploymentId: 8671140793
+2024-06-18 02:39:00.795 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-18 02:39:00.808 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-18 02:39:01.232 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-18 02:39:01.234 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 425ms
+2024-06-18 02:39:01.242 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-18 02:39:01.262 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-18 02:39:01.264 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 22ms
+2024-06-18 02:39:01.273 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-18 02:39:01.273 [main] INFO  liquibase.util - Run:                          2
+2024-06-18 02:39:01.273 [main] INFO  liquibase.util - Previously run:               0
+2024-06-18 02:39:01.273 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-18 02:39:01.273 [main] INFO  liquibase.util - -------------------------------
+2024-06-18 02:39:01.273 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-18 02:39:01.274 [main] INFO  liquibase.util - Update summary generated
+2024-06-18 02:39:01.276 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-18 02:39:01.276 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-18 02:39:01.283 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-18 02:39:01.283 [main] INFO  liquibase.command - Command execution complete
+2024-06-18 02:39:01.372 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 02:39:01.431 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 02:39:01.467 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 02:39:01.681 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 02:39:02.613 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 02:39:02.616 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 02:39:03.410 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 02:39:04.093 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 02:39:04.962 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44e4fa97, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c10216f, org.springframework.security.web.context.SecurityContextHolderFilter@3453014b, org.springframework.security.web.authentication.logout.LogoutFilter@34a82874, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@27b94ed9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@745690d7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@31b273b2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b56774b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e700641, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e26bf55, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53534c15, org.springframework.security.web.access.ExceptionTranslationFilter@16415241, org.springframework.security.web.access.intercept.AuthorizationFilter@3f5298a5]
+2024-06-18 02:39:05.535 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-18 02:39:05.562 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-18 02:39:05.571 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 8.396 seconds (process running for 9.002)
+2024-06-18 02:39:09.337 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 02:39:09.338 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 02:39:09.344 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 02:39:39.436 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 02:39:39.551 [main] INFO  p.f.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.5 with PID 36860 (started by Huawei in D:\Financement)
+2024-06-18 02:39:39.552 [main] DEBUG p.f.controller.UserControllerTest - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 02:39:39.553 [main] INFO  p.f.controller.UserControllerTest - The following 1 profile is active: "test"
+2024-06-18 02:39:40.922 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 02:39:41.058 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 123 ms. Found 6 JPA repository interfaces.
+2024-06-18 02:39:42.701 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 02:39:42.824 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 02:39:42.890 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 02:39:43.379 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 02:39:43.428 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 02:39:43.948 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testDB user=SA
+2024-06-18 02:39:43.951 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 02:39:44.001 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 02:39:45.557 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 02:39:45.559 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 02:39:46.515 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 02:39:47.731 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 02:39:49.278 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31872f63, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d6399c0, org.springframework.security.web.context.SecurityContextHolderFilter@38244b4c, org.springframework.security.web.authentication.logout.LogoutFilter@4fb10b98, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5ac5e36c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@284cbd6a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1848c983, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3a3cd09b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e3fead8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43c904cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e709fdc, org.springframework.security.web.access.ExceptionTranslationFilter@3e6ec8d6, org.springframework.security.web.access.intercept.AuthorizationFilter@14cdf63b]
+2024-06-18 02:39:50.243 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-06-18 02:39:50.244 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-06-18 02:39:50.245 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-06-18 02:39:50.271 [main] INFO  p.f.controller.UserControllerTest - Started UserControllerTest in 11.513 seconds (process running for 13.787)
+2024-06-18 02:39:51.044 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 02:39:51.083 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 02:39:51.084 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 02:39:51.391 [main] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-28c9-2d3a-d336-c35c93154f2d, userInfoAfterCreation=UserInfoAfterCreationDto(username=Chris))
+END OF REQUEST
+2024-06-18 02:39:51.467 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 02:39:51.467 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 02:39:51.468 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 02:39:51.536 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23502, SQLState: 23502
+2024-06-18 02:39:51.537 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]
+2024-06-18 02:39:51.544 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [UserCreateDto(firstName=null, lastName=Karl, dateOfBirth=1989-07-08, userInfo=UserInfoCreateDto(username=Chris, email=karl.t@example.com, password=password123, phoneNumber=+7771167890, role=FreeUser), registrationDate=2024-06-18)]. could not execute statement [NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]] [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; SQL [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; constraint [null]
+2024-06-18 02:39:51.599 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/c71bca21-8fa0-45bf-b99a-a1afcecf2abc
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.UserController.getUserById
+2024-06-18 02:39:51.609 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.getUserById
+2024-06-18 02:39:51.623 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [c71bca21-8fa0-45bf-b99a-a1afcecf2abc]. User not found with ID: c71bca21-8fa0-45bf-b99a-a1afcecf2abc
+2024-06-18 02:39:51.667 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 02:39:51.670 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 02:39:51.672 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 02:56:29.534 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 02:56:29.579 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 20184 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-18 02:56:29.580 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 02:56:29.580 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 02:56:30.381 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 02:56:30.431 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 6 JPA repository interfaces.
+2024-06-18 02:56:31.051 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-18 02:56:31.059 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-18 02:56:31.061 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 02:56:31.061 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-18 02:56:31.118 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 02:56:31.119 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1507 ms
+2024-06-18 02:56:31.276 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 02:56:31.550 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e159116
+2024-06-18 02:56:31.552 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 02:56:31.870 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-18 02:56:31.876 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-18 02:56:31.879 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-18 02:56:32.358 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-18 02:56:32.366 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-18 02:56:32.368 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-18 02:56:32.368 [main] INFO  liquibase.command - Command execution complete
+2024-06-18 02:56:32.489 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-18 02:56:32.512 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-18 02:56:32.559 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-18 02:56:32.560 [main] INFO  liquibase.command - Using deploymentId: 8672192559
+2024-06-18 02:56:32.562 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-18 02:56:32.575 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-18 02:56:32.937 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-18 02:56:32.938 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 362ms
+2024-06-18 02:56:32.943 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-18 02:56:32.959 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-18 02:56:32.962 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 18ms
+2024-06-18 02:56:32.969 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-18 02:56:32.969 [main] INFO  liquibase.util - Run:                          2
+2024-06-18 02:56:32.969 [main] INFO  liquibase.util - Previously run:               0
+2024-06-18 02:56:32.969 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-18 02:56:32.969 [main] INFO  liquibase.util - -------------------------------
+2024-06-18 02:56:32.969 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-18 02:56:32.970 [main] INFO  liquibase.util - Update summary generated
+2024-06-18 02:56:32.972 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-18 02:56:32.972 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-18 02:56:32.975 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-18 02:56:32.976 [main] INFO  liquibase.command - Command execution complete
+2024-06-18 02:56:33.049 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 02:56:33.102 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 02:56:33.129 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 02:56:33.318 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 02:56:34.130 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 02:56:34.132 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 02:56:34.668 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 02:56:35.313 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 02:56:36.044 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@219505d9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24fe3184, org.springframework.security.web.context.SecurityContextHolderFilter@29d8d7a9, org.springframework.security.web.authentication.logout.LogoutFilter@5de4f44e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@78f9b1ec, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@58f45557, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@113d9226, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7bdfd631, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@9b8d3db, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c24a636, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63cde372, org.springframework.security.web.access.ExceptionTranslationFilter@7261773c, org.springframework.security.web.access.intercept.AuthorizationFilter@70661538]
+2024-06-18 02:56:36.545 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-18 02:56:36.565 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-18 02:56:36.572 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.458 seconds (process running for 8.292)
+2024-06-18 02:56:41.933 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 02:56:41.935 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 02:56:41.940 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 03:33:10.027 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 03:33:10.151 [main] INFO  p.f.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.5 with PID 26228 (started by Huawei in D:\Financement)
+2024-06-18 03:33:10.152 [main] DEBUG p.f.controller.UserControllerTest - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 03:33:10.153 [main] INFO  p.f.controller.UserControllerTest - The following 1 profile is active: "test"
+2024-06-18 03:33:11.394 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 03:33:11.496 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 6 JPA repository interfaces.
+2024-06-18 03:33:12.564 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 03:33:12.679 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 03:33:12.734 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 03:33:13.134 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 03:33:13.181 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 03:33:13.631 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testDB user=SA
+2024-06-18 03:33:13.633 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 03:33:13.675 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 03:33:15.317 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 03:33:15.321 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 03:33:16.376 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 03:33:17.532 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 03:33:18.924 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31872f63, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6d6399c0, org.springframework.security.web.context.SecurityContextHolderFilter@38244b4c, org.springframework.security.web.authentication.logout.LogoutFilter@4fb10b98, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5ac5e36c, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@284cbd6a, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1848c983, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3a3cd09b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e3fead8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43c904cc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e709fdc, org.springframework.security.web.access.ExceptionTranslationFilter@3e6ec8d6, org.springframework.security.web.access.intercept.AuthorizationFilter@14cdf63b]
+2024-06-18 03:33:19.827 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-06-18 03:33:19.828 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-06-18 03:33:19.829 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-06-18 03:33:19.855 [main] INFO  p.f.controller.UserControllerTest - Started UserControllerTest in 10.441 seconds (process running for 12.335)
+2024-06-18 03:33:20.766 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 03:33:20.804 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 03:33:20.804 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 03:33:21.153 [main] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-28fa-275d-fc74-080346c34e24, userInfoAfterCreation=UserInfoAfterCreationDto(username=Chris))
+END OF REQUEST
+2024-06-18 03:33:21.257 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 03:33:21.258 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 03:33:21.258 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 03:33:21.326 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23502, SQLState: 23502
+2024-06-18 03:33:21.326 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]
+2024-06-18 03:33:21.333 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [UserCreateDto(firstName=null, lastName=Karl, dateOfBirth=1989-07-08, userInfo=UserInfoCreateDto(username=Chris, email=karl.t@example.com, password=password123, phoneNumber=+7771167890, role=FreeUser), registrationDate=2024-06-18)]. could not execute statement [NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]] [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; SQL [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; constraint [null]
+2024-06-18 03:33:21.400 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/770d64c5-4814-4d8d-bb39-e00ab0430e25
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.UserController.getUserById
+2024-06-18 03:33:21.411 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.getUserById
+2024-06-18 03:33:21.428 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [770d64c5-4814-4d8d-bb39-e00ab0430e25]. User not found with ID: 770d64c5-4814-4d8d-bb39-e00ab0430e25
+2024-06-18 03:33:21.484 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 03:33:21.486 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 03:33:21.490 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 03:33:38.147 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 03:33:38.303 [main] INFO  p.f.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.5 with PID 18080 (started by Huawei in D:\Financement)
+2024-06-18 03:33:38.303 [main] DEBUG p.f.controller.UserControllerTest - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 03:33:38.303 [main] INFO  p.f.controller.UserControllerTest - The following 1 profile is active: "test"
+2024-06-18 03:33:39.959 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 03:33:40.101 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 122 ms. Found 6 JPA repository interfaces.
+2024-06-18 03:33:41.745 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 03:33:41.954 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 03:33:42.078 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 03:33:42.705 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 03:33:42.751 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 03:33:43.400 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testDB user=SA
+2024-06-18 03:33:43.405 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 03:33:43.496 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 03:33:45.589 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 03:33:45.589 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 03:33:46.872 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 03:33:48.425 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 03:33:50.766 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e5325e3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78042608, org.springframework.security.web.context.SecurityContextHolderFilter@284cbd6a, org.springframework.security.web.authentication.logout.LogoutFilter@f0c27b8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@336e6e97, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2880ff6f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@38dee549, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@37bc27b6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@379fc755, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73cb1ae3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fd6c8c7, org.springframework.security.web.access.ExceptionTranslationFilter@43c904cc, org.springframework.security.web.access.intercept.AuthorizationFilter@4984055c]
+2024-06-18 03:33:52.042 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-06-18 03:33:52.042 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-06-18 03:33:52.044 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-06-18 03:33:52.083 [main] INFO  p.f.controller.UserControllerTest - Started UserControllerTest in 14.865 seconds (process running for 17.549)
+2024-06-18 03:33:53.371 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 03:33:53.411 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 03:33:53.411 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 03:33:53.865 [main] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-28fa-a70f-a571-d51e884e4c82, userInfoAfterCreation=UserInfoAfterCreationDto(username=Chris))
+END OF REQUEST
+2024-06-18 03:33:53.976 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 03:33:53.977 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 03:33:53.977 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 03:33:54.071 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23502, SQLState: 23502
+2024-06-18 03:33:54.072 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]
+2024-06-18 03:33:54.082 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [UserCreateDto(firstName=null, lastName=Karl, dateOfBirth=1989-07-08, userInfo=UserInfoCreateDto(username=Chris, email=karl.t@example.com, password=password123, phoneNumber=+7771167890, role=FreeUser), registrationDate=2024-06-18)]. could not execute statement [NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]] [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; SQL [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; constraint [null]
+2024-06-18 03:33:54.170 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/6c33088d-f45c-4bc8-b5ef-ef9689efa15b
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.UserController.getUserById
+2024-06-18 03:33:54.186 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.getUserById
+2024-06-18 03:33:54.207 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [6c33088d-f45c-4bc8-b5ef-ef9689efa15b]. User not found with ID: 6c33088d-f45c-4bc8-b5ef-ef9689efa15b
+2024-06-18 03:33:54.273 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 03:33:54.276 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 03:33:54.278 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 03:47:16.643 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 03:47:16.746 [main] INFO  p.f.controller.UserControllerTest - Starting UserControllerTest using Java 17.0.5 with PID 34896 (started by Huawei in D:\Financement)
+2024-06-18 03:47:16.747 [main] DEBUG p.f.controller.UserControllerTest - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 03:47:16.748 [main] INFO  p.f.controller.UserControllerTest - The following 1 profile is active: "test"
+2024-06-18 03:47:17.854 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 03:47:17.948 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 6 JPA repository interfaces.
+2024-06-18 03:47:18.873 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 03:47:18.973 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 03:47:19.027 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 03:47:19.415 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 03:47:19.459 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 03:47:19.872 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testDB user=SA
+2024-06-18 03:47:19.874 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 03:47:19.917 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-18 03:47:21.525 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 03:47:21.527 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 03:47:22.598 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 03:47:23.736 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 03:47:25.368 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@490ab739, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1838104d, org.springframework.security.web.context.SecurityContextHolderFilter@307ab1f1, org.springframework.security.web.authentication.logout.LogoutFilter@6ed5033, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7c773286, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@19846908, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5d1ef2ce, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@290f0d98, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b4807e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52bfc174, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64351d46, org.springframework.security.web.access.ExceptionTranslationFilter@31f42606, org.springframework.security.web.access.intercept.AuthorizationFilter@7a9f1582]
+2024-06-18 03:47:26.259 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-06-18 03:47:26.259 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-06-18 03:47:26.260 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-06-18 03:47:26.286 [main] INFO  p.f.controller.UserControllerTest - Started UserControllerTest in 10.22 seconds (process running for 12.05)
+2024-06-18 03:47:27.106 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 03:47:27.145 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 03:47:27.146 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 03:47:27.465 [main] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-2907-1142-9861-21b76a1b47df, userInfoAfterCreation=UserInfoAfterCreationDto(username=Chris))
+END OF REQUEST
+2024-06-18 03:47:27.547 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 03:47:27.548 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 03:47:27.548 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 03:47:27.624 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 23502, SQLState: 23502
+2024-06-18 03:47:27.624 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]
+2024-06-18 03:47:27.630 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [UserCreateDto(firstName=null, lastName=Karl, dateOfBirth=1989-07-08, userInfo=UserInfoCreateDto(username=Chris, email=karl.t@example.com, password=password123, phoneNumber=+7771167890, role=FreeUser), registrationDate=2024-06-18)]. could not execute statement [NULL not allowed for column "FIRST_NAME"; SQL statement:
+insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?) [23502-224]] [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; SQL [insert into users (date_of_birth,first_name,last_name,registration_date,user_info_id,user_id) values (?,?,?,?,?,?)]; constraint [null]
+2024-06-18 03:47:27.689 [main] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 127.0.0.1
+URL : http://localhost/user/1e90ab4b-64e8-4a66-989c-3fc524ae3ea6
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.UserController.getUserById
+2024-06-18 03:47:27.701 [main] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.getUserById
+2024-06-18 03:47:27.715 [main] ERROR p.financement.aspect.LoggingAspect - Request throw an exception. Cause - [1e90ab4b-64e8-4a66-989c-3fc524ae3ea6]. User not found with ID: 1e90ab4b-64e8-4a66-989c-3fc524ae3ea6
+2024-06-18 03:47:27.766 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 03:47:27.769 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 03:47:27.770 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-06-18 03:57:47.245 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-06-18 03:57:47.288 [main] INFO  p.financement.FinancementApplication - Starting FinancementApplication using Java 17.0.5 with PID 35180 (D:\Financement\target\classes started by Huawei in D:\Financement)
+2024-06-18 03:57:47.289 [main] DEBUG p.financement.FinancementApplication - Running with Spring Boot v3.2.4, Spring v6.1.5
+2024-06-18 03:57:47.289 [main] INFO  p.financement.FinancementApplication - No active profile set, falling back to 1 default profile: "default"
+2024-06-18 03:57:48.010 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-18 03:57:48.066 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 6 JPA repository interfaces.
+2024-06-18 03:57:48.699 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-06-18 03:57:48.707 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-06-18 03:57:48.710 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-06-18 03:57:48.711 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-06-18 03:57:48.767 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-06-18 03:57:48.767 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1448 ms
+2024-06-18 03:57:49.005 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-06-18 03:57:49.317 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e159116
+2024-06-18 03:57:49.318 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-06-18 03:57:49.674 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-18 03:57:49.679 [main] INFO  liquibase.command - Dropping Database Objects in schema: fin_db.fin_db
+2024-06-18 03:57:49.683 [main] INFO  liquibase.snapshot - Creating snapshot
+2024-06-18 03:57:50.168 [main] INFO  liquibase.database - Successfully deleted all supported object types in schema fin_db.fin_db.
+2024-06-18 03:57:50.177 [main] WARN  liquibase.lockservice - Failed to release change log lock
+2024-06-18 03:57:50.180 [main] INFO  liquibase.ui - All objects dropped from root@localhost@jdbc:mysql://localhost:3306/fin_db?allowMultiQueries=true
+2024-06-18 03:57:50.180 [main] INFO  liquibase.command - Command execution complete
+2024-06-18 03:57:50.304 [main] INFO  liquibase.changelog - Creating database history table with name: fin_db.databasechangelog
+2024-06-18 03:57:50.331 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-18 03:57:50.376 [main] INFO  liquibase.lockservice - Successfully acquired change log lock
+2024-06-18 03:57:50.377 [main] INFO  liquibase.command - Using deploymentId: 8675870377
+2024-06-18 03:57:50.379 [main] INFO  liquibase.changelog - Reading from fin_db.databasechangelog
+2024-06-18 03:57:50.392 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll
+2024-06-18 03:57:50.707 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-18 03:57:50.708 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/schema.sql::raw::includeAll ran successfully in 315ms
+2024-06-18 03:57:50.714 [main] INFO  liquibase.ui - Running Changeset: db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll
+2024-06-18 03:57:50.721 [main] INFO  liquibase.changelog - Custom SQL executed
+2024-06-18 03:57:50.721 [main] INFO  liquibase.changelog - ChangeSet db/changelog/v1.0.0-SNAPSHOT/data.sql::raw::includeAll ran successfully in 7ms
+2024-06-18 03:57:50.739 [main] INFO  liquibase.util - UPDATE SUMMARY
+2024-06-18 03:57:50.739 [main] INFO  liquibase.util - Run:                          2
+2024-06-18 03:57:50.739 [main] INFO  liquibase.util - Previously run:               0
+2024-06-18 03:57:50.739 [main] INFO  liquibase.util - Filtered out:                 0
+2024-06-18 03:57:50.739 [main] INFO  liquibase.util - -------------------------------
+2024-06-18 03:57:50.739 [main] INFO  liquibase.util - Total change sets:            2
+2024-06-18 03:57:50.739 [main] INFO  liquibase.util - Update summary generated
+2024-06-18 03:57:50.739 [main] INFO  liquibase.command - Update command completed successfully.
+2024-06-18 03:57:50.739 [main] INFO  liquibase.ui - Liquibase: Update has been successful. Rows affected: 23
+2024-06-18 03:57:50.739 [main] INFO  liquibase.lockservice - Successfully released change log lock
+2024-06-18 03:57:50.739 [main] INFO  liquibase.command - Command execution complete
+2024-06-18 03:57:50.823 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-18 03:57:50.872 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-06-18 03:57:50.899 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-06-18 03:57:51.087 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-18 03:57:52.006 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-18 03:57:52.018 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 03:57:52.613 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-18 03:57:53.252 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-18 03:57:53.970 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4ffe2ded, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@187c011d, org.springframework.security.web.context.SecurityContextHolderFilter@79052209, org.springframework.security.web.authentication.logout.LogoutFilter@a07479d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6d386dff, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@27585962, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3605d078, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@431298ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7006b304, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@321b0237, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c86938f, org.springframework.security.web.access.ExceptionTranslationFilter@58f28c5e, org.springframework.security.web.access.intercept.AuthorizationFilter@7b48b933]
+2024-06-18 03:57:54.581 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-06-18 03:57:54.636 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-06-18 03:57:54.654 [main] INFO  p.financement.FinancementApplication - Started FinancementApplication in 7.794 seconds (process running for 8.482)
+2024-06-18 03:57:56.454 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-18 03:57:56.454 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-06-18 03:57:56.455 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-06-18 03:57:57.019 [http-nio-8080-exec-3] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 428 ms
+2024-06-18 03:58:12.845 [http-nio-8080-exec-7] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/expense-category/all
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.ExpenseCategoryController.getAllExpenseCategories
+2024-06-18 03:58:12.862 [http-nio-8080-exec-7] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.ExpenseCategoryServiceImpl.findAll
+2024-06-18 03:58:12.878 [http-nio-8080-exec-7] INFO  p.financement.aspect.LoggingAspect - 
+Return value: <200 OK OK,[ExpenseCategoryDto(expenseCategoryName=Groceries), ExpenseCategoryDto(expenseCategoryName=Utilities), ExpenseCategoryDto(expenseCategoryName=Transport), ExpenseCategoryDto(expenseCategoryName=Housing), ExpenseCategoryDto(expenseCategoryName=Health), ExpenseCategoryDto(expenseCategoryName=Personal Expenses), ExpenseCategoryDto(expenseCategoryName=Education), ExpenseCategoryDto(expenseCategoryName=Entertainment)],[]>
+END OF REQUEST
+2024-06-18 03:58:45.764 [http-nio-8080-exec-8] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/account/create-account/12345678-1234-5678-1234-567812345678
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.AccountController.createAccount
+2024-06-18 03:58:45.782 [http-nio-8080-exec-8] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.AccountServiceImpl.createAccount
+2024-06-18 03:58:45.832 [http-nio-8080-exec-8] INFO  p.financement.aspect.LoggingAspect - 
+Return value: <201 CREATED Created,AccountDto(accountName=1, balance=15000, currency=EUR),[]>
+END OF REQUEST
+2024-06-18 03:58:51.029 [http-nio-8080-exec-4] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/account/create-account/12345678-1234-5678-1234-567812345678
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.AccountController.createAccount
+2024-06-18 03:58:51.030 [http-nio-8080-exec-4] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.AccountServiceImpl.createAccount
+2024-06-18 03:58:51.040 [http-nio-8080-exec-4] INFO  p.financement.aspect.LoggingAspect - 
+Return value: <201 CREATED Created,AccountDto(accountName=2, balance=15000, currency=EUR),[]>
+END OF REQUEST
+2024-06-18 03:58:55.562 [http-nio-8080-exec-10] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/account/create-account/12345678-1234-5678-1234-567812345678
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.AccountController.createAccount
+2024-06-18 03:58:55.562 [http-nio-8080-exec-10] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.AccountServiceImpl.createAccount
+2024-06-18 03:58:55.576 [http-nio-8080-exec-10] INFO  p.financement.aspect.LoggingAspect - 
+Return value: <201 CREATED Created,AccountDto(accountName=3, balance=15000, currency=EUR),[]>
+END OF REQUEST
+2024-06-18 03:59:31.394 [http-nio-8080-exec-2] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/user/create-user
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.UserController.createUser
+2024-06-18 03:59:31.394 [http-nio-8080-exec-2] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.UserServiceImpl.createUser
+2024-06-18 03:59:31.394 [http-nio-8080-exec-2] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getDefaultRole
+2024-06-18 03:59:31.544 [http-nio-8080-exec-2] INFO  p.financement.aspect.LoggingAspect - 
+Return value: UserAfterCreationDto(userId=00000190-2912-1dc6-cf24-99effd7a456c, userInfoAfterCreation=UserInfoAfterCreationDto(username=tomtom))
+END OF REQUEST
+2024-06-18 04:00:03.598 [http-nio-8080-exec-6] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/expense-category/all
+HTTP_METHOD : GET
+CONTROLLER_METHOD : project.financement.controller.ExpenseCategoryController.getAllExpenseCategories
+2024-06-18 04:00:03.598 [http-nio-8080-exec-6] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.ExpenseCategoryServiceImpl.findAll
+2024-06-18 04:00:03.598 [http-nio-8080-exec-6] INFO  p.financement.aspect.LoggingAspect - 
+Return value: <200 OK OK,[ExpenseCategoryDto(expenseCategoryName=Groceries), ExpenseCategoryDto(expenseCategoryName=Utilities), ExpenseCategoryDto(expenseCategoryName=Transport), ExpenseCategoryDto(expenseCategoryName=Housing), ExpenseCategoryDto(expenseCategoryName=Health), ExpenseCategoryDto(expenseCategoryName=Personal Expenses), ExpenseCategoryDto(expenseCategoryName=Education), ExpenseCategoryDto(expenseCategoryName=Entertainment)],[]>
+END OF REQUEST
+2024-06-18 04:01:52.901 [http-nio-8080-exec-4] INFO  p.financement.aspect.LoggingAspect - NEW REQUEST:
+IP : 0:0:0:0:0:0:0:1
+URL : http://localhost:8080/payments/upgrade/00000190-2912-1dc6-cf24-99effd7a456c
+HTTP_METHOD : POST
+CONTROLLER_METHOD : project.financement.controller.PaymentController.upgradeUserInfo
+2024-06-18 04:01:52.904 [http-nio-8080-exec-4] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.PaymentServiceImpl.upgradeUserToPremium
+2024-06-18 04:01:52.915 [http-nio-8080-exec-4] INFO  p.financement.aspect.LoggingAspect - RUN SERVICE:
+SERVICE_METHOD : project.financement.service.impl.RoleServiceImpl.getPremiumRole
+2024-06-18 04:01:52.938 [http-nio-8080-exec-4] INFO  p.financement.aspect.LoggingAspect - 
+Return value: <200 OK OK,Congratulations! Your account has been upgraded to Premium.,[]>
+END OF REQUEST
+2024-06-18 04:02:13.732 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-18 04:02:13.732 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-06-18 04:02:13.732 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
