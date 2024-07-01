@@ -127,7 +127,6 @@ This structured database schema enables efficient management and tracking of use
     - **Spring Boot:** Simplifies Spring application setup and development.
     - **Spring Security:** Manages authentication and authorization.
     - **Spring Data JPA (Hibernate):** Implements the persistence layer for interacting with MySQL.
-    - **SpringDoc OpenAPI:** Generates and serves OpenAPI documentation.
     - **Lombok:** Reduces boilerplate code in Java classes.
     - **MapStruct:** Facilitates mapping between Java bean types.
     - **Swagger:** Annotations for generating API documentation.
